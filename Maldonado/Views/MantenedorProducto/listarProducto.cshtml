@@ -1,0 +1,95 @@
+﻿@model IEnumerable<CapaEntidad.entProducto>
+
+@{
+    ViewBag.Title = "listarProducto";
+}
+
+<h2>listarProducto</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "InsertarProducto","MantenedorProducto")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desProducto)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.idTipoProducto)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.idMaterial)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.preProducto)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.idColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imgProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stkProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fcrProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estProducto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.desProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idTipoProducto.desTipoProducto)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.idMaterial.desMaterial)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.preProducto)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.idColor.desColor)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.imgProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stkProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fcrProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estProducto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

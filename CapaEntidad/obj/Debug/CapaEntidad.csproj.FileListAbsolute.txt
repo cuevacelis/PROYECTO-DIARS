@@ -1,0 +1,22 @@
+D:\SistemaMuebleria\Maldonado\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\SistemaMuebleria\Maldonado\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\SistemaMuebleria\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.csprojResolveAssemblyReference.cache
+D:\SistemaMuebleria\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\SistemaMuebleria\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.csprojResolveAssemblyReference.cache
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\oscar\Desktop\Parcial\Maldonado\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\oscar\Desktop\Parcial\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.csprojAssemblyReference.cache
+C:\Users\oscar\Desktop\Parcial\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Desktop\Parcial\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\CapaEntidad\obj\Debug\CapaEntidad.csprojAssemblyReference.cache
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\CapaEntidad\obj\Debug\CapaEntidad.pdb

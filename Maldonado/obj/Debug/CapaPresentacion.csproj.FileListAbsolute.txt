@@ -1,0 +1,176 @@
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\Maldonado.dll.config
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\Maldonado.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\Maldonado.pdb
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\CapaEntidad.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\CapaLogica.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\Microsoft.Web.Infrastructure.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\Newtonsoft.Json.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Net.Http.Formatting.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Helpers.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Http.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Http.WebHost.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Mvc.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Razor.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.WebPages.Deployment.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.WebPages.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.WebPages.Razor.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\CapaAccesoDatos.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\CapaEntidad.pdb
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\CapaLogica.pdb
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\Newtonsoft.Json.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Net.Http.Formatting.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Helpers.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Http.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Http.WebHost.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Mvc.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.Razor.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.WebPages.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.WebPages.Deployment.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\System.Web.WebPages.Razor.xml
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\CapaAccesoDatos.pdb
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Net.Http.Formatting.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Web.Helpers.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Web.Http.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Web.Http.WebHost.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Web.Mvc.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Web.Razor.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Web.WebPages.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+D:\SistemaMuebleria\Maldonado\Maldonado\obj\Debug\Maldonado.dll
+D:\SistemaMuebleria\Maldonado\Maldonado\obj\Debug\Maldonado.pdb
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\Maldonado.dll.config
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\Maldonado.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\Maldonado.pdb
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\CapaEntidad.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\CapaLogica.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\Newtonsoft.Json.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Net.Http.Formatting.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Helpers.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Http.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Http.WebHost.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Mvc.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Razor.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.Deployment.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.Razor.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\CapaAccesoDatos.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\CapaEntidad.pdb
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\CapaLogica.pdb
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\Newtonsoft.Json.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Net.Http.Formatting.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Helpers.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Http.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Http.WebHost.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Mvc.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.Razor.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.Deployment.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.Razor.xml
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\CapaAccesoDatos.pdb
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Web.Helpers.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Web.Http.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Web.Mvc.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Web.Razor.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Web.WebPages.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\obj\Debug\Maldonado.dll
+C:\Users\UTSILAB513\Desktop\DIARSVERANO\Parcial\Maldonado\Maldonado\obj\Debug\Maldonado.pdb
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\Maldonado.dll.config
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\Maldonado.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\Maldonado.pdb
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\CapaEntidad.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\CapaLogica.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\Newtonsoft.Json.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Net.Http.Formatting.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Helpers.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Http.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Http.WebHost.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Mvc.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Razor.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.Deployment.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.Razor.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\CapaAccesoDatos.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\CapaEntidad.pdb
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\CapaLogica.pdb
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\Newtonsoft.Json.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Net.Http.Formatting.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Helpers.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Http.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Http.WebHost.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Mvc.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.Razor.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.Deployment.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\System.Web.WebPages.Razor.xml
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\CapaAccesoDatos.pdb
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Web.Helpers.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Web.Http.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Web.Mvc.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Web.Razor.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Web.WebPages.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\obj\Debug\Maldonado.dll
+C:\Users\oscar\Desktop\Parcial\Maldonado\Maldonado\obj\Debug\Maldonado.pdb
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\Maldonado.dll.config
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\Maldonado.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\Maldonado.pdb
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\CapaEntidad.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\CapaLogica.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\Newtonsoft.Json.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Net.Http.Formatting.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Helpers.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Http.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Http.WebHost.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Mvc.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Razor.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.WebPages.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\CapaAccesoDatos.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\CapaEntidad.pdb
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\CapaLogica.pdb
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\Newtonsoft.Json.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Net.Http.Formatting.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Helpers.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Http.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Http.WebHost.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Mvc.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.Razor.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.WebPages.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\CapaAccesoDatos.pdb
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Web.Http.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Web.Razor.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\obj\Debug\Maldonado.dll
+C:\Users\Sql Server\Desktop\Estudiar para el parcial\Maldonado V2\Maldonado\obj\Debug\Maldonado.pdb
