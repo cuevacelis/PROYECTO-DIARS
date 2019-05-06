@@ -111,8 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\InicioController.cs" />
-    <Compile Include="Controllers\MantenedorProductoController.cs" />
-    <Compile Include="Controllers\MantenedorTipoProductoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,24 +146,6 @@
       <Project>{c124c335-259d-4948-a255-c4c31cf83751}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\MantenedorTipoProducto\listarTipoProducto.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\MantenedorTipoProducto\InsertarTipoProducto.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\MantenedorTipoProducto\EditarTipoProducto.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\MantenedorTipoProducto\EliminarTipoProducto.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\MantenedorProducto\listarProducto.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\MantenedorProducto\InsertarProducto.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

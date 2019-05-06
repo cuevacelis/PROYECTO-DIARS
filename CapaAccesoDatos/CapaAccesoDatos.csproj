@@ -40,10 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="datColor.cs" />
-    <Compile Include="datMatPrima.cs" />
-    <Compile Include="datProducto.cs" />
-    <Compile Include="datTipoProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -39,10 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="logColor.cs" />
-    <Compile Include="logMatPrima.cs" />
-    <Compile Include="logProducto.cs" />
-    <Compile Include="logTipoProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
