@@ -1,0 +1,78 @@
+﻿@model IEnumerable<CapaEntidad.entPersona>
+
+@{
+    ViewBag.Title = "listarPersona";
+}
+
+<h2>listarPersona</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rucPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.razPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dirPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciuPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.finPersona)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rucPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.razPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dirPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciuPersona.desCiudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipPersona.desTipoPersona)
+        </td>
+        <td>
+            @*Html.TextBoxFor(modelItem => item.finPersona, "{0:dd/MM/yyyy}", new { @class = "width-34px" })*@
+            @Html.TextBoxFor(modelItem => item.finPersona, "{0:dd/MM/yyyy}", new { @class = "form-control", @readonly = true })
+            @*Html.EditorFor(model => model.FechaSolicitud, new { htmlAttributes = new { @class = "form-control datepicker", Value = DateTime.Now.ToShortDateString(), @type = "date" } }*@
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditarPersona", new { idPersona = item.@idPersona })
+            @Html.ActionLink("Deshabilitar", "EliminarPersona", new { idPersona = item.@idPersona })
+        </td>
+
+        
+    </tr>
+}
+
+</table>
