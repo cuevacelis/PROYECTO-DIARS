@@ -45,7 +45,7 @@ namespace CapaAccesoDatos
 
                     cliente.idCliente = Convert.ToInt16(dr["idCliente"]);
 
-                    //tp.idTipoProducto = Convert.ToInt16(dr["idTipoProducto"]);
+                    //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
                     tipo.desTipoCliente = dr["desTipoCliente"].ToString();
                     cliente.idTipoCliente = tipo;
 
