@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Habitacion
+    public class entHabitacion
     {
+        public int idHabitacion { get; set; }
         public int numeroHabitacion { get; set; }
         public String descHabitacion { get; set; }
         public Boolean estHabitacions{ get; set; }
-        public int MyProperty { get; set; }
     }
 }
