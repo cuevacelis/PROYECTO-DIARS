@@ -23,6 +23,7 @@ namespace CapaLogica
         #endregion singleton
 
         #region metodos
+ 
         public List<entHabitacion> ListarHabitacion()
         {
             try
@@ -37,16 +38,17 @@ namespace CapaLogica
         }
 
         /*
-        public Boolean InsertarHabitacion(entHabitacion a)
-        {
-            try
-            {
-                return datHabitacion.Instancia.InsertarHabitacion(a);
-            }
-            catch (Exception e) { throw e; }
+       public Boolean InsertarHabitacion(entHabitacion a)
+       {
+           try
+           {
+               return datHabitacion.Instancia.InsertarHabitacion(a);
+           }
+           catch (Exception e) { throw e; }
 
 
-        }*/
+       }*/
+       
         #endregion metodos
     }
 }

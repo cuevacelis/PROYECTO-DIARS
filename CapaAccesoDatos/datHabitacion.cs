@@ -40,9 +40,14 @@ namespace CapaAccesoDatos
                 while (dr.Read())
                 {
 
-                    entHabitacion tipo = new entHabitacion();
-                    tipo.idHabitacion = Convert.ToInt16(dr["idHabitacion"]);
-                    lista.Add(tipo);
+                    entHabitacion Habitacion = new entHabitacion();
+                    entTipoHabitacion TipoHabitacion = new entTipoHabitacion();
+
+                    Habitacion.idHabitacion = Convert.ToInt16(dr["idHabitacion"]);
+                    TipoHabitacion.desTipoHabitacion = dr["desTipoHabitacion"].ToString();
+                    Habitacion.idTipoHabitacion = TipoHabitacion;
+
+                    lista.Add(Habitacion);
                 }
 
             }
