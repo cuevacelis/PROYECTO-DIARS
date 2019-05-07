@@ -11,6 +11,5 @@ namespace CapaEntidad
         public int numeroHabitacion { get; set; }
         public String descHabitacion { get; set; }
         public Boolean estHabitacions{ get; set; }
-        public int MyProperty { get; set; }
     }
 }
