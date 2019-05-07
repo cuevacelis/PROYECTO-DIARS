@@ -12,5 +12,6 @@ namespace CapaEntidad
         public String descHabitacion { get; set; }
         public Boolean estHabitacions{ get; set; }
         UwU
+        XD
     }
 }
