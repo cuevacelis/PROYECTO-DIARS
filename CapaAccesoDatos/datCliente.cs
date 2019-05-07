@@ -40,16 +40,22 @@ namespace CapaAccesoDatos
                 while (dr.Read())
                 {
 
-                    entCliente cliente = new entCliente();
-                    entTipoCliente tipo = new entTipoCliente();
+                    entCliente Cliente = new entCliente();
+                    entTipoCliente TipoCliente = new entTipoCliente();
 
-                    cliente.idCliente = Convert.ToInt16(dr["idCliente"]);
+                    Cliente.idCliente = Convert.ToInt16(dr["idCliente"]);
 
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
-                    tipo.desTipoCliente = dr["desTipoCliente"].ToString();
-                    cliente.idTipoCliente = tipo;
+                    TipoCliente.desTipoCliente = dr["desTipoCliente"].ToString();
+                    Cliente.idTipoCliente = TipoCliente;
 
-                    lista.Add(cliente);
+                    Cliente.nombreCliente = dr["nombreCliente"].ToString();
+                    Cliente.apellidoCliente = dr["apellidoCliente"].ToString();
+                    Cliente.DNI = dr["dni"].ToString();
+                    Cliente.telefono = Convert.ToInt16(dr["telefono"]);
+                    Cliente.estCliente = Convert.ToBoolean(dr["estCliente"]);
+
+                    lista.Add(Cliente);
                 }
 
             }
