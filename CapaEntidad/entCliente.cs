@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Cliente
+    public class entCliente
     {
         public int idCliente { get; set; }
         public String nombreCliente { get; set; }
@@ -14,6 +14,6 @@ namespace CapaEntidad
         public int DNI { get; set; }
         public int telefono { get; set; }
         public Boolean estCliente { get; set; }
-        public TipoCliente TipoCliente { get; set; }
+        public entTipoCliente TipoCliente { get; set; }
     }
 }

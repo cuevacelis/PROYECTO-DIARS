@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Reserva
+    public class entReserva
     {
         public int idReserva { get; set; }
         public String desReserva { get; set; }
