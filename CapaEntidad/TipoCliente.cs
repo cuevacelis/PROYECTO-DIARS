@@ -11,6 +11,5 @@ namespace CapaEntidad
         public int idTipoCliente { get; set; }
         public String desTipoCliente { get; set; }
         public Boolean estTipoCliente { get; set; }
-        asdasdassdasdasdasd
     }
 }
