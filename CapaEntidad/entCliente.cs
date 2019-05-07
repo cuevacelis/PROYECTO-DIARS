@@ -14,6 +14,6 @@ namespace CapaEntidad
         public int DNI { get; set; }
         public int telefono { get; set; }
         public Boolean estCliente { get; set; }
-        public entTipoCliente TipoCliente { get; set; }
+        public entTipoCliente idTipoCliente { get; set; }
     }
 }
