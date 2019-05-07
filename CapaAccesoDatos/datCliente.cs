@@ -50,8 +50,6 @@ namespace CapaAccesoDatos
                     cliente.idTipoCliente = tipo;
 
                     lista.Add(cliente);
-                    
-                    
                 }
 
             }
@@ -62,9 +60,6 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return lista;
         }
-
-
-
         #endregion metodos
     }
 
