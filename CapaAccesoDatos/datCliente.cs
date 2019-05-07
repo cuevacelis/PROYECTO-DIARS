@@ -24,7 +24,6 @@ namespace CapaAccesoDatos
         }
         #endregion singleton
 
-
         #region metodos
         public List<entCliente> ListarCliente()
         {
