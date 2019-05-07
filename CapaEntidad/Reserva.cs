@@ -11,5 +11,6 @@ namespace CapaEntidad
         public int idReserva { get; set; }
         public String desReserva { get; set; }
         public Boolean estReserva { get; set; }
+        .
     }
 }
