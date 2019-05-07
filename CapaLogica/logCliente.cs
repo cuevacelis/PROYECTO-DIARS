@@ -27,7 +27,7 @@ namespace CapaLogica
         {
             try
             {
-                List<entCliente> lista = datCliente.Instancia.ListarProducto();
+                List<entCliente> lista = datCliente.Instancia.ListarCliente();
                 return lista;
             }
             catch (Exception e)
