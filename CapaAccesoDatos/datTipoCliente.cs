@@ -56,9 +56,6 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return lista;
         }
-
-
-
         #endregion metodos
     }
 }
