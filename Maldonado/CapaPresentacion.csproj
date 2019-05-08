@@ -113,6 +113,7 @@
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\MantenedorClienteController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
+    <Compile Include="Controllers\MantenedorReservaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
