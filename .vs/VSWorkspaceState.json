@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CapaEntidad"
+    "\\CapaAccesoDatos",
+    "\\CapaEntidad",
+    "\\CapaLogica",
+    "\\Maldonado",
+    "\\Maldonado\\Controllers"
   ],
+  "SelectedNode": "\\CapaEntidad\\entCliente.cs",
   "PreviewInSolutionExplorer": false
 }
