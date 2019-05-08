@@ -43,8 +43,8 @@ namespace CapaAccesoDatos
                     entHabitacion Habitacion = new entHabitacion();
                     entTipoHabitacion TipoHabitacion = new entTipoHabitacion();
 
-                    Habitacion.idHabitacion = Convert.ToInt16(dr["idHabitacion"]);
-                    TipoHabitacion.desTipoHabitacion = dr["desTipoHabitacion"].ToString();
+                    Habitacion.idHabitacion = Convert.ToInt16(dr["IdHabitacion"]);
+                    TipoHabitacion.desTipoHabitacion = dr["DesTipoHabitacion"].ToString();
                     Habitacion.idTipoHabitacion = TipoHabitacion;
 
                     lista.Add(Habitacion);

@@ -42,18 +42,19 @@ namespace CapaAccesoDatos
                     entReserva Reserva = new entReserva();
                     entCliente Cliente = new entCliente();
 
-                    Reserva.idReserva = Convert.ToInt16(dr["idReserva"]);
+                    Reserva.idReserva = Convert.ToInt16(dr["IdReserva"]);
 
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
-                    Cliente.nombreCliente = dr["nombreCliente"].ToString();
-                    Cliente.apellidoCliente = dr["apellidoCliente"].ToString();
+                    Cliente.nombreCliente = dr["NombreCliente"].ToString();
+                    Cliente.apellidoCliente = dr["ApellidoCliente"].ToString();
                     Reserva.idCliente = Cliente;
 
                     entHabitacion Habitacion = new entHabitacion();
 
-                    Habitacion.numeroHabitacion = Convert.ToInt16(dr["dni"]);
-                    Habitacion.descHabitacion = dr["telefono"].ToString();
-                    Cliente.estCliente = Convert.ToBoolean(dr["estCliente"]);
+                    Habitacion.numeroHabitacion = Convert.ToInt16(dr["NumeroHabitacion"]);
+                    Habitacion.descHabitacion = dr["DescHabitacion"].ToString();
+                    Habitacion.estHabitacion = Convert.ToBoolean(dr["EstHabitacion"]);
+                    Cliente.estCliente = Convert.ToBoolean(dr["EstCliente"]);
                     Reserva.idHabitacion = Habitacion;
 
                     lista.Add(Reserva);
