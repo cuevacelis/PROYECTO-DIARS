@@ -19,6 +19,7 @@ namespace CapaAccesoDatos
             {
                 return datReserva.UnicaInstancia;
             }
+
         }
         #endregion singleton
 
@@ -46,7 +47,7 @@ namespace CapaAccesoDatos
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
                     Cliente.nombreCliente = dr["NombreCliente"].ToString();
                     Cliente.apellidoCliente = dr["ApellidoCliente"].ToString();
-                    Cliente.estCliente = Convert.ToBoolean(dr["EstCliente"]);
+                    //Cliente.estCliente = Convert.ToBoolean(dr["EstCliente"]);
                     Reserva.idCliente = Cliente;
 
                     entHabitacion Habitacion = new entHabitacion();
@@ -57,9 +58,10 @@ namespace CapaAccesoDatos
                     Reserva.idHabitacion = Habitacion;
 
                     Reserva.fechaIncioReserva = Convert.ToDateTime(dr["FechaInicioReserva"]);
-                    Reserva.fechaFinReserva = Convert.ToDateTime(dr["FechaFinReserva"]);
+                    Reserva.fechaIncioReserva = Convert.ToDateTime(dr["FechaFinReserva"]);
                     lista.Add(Reserva);
                 }
+
             }
             catch (Exception e)
             {
