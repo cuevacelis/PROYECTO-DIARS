@@ -16,7 +16,7 @@ namespace Maldonado
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "InicioController", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "MantenedorReserva", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
