@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CapaEntidad.entHabitacion>
+
+@{
+    ViewBag.Title = "ListarHabitacion";
+}
+
+<h2>ListarHabitacion</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idHabitacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroHabitacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descHabitacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estHabitacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idTipoHabitacion.idTipoHabitacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idHabitacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroHabitacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descHabitacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estHabitacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idTipoHabitacion.idTipoHabitacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

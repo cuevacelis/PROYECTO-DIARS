@@ -5,7 +5,9 @@
     "\\CapaEntidad",
     "\\CapaLogica",
     "\\Maldonado",
-    "\\Maldonado\\Controllers"
+    "\\Maldonado\\Controllers",
+    "\\Maldonado\\Views",
+    "\\Maldonado\\Views\\MantenedorReserva"
   ],
   "PreviewInSolutionExplorer": false
 }

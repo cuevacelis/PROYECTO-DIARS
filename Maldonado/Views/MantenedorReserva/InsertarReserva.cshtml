@@ -1,0 +1,66 @@
+﻿@model CapaEntidad.entReserva
+
+@{
+    ViewBag.Title = "InsertarReserva";
+}
+
+<h2>InsertarReserva</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+<fieldset>
+    <legend>entReserva</legend>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.idReserva)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.idReserva)
+        @Html.ValidationMessageFor(model => model.idReserva)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.fechaIncioReserva)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.fechaIncioReserva)
+        @Html.ValidationMessageFor(model => model.fechaIncioReserva)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.fechaFinReserva)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.fechaFinReserva)
+        @Html.ValidationMessageFor(model => model.fechaFinReserva)
+    </div>
+
+    <div class="form-group">
+        Cliente:
+        <div class="col-md-10">
+            @Html.DropDownList("cboCliente", (SelectList)ViewBag.listaCliente, "<seleccionar>")
+        </div>
+    </div>
+
+    <div class="form-group">
+        Habitacion:
+        <div class="col-md-10">
+            @Html.DropDownList("cboHabitacion", (SelectList)ViewBag.listaHabitacion, "<seleccionar>")
+        </div>
+    </div>
+
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+</fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

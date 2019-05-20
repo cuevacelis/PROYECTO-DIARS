@@ -43,7 +43,7 @@ namespace CapaAccesoDatos
                     entCliente Cliente = new entCliente();
                     entTipoCliente TipoCliente = new entTipoCliente();
 
-                    Cliente.idCliente = Convert.ToInt16(dr["IdCliente"]);
+                    Cliente.idCliente = Convert.ToInt32(dr["IdCliente"]);
 
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
                     TipoCliente.desTipoCliente = dr["DesTipoCliente"].ToString();
@@ -52,7 +52,7 @@ namespace CapaAccesoDatos
                     Cliente.nombreCliente = dr["NombreCliente"].ToString();
                     Cliente.apellidoCliente = dr["ApellidoCliente"].ToString();
                     Cliente.DNI = dr["Dni"].ToString();
-                    Cliente.telefono = Convert.ToInt16(dr["Telefono"]);
+                    Cliente.telefono = Convert.ToInt32(dr["Telefono"]);
                     Cliente.estCliente = Convert.ToBoolean(dr["EstCliente"]);
 
                     lista.Add(Cliente);

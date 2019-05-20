@@ -35,5 +35,15 @@ namespace CapaLogica
                 throw e;
             }
         }
+
+        public Boolean InsertarReserva(entReserva R)
+        {
+            try
+            {
+                return datReserva.Instancia.InsertarReserva(R);
+            }
+            catch (Exception e)
+            { throw e; }
+        }
     }
 }
