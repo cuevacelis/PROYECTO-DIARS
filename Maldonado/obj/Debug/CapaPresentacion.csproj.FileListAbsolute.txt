@@ -262,3 +262,8 @@ C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPres
 C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.dll
 C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.pdb
+C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\Antlr3.Runtime.dll
+C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\System.Web.Optimization.dll
+C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\WebGrease.dll
+C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\Antlr3.Runtime.pdb
+C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\System.Web.Optimization.xml

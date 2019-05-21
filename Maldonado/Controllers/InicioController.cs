@@ -15,6 +15,5 @@ namespace Maldonado.Controllers
         {
             return View();
         }
-
     }
 }

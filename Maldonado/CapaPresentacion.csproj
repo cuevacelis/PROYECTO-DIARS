@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,7 +42,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -51,6 +58,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -67,9 +77,6 @@
     <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -108,8 +115,12 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\MantenedorClienteController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
@@ -123,7 +134,71 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Contents\css\animate.css" />
+    <Content Include="Contents\css\aos.css" />
+    <Content Include="Contents\css\bootstrap-datepicker.css" />
+    <Content Include="Contents\css\bootstrap-grid.css" />
+    <Content Include="Contents\css\bootstrap-reboot.css" />
+    <Content Include="Contents\css\bootstrap.css" />
+    <Content Include="Contents\css\bootstrap.min.css" />
+    <Content Include="Contents\css\fancybox.min.css" />
+    <Content Include="Contents\css\jquery.timepicker.css" />
+    <Content Include="Contents\css\magnific-popup.css" />
+    <Content Include="Contents\css\owl.carousel.min.css" />
+    <Content Include="Contents\css\style.css" />
+    <Content Include="Contents\css\_custom.css" />
+    <Content Include="Contents\fonts\fontawesome\css\font-awesome.min.css" />
+    <Content Include="Contents\fonts\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Contents\fonts\ionicons\cheatsheet.html" />
+    <Content Include="Contents\fonts\ionicons\css\ionicons.css" />
+    <Content Include="Contents\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="Contents\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="Contents\images\about_feature_image.png" />
+    <Content Include="Contents\images\food-1.jpg" />
+    <Content Include="Contents\images\hero_1.jpg" />
+    <Content Include="Contents\images\hero_2.jpg" />
+    <Content Include="Contents\images\hero_3.jpg" />
+    <Content Include="Contents\images\hero_4.jpg" />
+    <Content Include="Contents\images\image_5.jpg" />
+    <Content Include="Contents\images\image_6.jpg" />
+    <Content Include="Contents\images\image_7.jpg" />
+    <Content Include="Contents\images\img_1.jpg" />
+    <Content Include="Contents\images\img_2.jpg" />
+    <Content Include="Contents\images\img_3.jpg" />
+    <Content Include="Contents\images\img_4.jpg" />
+    <Content Include="Contents\images\img_5.jpg" />
+    <Content Include="Contents\images\person_1.jpg" />
+    <Content Include="Contents\images\person_2.jpg" />
+    <Content Include="Contents\images\person_3.jpg" />
+    <Content Include="Contents\images\person_4.jpg" />
+    <Content Include="Contents\images\round.png" />
+    <Content Include="Contents\images\slider-1.jpg" />
+    <Content Include="Contents\images\slider-2.jpg" />
+    <Content Include="Contents\images\slider-3.jpg" />
+    <Content Include="Contents\images\slider-4.jpg" />
+    <Content Include="Contents\images\slider-5.jpg" />
+    <Content Include="Contents\images\slider-6.jpg" />
+    <Content Include="Contents\images\slider-7.jpg" />
+    <Content Include="Contents\js\aos.js" />
+    <Content Include="Contents\js\bootstrap-datepicker.js" />
+    <Content Include="Contents\js\bootstrap.min.js" />
+    <Content Include="Contents\js\jquery-3.3.1.min.js" />
+    <Content Include="Contents\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="Contents\js\jquery.fancybox.min.js" />
+    <Content Include="Contents\js\jquery.magnific-popup.min.js" />
+    <Content Include="Contents\js\jquery.stellar.min.js" />
+    <Content Include="Contents\js\jquery.timepicker.min.js" />
+    <Content Include="Contents\js\jquery.validate.min.js" />
+    <Content Include="Contents\js\jquery.waypoints.min.js" />
+    <Content Include="Contents\js\main.js" />
+    <Content Include="Contents\js\owl.carousel.min.js" />
+    <Content Include="Contents\js\popper.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Shared\about.html" />
+    <Content Include="Views\Shared\contact.html" />
+    <Content Include="Views\Shared\events.html" />
+    <Content Include="Views\Shared\reservation.html" />
+    <Content Include="Views\Shared\rooms.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -158,6 +233,114 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\MantenedorHabitacion\ListarHabitacion.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contents\css\bootstrap.css.map" />
+    <Content Include="Contents\fonts\.DS_Store" />
+    <Content Include="Contents\fonts\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Contents\fonts\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Contents\fonts\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Contents\fonts\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Contents\fonts\ionicons\.DS_Store" />
+    <Content Include="Contents\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="Contents\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="Contents\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="Contents\images\.DS_Store" />
+    <Content Include="Contents\js\.DS_Store" />
+    <Content Include="Contents\scss\bootstrap-grid.scss" />
+    <Content Include="Contents\scss\bootstrap-reboot.scss" />
+    <Content Include="Contents\scss\bootstrap.scss" />
+    <Content Include="Contents\scss\mixins\_alert.scss" />
+    <Content Include="Contents\scss\mixins\_background-variant.scss" />
+    <Content Include="Contents\scss\mixins\_badge.scss" />
+    <Content Include="Contents\scss\mixins\_border-radius.scss" />
+    <Content Include="Contents\scss\mixins\_box-shadow.scss" />
+    <Content Include="Contents\scss\mixins\_breakpoints.scss" />
+    <Content Include="Contents\scss\mixins\_buttons.scss" />
+    <Content Include="Contents\scss\mixins\_caret.scss" />
+    <Content Include="Contents\scss\mixins\_clearfix.scss" />
+    <Content Include="Contents\scss\mixins\_float.scss" />
+    <Content Include="Contents\scss\mixins\_forms.scss" />
+    <Content Include="Contents\scss\mixins\_gradients.scss" />
+    <Content Include="Contents\scss\mixins\_grid-framework.scss" />
+    <Content Include="Contents\scss\mixins\_grid.scss" />
+    <Content Include="Contents\scss\mixins\_hover.scss" />
+    <Content Include="Contents\scss\mixins\_image.scss" />
+    <Content Include="Contents\scss\mixins\_list-group.scss" />
+    <Content Include="Contents\scss\mixins\_lists.scss" />
+    <Content Include="Contents\scss\mixins\_nav-divider.scss" />
+    <Content Include="Contents\scss\mixins\_pagination.scss" />
+    <Content Include="Contents\scss\mixins\_reset-text.scss" />
+    <Content Include="Contents\scss\mixins\_resize.scss" />
+    <Content Include="Contents\scss\mixins\_screen-reader.scss" />
+    <Content Include="Contents\scss\mixins\_size.scss" />
+    <Content Include="Contents\scss\mixins\_table-row.scss" />
+    <Content Include="Contents\scss\mixins\_text-emphasis.scss" />
+    <Content Include="Contents\scss\mixins\_text-hide.scss" />
+    <Content Include="Contents\scss\mixins\_text-truncate.scss" />
+    <Content Include="Contents\scss\mixins\_transition.scss" />
+    <Content Include="Contents\scss\mixins\_visibility.scss" />
+    <Content Include="Contents\scss\style.scss" />
+    <Content Include="Contents\scss\utilities\_align.scss" />
+    <Content Include="Contents\scss\utilities\_background.scss" />
+    <Content Include="Contents\scss\utilities\_borders.scss" />
+    <Content Include="Contents\scss\utilities\_clearfix.scss" />
+    <Content Include="Contents\scss\utilities\_display.scss" />
+    <Content Include="Contents\scss\utilities\_embed.scss" />
+    <Content Include="Contents\scss\utilities\_flex.scss" />
+    <Content Include="Contents\scss\utilities\_float.scss" />
+    <Content Include="Contents\scss\utilities\_position.scss" />
+    <Content Include="Contents\scss\utilities\_screenreaders.scss" />
+    <Content Include="Contents\scss\utilities\_shadows.scss" />
+    <Content Include="Contents\scss\utilities\_sizing.scss" />
+    <Content Include="Contents\scss\utilities\_spacing.scss" />
+    <Content Include="Contents\scss\utilities\_text.scss" />
+    <Content Include="Contents\scss\utilities\_visibility.scss" />
+    <Content Include="Contents\scss\_alert.scss" />
+    <Content Include="Contents\scss\_badge.scss" />
+    <Content Include="Contents\scss\_breadcrumb.scss" />
+    <Content Include="Contents\scss\_button-group.scss" />
+    <Content Include="Contents\scss\_buttons.scss" />
+    <Content Include="Contents\scss\_card.scss" />
+    <Content Include="Contents\scss\_carousel.scss" />
+    <Content Include="Contents\scss\_close.scss" />
+    <Content Include="Contents\scss\_code.scss" />
+    <Content Include="Contents\scss\_custom-forms.scss" />
+    <Content Include="Contents\scss\_custom.scss" />
+    <Content Include="Contents\scss\_dropdown.scss" />
+    <Content Include="Contents\scss\_forms.scss" />
+    <Content Include="Contents\scss\_functions.scss" />
+    <Content Include="Contents\scss\_grid.scss" />
+    <Content Include="Contents\scss\_images.scss" />
+    <Content Include="Contents\scss\_input-group.scss" />
+    <Content Include="Contents\scss\_jumbotron.scss" />
+    <Content Include="Contents\scss\_list-group.scss" />
+    <Content Include="Contents\scss\_media.scss" />
+    <Content Include="Contents\scss\_mixins.scss" />
+    <Content Include="Contents\scss\_modal.scss" />
+    <Content Include="Contents\scss\_nav.scss" />
+    <Content Include="Contents\scss\_navbar.scss" />
+    <Content Include="Contents\scss\_pagination.scss" />
+    <Content Include="Contents\scss\_popover.scss" />
+    <Content Include="Contents\scss\_print.scss" />
+    <Content Include="Contents\scss\_progress.scss" />
+    <Content Include="Contents\scss\_reboot.scss" />
+    <Content Include="Contents\scss\_root.scss" />
+    <Content Include="Contents\scss\_tables.scss" />
+    <Content Include="Contents\scss\_tooltip.scss" />
+    <Content Include="Contents\scss\_transitions.scss" />
+    <Content Include="Contents\scss\_type.scss" />
+    <Content Include="Contents\scss\_utilities.scss" />
+    <Content Include="Contents\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Inicio\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

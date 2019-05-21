@@ -2,12 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\CapaAccesoDatos",
-    "\\CapaEntidad",
     "\\CapaLogica",
     "\\Maldonado",
-    "\\Maldonado\\Controllers",
-    "\\Maldonado\\Views",
-    "\\Maldonado\\Views\\MantenedorReserva"
+    "\\Maldonado\\Views"
   ],
   "PreviewInSolutionExplorer": false
 }
