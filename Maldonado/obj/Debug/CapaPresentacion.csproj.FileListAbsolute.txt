@@ -267,3 +267,10 @@ C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\System.Web.Opt
 C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\WebGrease.dll
 C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\Antlr3.Runtime.pdb
 C:\Users\USUARIO\source\Repositorios\PROYECTO-DIARS\Maldonado\bin\System.Web.Optimization.xml
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\Antlr3.Runtime.dll
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\System.Web.Optimization.dll
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\WebGrease.dll
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\CapaAccesoDatos.dll
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\Antlr3.Runtime.pdb
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\System.Web.Optimization.xml
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\CapaAccesoDatos.pdb
