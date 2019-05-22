@@ -15,5 +15,25 @@ namespace Maldonado.Controllers
         {
             return View();
         }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Eventos()
+        {
+            return View();
+        }
+
+        public ActionResult Reservaciones()
+        {
+            return View();
+        }
+
+        public ActionResult Habitaciones()
+        {
+            return View();
+        }
     }
 }

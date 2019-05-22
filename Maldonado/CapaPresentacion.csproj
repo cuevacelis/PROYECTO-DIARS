@@ -194,11 +194,15 @@
     <Content Include="Contents\js\owl.carousel.min.js" />
     <Content Include="Contents\js\popper.min.js" />
     <Content Include="Global.asax" />
-    <Content Include="Views\Shared\about.html" />
-    <Content Include="Views\Shared\contact.html" />
-    <Content Include="Views\Shared\events.html" />
-    <Content Include="Views\Shared\reservation.html" />
-    <Content Include="Views\Shared\rooms.html" />
+    <Content Include="Views\Inicio\About.cshtml" />
+    <Content Include="Views\Inicio\Eventos.cshtml" />
+    <Content Include="Views\Inicio\Reservaciones.cshtml" />
+    <Content Include="Views\Inicio\Habitaciones.cshtml" />
+    <None Include="Views\Shared\about.cshtml" />
+    <None Include="Views\Shared\contact.cshtml" />
+    <None Include="Views\Shared\events.cshtml" />
+    <None Include="Views\Shared\reservation.cshtml" />
+    <None Include="Views\Shared\habitaciones.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

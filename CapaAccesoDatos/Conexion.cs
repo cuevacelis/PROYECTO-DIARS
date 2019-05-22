@@ -27,7 +27,7 @@ namespace CapaAccesoDatos
             public SqlConnection Conectar()
             { 
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source=TOSHIBA\\MSSQLSERVER01; initial Catalog=DBHotelDelRey;" + "Integrated Security=true";
+            cn.ConnectionString = "Data Source=SQLSERVER\\SQLEXPRESS; initial Catalog=DBHotelDelRey;" + "Integrated Security=true";
             return cn;
             }
           #endregion metodos
