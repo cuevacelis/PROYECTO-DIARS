@@ -122,6 +122,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MantenedorClienteController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
     <Compile Include="Controllers\MantenedorReservaController.cs" />
@@ -193,11 +194,15 @@
     <Content Include="Contents\js\main.js" />
     <Content Include="Contents\js\owl.carousel.min.js" />
     <Content Include="Contents\js\popper.min.js" />
+    <Content Include="Contents\Login\css\style.css" />
+    <Content Include="Contents\Login\js\index.js" />
     <Content Include="Global.asax" />
     <Content Include="Views\Inicio\About.cshtml" />
     <Content Include="Views\Inicio\Eventos.cshtml" />
     <Content Include="Views\Inicio\Reservaciones.cshtml" />
     <Content Include="Views\Inicio\Habitaciones.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Contents\Login\scss\style.scss" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

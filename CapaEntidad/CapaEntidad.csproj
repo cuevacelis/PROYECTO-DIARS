@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="entCliente.cs" />
     <Compile Include="entHabitacion.cs" />
+    <Compile Include="entUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="entReserva.cs" />
     <Compile Include="entTipoCliente.cs" />
