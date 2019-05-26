@@ -28,7 +28,7 @@
     <header class="site-header js-site-header">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="/">Pagina Principal</a></div>
+                <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="/"></a></div>
                 <div class="col-6 col-lg-8">
 
                     <div class="site-menu-toggle js-site-menu-toggle" data-aos="fade">
@@ -49,6 +49,7 @@
                                             <li>@Html.ActionLink("Eventos", "Eventos", "Inicio")</li>
                                             <!--<li><a href="Inicio/Contactos">Contactos</a></li>-->
                                             <li>@Html.ActionLink("Reservaciones", "Reservaciones", "Inicio")</li>
+                                            <li>@Html.ActionLink("Login","Login","Login")</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -63,7 +64,7 @@
 
     @{
         string urlObtenida = HttpContext.Current.Request.Url.AbsoluteUri;
-        string rutaPrincipal = "http://localhost:56998/";
+        string rutaPrincipal = "http://localhost:56998/Inicio/Inidex";
 
         if (urlObtenida.Equals(rutaPrincipal))
         {
@@ -71,7 +72,7 @@
                 <div class="container">
                     <div class="row site-hero-inner justify-content-center align-items-center">
                         <div class="col-md-10 text-center" data-aos="fade-up">
-                            <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To 5 <span class="fa fa-star text-primary"></span>Hotel</span>
+                            <span class="custom-caption text-uppercase text-white d-block  mb-3">Bienvenido al Hotel 5</span><span class="fa fa-star text-primary"></span>
                             <h1 class="heading">Hotel la Posada del Rey</h1>
                         </div>
                     </div>
