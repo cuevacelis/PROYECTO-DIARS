@@ -155,7 +155,9 @@
     <Content Include="Contents\fonts\ionicons\css\ionicons.min.css" />
     <Content Include="Contents\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="Contents\images\about_feature_image.png" />
+    <Content Include="Contents\images\Background_Fondo.jpg" />
     <Content Include="Contents\images\food-1.jpg" />
+    <Content Include="Contents\images\Habitaciones.jpg" />
     <Content Include="Contents\images\hero_1.jpg" />
     <Content Include="Contents\images\hero_2.jpg" />
     <Content Include="Contents\images\hero_3.jpg" />
