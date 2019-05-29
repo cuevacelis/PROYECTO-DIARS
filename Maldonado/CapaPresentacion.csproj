@@ -197,6 +197,7 @@
     <Content Include="Contents\js\owl.carousel.min.js" />
     <Content Include="Contents\js\popper.min.js" />
     <Content Include="Contents\Login\css\style.css" />
+    <Content Include="Contents\Login\images\D-Frag-anime-girls-Takao-D-Frag-anime-brunette-feet-1369059-wallhere.com.jpg" />
     <Content Include="Contents\Login\js\index.js" />
     <Content Include="Global.asax" />
     <Content Include="Views\Inicio\About.cshtml" />
