@@ -13,7 +13,7 @@ namespace Maldonado.Controllers
         //
         // GET: /Login/
 
-        public ActionResult Login()
+        public ActionResult Index()
         {
             Session["usuario"] = null;
             return View();

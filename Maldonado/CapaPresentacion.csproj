@@ -204,7 +204,7 @@
     <Content Include="Views\Inicio\Eventos.cshtml" />
     <Content Include="Views\Inicio\Reservaciones.cshtml" />
     <Content Include="Views\Inicio\Habitaciones.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Contents\Login\scss\style.scss" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config" />
