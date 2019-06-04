@@ -58,7 +58,7 @@ namespace CapaAccesoDatos
                     Reserva.idHabitacion = Habitacion;
 
                     Reserva.fechaIncioReserva = Convert.ToDateTime(dr["FechaInicioReserva"]);
-                    Reserva.fechaIncioReserva = Convert.ToDateTime(dr["FechaFinReserva"]);
+                    Reserva.fechaFinReserva = Convert.ToDateTime(dr["FechaFinReserva"]);
                     lista.Add(Reserva);
                 }
 

@@ -1,10 +1,9 @@
 ﻿@model CapaEntidad.entReserva
 
 @{
-    ViewBag.Title = "InsertarReserva";
+    ViewBag.Title = "Insertar Reserva";
 }
 
-<h2>InsertarReserva</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -13,27 +12,21 @@
 <fieldset>
     <legend>entReserva</legend>
 
-    <div class="editor-label">
-        @Html.LabelFor(model => model.idReserva)
-    </div>
-    <div class="editor-field">
-        @Html.EditorFor(model => model.idReserva)
-        @Html.ValidationMessageFor(model => model.idReserva)
-    </div>
+   
 
     <div class="editor-label">
-        @Html.LabelFor(model => model.fechaIncioReserva)
+        Fecha de Inicio
     </div>
     <div class="editor-field">
-        @Html.EditorFor(model => model.fechaIncioReserva)
+        @Html.TextBoxFor(model => model.fechaIncioReserva, new { @class = "form-control", @id = "checkin_date" })
         @Html.ValidationMessageFor(model => model.fechaIncioReserva)
     </div>
 
     <div class="editor-label">
-        @Html.LabelFor(model => model.fechaFinReserva)
+        Fecha de Fin
     </div>
     <div class="editor-field">
-        @Html.EditorFor(model => model.fechaFinReserva)
+        @Html.TextBoxFor(model => model.fechaFinReserva, new { @class = "form-control", @id = "checkin_date" })
         @Html.ValidationMessageFor(model => model.fechaFinReserva)
     </div>
 
