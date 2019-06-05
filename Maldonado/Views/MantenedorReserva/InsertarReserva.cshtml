@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Insertar Reserva";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
@@ -31,14 +32,14 @@
     </div>
 
     <div class="form-group">
-        Cliente:
+        Nombre de Cliente:
         <div class="col-md-10">
             @Html.DropDownList("cboCliente", (SelectList)ViewBag.listaCliente, "<seleccionar>")
         </div>
     </div>
 
     <div class="form-group">
-        Habitacion:
+        N° de Habitacion:
         <div class="col-md-10">
             @Html.DropDownList("cboHabitacion", (SelectList)ViewBag.listaHabitacion, "<seleccionar>")
         </div>
@@ -53,7 +54,3 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
-@*@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}*@

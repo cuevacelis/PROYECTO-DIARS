@@ -207,6 +207,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Contents\Login\scss\style.scss" />
     <Content Include="Views\MantenedorCliente\ListarCliente.cshtml" />
+    <Content Include="Views\MantenedorCliente\InsertarCliente.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

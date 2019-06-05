@@ -66,6 +66,34 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return lista;
         }
+
+        public Boolean InsertarCliente(entCliente C)
+        {
+            SqlCommand cmd = null;
+            Boolean insertar = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInsertarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmstrNombre",C.nombreCliente);
+                cmd.Parameters.AddWithValue("@prmstrApellido",C.apellidoCliente);
+                cmd.Parameters.AddWithValue("@prmIdDni", C.DNI);
+                cmd.Parameters.AddWithValue("@prmIdTelefono", C.telefono);
+                cmd.Parameters.AddWithValue("@prmbitEstado", C.estCliente);
+                cmd.Parameters.AddWithValue("@prmIdTipoCliente", C.idTipoCliente.idTipoCliente);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                { insertar = true; }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return insertar;
+        }
         #endregion metodos
     }
 

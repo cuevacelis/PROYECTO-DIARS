@@ -35,17 +35,17 @@ namespace CapaLogica
                 throw e;
             }
         }
-        /*
+        
         public Boolean InsertarCliente(entCliente a)
         {
             try
             {
-                return datCliente.Instancia.InsertarProducto(a);
+                return datCliente.Instancia.InsertarCliente(a);
             }
             catch (Exception e) { throw e; }
 
 
-        }*/
+        }
         #endregion metodos
     }
 }

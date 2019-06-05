@@ -1,0 +1,73 @@
+﻿@model CapaEntidad.entCliente
+
+@{
+    ViewBag.Title = "Insertar Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>entCliente</legend>
+
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nombreCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nombreCliente)
+            @Html.ValidationMessageFor(model => model.nombreCliente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.apellidoCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.apellidoCliente)
+            @Html.ValidationMessageFor(model => model.apellidoCliente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DNI)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DNI)
+            @Html.ValidationMessageFor(model => model.DNI)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.telefono)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.telefono)
+            @Html.ValidationMessageFor(model => model.telefono)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.estCliente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.estCliente)
+            @Html.ValidationMessageFor(model => model.estCliente)
+        </div>
+
+
+        <div class="form-group">
+        Tipo de Cliente:
+            <div class="col-md-10">
+                @Html.DropDownList("cboTipoCliente", (SelectList)ViewBag.listaTipoCliente, "<seleccionar>")
+            </div>
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
