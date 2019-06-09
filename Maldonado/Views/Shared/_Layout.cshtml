@@ -4,7 +4,7 @@
     @using System.Web.Optimization
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hotel Posada del Rey - @ViewBag.Title</title>
+    <title>Hotel La Posada del Rey - @ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -13,12 +13,14 @@
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
     -->
 
-    <link rel="stylesheet" href="~/Contents/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Scripts/jquery-3.0.0.min.js">
+    <link rel="stylesheet" href="~/Contents/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/Contents/css/jquery.timepicker.css">
     <link rel="stylesheet" href="~/Contents/css/animate.css">
     <link rel="stylesheet" href="~/Contents/css/owl.carousel.min.css">
     <link rel="stylesheet" href="~/Contents/css/aos.css">
-    <link rel="stylesheet" href="~/Contents/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="~/Contents/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="~/Contents/js/aos.js">
     <link rel="stylesheet" href="~/Contents/css/fancybox.min.css">
 
     <link rel="stylesheet" href="~/Contents/fonts/ionicons/css/ionicons.min.css">
@@ -28,10 +30,11 @@
     @Styles.Render("~/bundles/css")
 </head>
 <body>
+
     <header class="site-header js-site-header">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="/">Pagina Principal</a></div>
+                <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="/"></a></div>
                 <div class="col-6 col-lg-8">
 
                     <div class="site-menu-toggle js-site-menu-toggle" data-aos="fade">
@@ -46,16 +49,16 @@
                                 <div class="row full-height align-items-center">
                                     <div class="col-md-6 mx-auto">
                                         <ul class="list-unstyled menu">
-                                            <li class="active">@Html.ActionLink("Home", "Index", "Inicio")</li>
-                                            <li>@Html.ActionLink("Login", "Index", "Login")</li>
-                                            <li>@Html.ActionLink("Habitaciones", "Habitaciones", "Inicio")</li>
-                                            <li>@Html.ActionLink("Acerca De", "About", "Inicio")</li>
-                                            <li>@Html.ActionLink("Eventos", "Eventos", "Inicio")</li>
+                                            <li class="nav-item active">@Html.ActionLink("Home", "Index", "Inicio")</li>
+                                            <li class="nav-item">@Html.ActionLink("Login", "Index", "Login")</li>
+                                            <li class="nav-item">@Html.ActionLink("Habitaciones", "Habitaciones", "Inicio")</li>
+                                            <li class="nav-item">@Html.ActionLink("Acerca De", "About", "Inicio")</li>
+                                            <li class="nav-item">@Html.ActionLink("Eventos", "Eventos", "Inicio")</li>
                                             <!--<li><a href="Inicio/Contactos">Contactos</a></li>-->
-                                            <li>@Html.ActionLink("Reservaciones", "Reservaciones", "Inicio")</li>
+                                            <li class="nav-item">@Html.ActionLink("Reservaciones", "Reservaciones", "Inicio")</li>
 
-                                            <li>@Html.ActionLink("Admin Reservas", "Index", "MantenedorReserva")</li>
-                                            <li>@Html.ActionLink("Admin Clientes", "Index", "MantenedorCliente")</li>
+                                            <li class="nav-item">@Html.ActionLink("Admin Reservas", "Index", "MantenedorReserva")</li>
+                                            <li class="nav-item">@Html.ActionLink("Admin Clientes", "Index", "MantenedorCliente")</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -122,16 +125,14 @@
             <div class="row mb-4">
                 <div class="col-md-3 mb-5">
                     <ul class="list-unstyled link">
-                        <li><a href="#">About Us</a></li>
+                        <li>@Html.ActionLink("Acerca De", "About", "Inicio")</li>
                         <li><a href="#">Terms &amp; Conditions</a></li>
                         <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Rooms</a></li>
+                        <li>@Html.ActionLink("Habitaciones", "Habitaciones", "Inicio")</li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-5">
                     <ul class="list-unstyled link">
-                        <li><a href="#">The Rooms &amp; Suites</a></li>
-                        <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Restaurant</a></li>
                     </ul>
@@ -160,11 +161,11 @@
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
                 <p class="col-md-6 text-right social">
-                    <a href="#"><span class="fa fa-tripadvisor"></span></a>
-                    <a href="#"><span class="fa fa-facebook"></span></a>
-                    <a href="#"><span class="fa fa-twitter"></span></a>
-                    <a href="#"><span class="fa fa-linkedin"></span></a>
-                    <a href="#"><span class="fa fa-vimeo"></span></a>
+                    <a href="https://www.tripadvisor.com.pe/Hotel_Review-g298444-d1948288-Reviews-Hotel_La_Posada_del_Rey-Trujillo_La_Libertad_Region.html" target="_blank"><span class="fa fa-tripadvisor"></span></a>
+                    <a href="https://web.facebook.com/laposadadelrey/" target="_blank"><span class="fa fa-facebook"></span></a>
+                    <a href="https://twitter.com/h_posadadelrey" target="_blank"><span class="fa fa-twitter"></span></a>
+                    <a href="https://es.linkedin.com/company/hotel-la-posada-del-rey" target="_blank"><span class="fa fa-linkedin"></span></a>
+                    <a href="https://www.youtube.com/channel/UCBO0P2iOsb7WUXS-iRCm98g" target="_blank"><span class="ion-social-youtube"></span></a>
                 </p>
             </div>
         </div>
