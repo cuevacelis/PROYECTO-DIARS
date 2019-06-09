@@ -11,6 +11,7 @@ namespace CapaEntidad
         public int idUsuario { get; set; }
         public entCliente Cliente { get; set; }
         public String nomUsuario { get; set; }
+        public String correo { get; set; }
         public String contrasenia { get; set; }
         public Boolean estUsuario { get; set; }
         public DateTime fecCreacion { get; set; }

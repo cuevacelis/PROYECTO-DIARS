@@ -12,14 +12,15 @@ namespace Maldonado.Controllers
     {
         //
         // GET: /Login/
-
+        [HttpGet]
         public ActionResult Index()
         {
             Session["usuario"] = null;
             return View();
         }
 
-        public ActionResult VerificarAcceso(FormCollection frm)
+        [HttpPost]
+        public ActionResult Index(FormCollection frm)
         {
             try
             {
@@ -29,17 +30,18 @@ namespace Maldonado.Controllers
                 entUsuario u = logUsuario.Instancia.VerificarAcceso(txtUsuario, txtPassword);
 
                 Session["usuario"] = u;
-                return RedirectToAction("Inicio", "Index");
+                return RedirectToAction("Index", "Inicio");
             }
             catch (ApplicationException e)
             {
                 ViewBag.mensaje = e.Message;
-                return RedirectToAction("Login", "Login");
+                TempData["Mensaje"] = "Usuario o Contraseña erroneo";
+                return RedirectToAction("Index", "Login");
             }
             catch (Exception e)
             {
                 ViewBag.mensaje = e.Message;
-                return RedirectToAction("Login", "Login");
+                return RedirectToAction("Index", "Login");
             }
         }
     }

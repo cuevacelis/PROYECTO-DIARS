@@ -37,10 +37,10 @@ namespace CapaLogica
         {
             try
             {
-                if (DateTime.Now.Hour > 23)
+                /*if (DateTime.Now.Hour > 23)
                 {
                     throw new ApplicationException("No puede ingresar a esta hora");
-                }
+                }*/
                 entUsuario u = datUsuario.Instancia.VerificarAcceso(Usuario, Password);
                 if (u != null)
                 {
