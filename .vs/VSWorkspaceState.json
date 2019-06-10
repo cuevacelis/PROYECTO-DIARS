@@ -3,9 +3,10 @@
     "",
     "\\Maldonado",
     "\\Maldonado\\Contents",
-    "\\Maldonado\\Contents\\LoginInteractivo",
-    "\\Maldonado\\Contents\\LoginInteractivo\\css"
+    "\\Maldonado\\Contents\\sweetalert2",
+    "\\Maldonado\\Views",
+    "\\Maldonado\\Views\\Login"
   ],
-  "SelectedNode": "\\Maldonado\\Contents\\LoginInteractivo\\css\\style.css",
+  "SelectedNode": "\\Maldonado\\Views\\Login\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

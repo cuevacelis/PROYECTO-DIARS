@@ -38,8 +38,10 @@ namespace CapaAccesoDatos
                     U.idUsuario = Convert.ToInt16(dr["idUsuario"]);
                     U.nomUsuario = dr["nomUsuario"].ToString();
                     U.correo = dr["correo"].ToString();
+                    U.correo = dr["correo"].ToString();
                     U.estUsuario = Convert.ToBoolean(dr["estUsuario"]);
                     U.fecCreacion = Convert.ToDateTime(dr["fecCreacion"]);
+                    U.tipo = Convert.ToBoolean(dr["tipo"]);
 
                     entCliente C = new entCliente();
                     C.idCliente = Convert.ToInt16(dr["idCliente"]);
@@ -78,16 +80,18 @@ namespace CapaAccesoDatos
                 if (dr.Read())
                 {
                     u = new entUsuario();
-                    u.idUsuario = Convert.ToInt16(dr["idUsuario"]);
+                    u.idUsuario = Convert.ToInt32(dr["idUsuario"]);
                     u.fecCreacion = Convert.ToDateTime(dr["FecCreacion"]);
                     u.nomUsuario = dr["nomUsuario"].ToString();
+                    u.correo = dr["correo"].ToString();
                     u.estUsuario = Convert.ToBoolean(dr["estUsuario"]);
+                    u.tipo = Convert.ToBoolean(dr["tipo"]);
 
                     entCliente C = new entCliente();
                     C.nombreCliente = dr["NombreCliente"].ToString();
                     C.apellidoCliente = dr["ApellidoCliente"].ToString();
                     C.DNI = dr["Dni"].ToString();
-                    C.telefono = Convert.ToInt16(dr["Telefono"]);
+                    C.telefono = Convert.ToInt32(dr["Telefono"]);
                     C.estCliente = Convert.ToBoolean(dr["EstCliente"]);
                     u.Cliente = C;
                 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using System.Web.Mvc;
 using CapaEntidad;
 using CapaLogica;
@@ -28,20 +30,36 @@ namespace Maldonado.Controllers
                 String txtPassword = frm["txtPassword"];
 
                 entUsuario u = logUsuario.Instancia.VerificarAcceso(txtUsuario, txtPassword);
-
+                
                 Session["usuario"] = u;
-                return RedirectToAction("Index", "Inicio");
+                TempData["MensajeDeValidacion"] = "success";
+
+                if (u.tipo == true)//Adminitradores
+                {
+                    return RedirectToAction("Administradores", "Inicio");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Inicio");
+                }
+
+                
+
+
             }
             catch (ApplicationException e)
             {
                 ViewBag.mensaje = e.Message;
-                TempData["Mensaje"] = "Usuario o Contraseña erroneo";
+                TempData["MensajeDeValidacion"] = "error";
+
                 return RedirectToAction("Index", "Login");
             }
             catch (Exception e)
             {
                 ViewBag.mensaje = e.Message;
-                return RedirectToAction("Index", "Login");
+                TempData["MensajeDeValidacion"] = "errorCodigo";
+
+                return ViewBag(e);
             }
         }
     }

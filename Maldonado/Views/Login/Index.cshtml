@@ -11,21 +11,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Animated</title>
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">-->
     <link rel="stylesheet" href="~/Contents/LoginInteractivo/css/style.css ">
     <link rel="stylesheet" href="~/Contents/LoginInteractivo/css/reset.min.css">
-    
-    <link rel="stylesheet" href="~/Contents/sweetalert2/">
+
+    <script type="text/javascript" src="~/Contents/sweetalert2/sweetalert2.all.js"></script>
+    <link rel="stylesheet" href="~/Contents/sweetalert2/sweetalert2.css">
+
     <link rel="stylesheet" href="~/Contents/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="~/Scripts/jquery-3.0.0.min.js">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.0.0.min.js"></script>
 </head>
     
 <body background="~/Contents/images/hero_4.jpg">
-    <div class="alert alert-danger">
-        <p class="alert-link">@TempData["Mensaje"]</p>
-    </div>
-    <span class="success sweet-alert"> @TempData["Mensaje"]</span>
 
     <form method="post">
         <div class="svgContainer">
@@ -212,11 +208,41 @@
     </form>
 
 
-    <!--
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
-    <script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
-    -->
+
+    <!--VALIDACION POR MEDIO DE JS-->
+
+    @if (@TempData["MensajeDeValidacion"] != null)
+    {
+        if (@TempData["MensajeDeValidacion"].Equals("error"))
+        {
+            <script type="text/javascript">
+                Swal.fire({
+                    type: 'error',
+                    title: 'Ohhh noo..',
+                    text: 'Datos incorrectos!!'
+                })
+            </script>
+        }
+        else
+        {
+            if (@TempData["MensajeDeValidacion"].Equals("errorCodigo"))
+            {
+                <script type="text/javascript">
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Error Codigo',
+                        text: 'falla del sistema :('
+                    })
+                </script>
+            }
+        }
+    }
+
+
+
+
+
+
     <script src="~/Contents/LoginInteractivo/js/TweenMax.js"></script>
     <script src="~/Contents/LoginInteractivo/js/index.js"></script>
     <script src="~/Contents/LoginInteractivo/js/SVGplugin.js"></script>

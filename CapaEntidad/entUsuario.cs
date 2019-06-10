@@ -15,5 +15,6 @@ namespace CapaEntidad
         public String contrasenia { get; set; }
         public Boolean estUsuario { get; set; }
         public DateTime fecCreacion { get; set; }
+        public Boolean tipo { get; set; }
     }
 }

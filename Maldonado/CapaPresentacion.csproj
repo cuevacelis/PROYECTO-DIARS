@@ -262,9 +262,9 @@
     <Content Include="Contents\Login\css\style.css" />
     <Content Include="Contents\Login\images\D-Frag-anime-girls-Takao-D-Frag-anime-brunette-feet-1369059-wallhere.com.jpg" />
     <Content Include="Contents\Login\js\index.js" />
-    <Content Include="Contents\sweetalert2\sweetalert2.all.js.txt" />
-    <Content Include="Contents\sweetalert2\sweetalert2.all.min.js.txt" />
-    <Content Include="Contents\sweetalert2\sweetalert2.css.txt" />
+    <Content Include="Contents\sweetalert2\sweetalert2.all.js" />
+    <Content Include="Contents\sweetalert2\sweetalert2.all.min.js" />
+    <Content Include="Contents\sweetalert2\sweetalert2.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
