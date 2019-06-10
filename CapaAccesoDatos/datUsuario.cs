@@ -51,7 +51,7 @@ namespace CapaAccesoDatos
                     C.telefono = Convert.ToInt16(dr["Telefono"]);
                     C.estCliente = Convert.ToBoolean(dr["EstCliente"]);
 
-                    U.Cliente = C;
+                    U.idCliente = C;
                     lista.Add(U);
                 }
             }
@@ -93,7 +93,7 @@ namespace CapaAccesoDatos
                     C.DNI = dr["Dni"].ToString();
                     C.telefono = Convert.ToInt32(dr["Telefono"]);
                     C.estCliente = Convert.ToBoolean(dr["EstCliente"]);
-                    u.Cliente = C;
+                    u.idCliente = C;
                 }
             }
             catch (Exception e)

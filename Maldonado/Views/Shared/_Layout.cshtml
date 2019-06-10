@@ -1,4 +1,9 @@
-﻿<!DOCTYPE HTML>
+﻿@using CapaEntidad
+@{
+    entUsuario u = (entUsuario)Session["usuario"];
+}
+
+<!DOCTYPE HTML>
 <html>
 <head>
     @using System.Web.Optimization
@@ -9,9 +14,11 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
+
     <!--
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
     -->
+
     <link rel="stylesheet" href="~/Contents/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="~/Contents/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="~/Contents/css/jquery.timepicker.css">
@@ -25,10 +32,9 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="~/Contents/css/style.css">
 
-    <script type="text/javascript" src="~/Contents/js/aos.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery-3.0.0.min.js"></script>
     @Styles.Render("~/bundles/css")
 </head>
+
 <body>
 
     <header class="site-header js-site-header">
@@ -50,15 +56,34 @@
                                     <div class="col-md-6 mx-auto">
                                         <ul class="list-unstyled menu">
                                             <li class="nav-item active">@Html.ActionLink("Home", "Index", "Inicio")</li>
-                                            <li class="nav-item">@Html.ActionLink("Login", "Index", "Login")</li>
-                                            <li class="nav-item">@Html.ActionLink("Habitaciones", "Habitaciones", "Inicio")</li>
-                                            <li class="nav-item">@Html.ActionLink("Acerca De", "About", "Inicio")</li>
-                                            <li class="nav-item">@Html.ActionLink("Eventos", "Eventos", "Inicio")</li>
-                                            <!--<li><a href="Inicio/Contactos">Contactos</a></li>-->
-                                            <li class="nav-item">@Html.ActionLink("Reservaciones", "Reservaciones", "Inicio")</li>
+                                            @if (u != null)   //USUARIO INICIO SESION
+                                            {
+                                                if (u.tipo == true) //Tipo Administrador
+                                                {
+                                                    <li class="nav-item">@Html.ActionLink("Mi Cuenta(Admin)", "Index", "MenuIntranet")</li>
+                                                    <li class="nav-item">@Html.ActionLink("Admin Reservas", "Index", "MantenedorReserva")</li>
+                                                    <li class="nav-item">@Html.ActionLink("Admin Clientes", "Index", "MantenedorCliente")</li>
+                                                }
+                                                else //Tipo Clientes
+                                                {
+                                                    <li class="nav-item">@Html.ActionLink("Mi Cuenta", "Clientes", "MenuIntranet")</li>
+                                                }
+                                                <li class="nav-item">@Html.ActionLink("Habitaciones", "Habitaciones", "Inicio")</li>
+                                                <li class="nav-item">@Html.ActionLink("Acerca De", "About", "Inicio")</li>
+                                                <li class="nav-item">@Html.ActionLink("Eventos", "Eventos", "Inicio")</li>
+                                                <li class="nav-item">@Html.ActionLink("Reservaciones", "Reservaciones", "Inicio")</li>
 
-                                            <li class="nav-item">@Html.ActionLink("Admin Reservas", "Index", "MantenedorReserva")</li>
-                                            <li class="nav-item">@Html.ActionLink("Admin Clientes", "Index", "MantenedorCliente")</li>
+                                                <a href="/Login/Logout" class="btn btn-primary btn-lg active" role="button">Terminar Sesion</a>
+                                                
+                                            }
+                                            else
+                                            {
+                                                <li class="nav-item">@Html.ActionLink("Login", "Index", "Login")</li>
+                                                <li class="nav-item">@Html.ActionLink("Habitaciones", "Habitaciones", "Inicio")</li>
+                                                <li class="nav-item">@Html.ActionLink("Acerca De", "About", "Inicio")</li>
+                                                <li class="nav-item">@Html.ActionLink("Eventos", "Eventos", "Inicio")</li>
+                                                <li class="nav-item">@Html.ActionLink("Reservaciones", "Reservaciones", "Inicio")</li>
+                                            }
                                         </ul>
                                     </div>
                                 </div>
@@ -70,14 +95,13 @@
         </div>
     </header>
 
-
     @{
         string urlObtenida = HttpContext.Current.Request.Url.AbsoluteUri;
         string rutaPrincipal = "http://localhost:56998/";
 
         if (urlObtenida.Equals(rutaPrincipal))
         {
-            <section class="site-hero overlay" style="background-image: url(/Contents/images/Background_Fondo.jpg)" data-stellar-background-ratio="0.5">
+            <section class="site-hero overlay " style="background-image: url(/Contents/images/Background_Fondo.jpg)" data-stellar-background-ratio="0.5">
                 <div class="container">
                     <div class="row site-hero-inner justify-content-center align-items-center">
                         <div class="col-md-10 text-center" data-aos="fade-up">
@@ -170,6 +194,9 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="~/Contents/js/aos.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.0.0.min.js"></script>
     @Scripts.Render("~/bundles/js")
 </body>
 </html>

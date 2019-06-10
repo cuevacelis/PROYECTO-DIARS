@@ -9,7 +9,7 @@ namespace CapaEntidad
     public class entUsuario
     {
         public int idUsuario { get; set; }
-        public entCliente Cliente { get; set; }
+        public entCliente idCliente { get; set; }
         public String nomUsuario { get; set; }
         public String correo { get; set; }
         public String contrasenia { get; set; }

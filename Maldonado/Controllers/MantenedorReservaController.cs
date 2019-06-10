@@ -21,23 +21,55 @@ namespace Maldonado.Controllers
         [HttpGet]
         public ActionResult ListarReservas()
         {
-            List<entReserva> lista = logReserva.Instancia.ListarReservas();
-            ViewBag.lista = lista;
-            return View(lista);
+            try
+            {
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.tipo == true)
+                {
+                    List<entReserva> lista = logReserva.Instancia.ListarReservas();
+                    ViewBag.lista = lista;
+                    return View(lista);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Login");
+            }
         }
 
         [HttpGet]
         public ActionResult InsertarReserva()
         {
-            List<entCliente> listarCliente = logCliente.Instancia.ListarCliente();
-            var lsCliente = new SelectList(listarCliente, "idCliente", "nombreCliente");
+            try
+            {
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.tipo == true)
+                {
+                    List<entCliente> listarCliente = logCliente.Instancia.ListarCliente();
+                    var lsCliente = new SelectList(listarCliente, "idCliente", "nombreCliente");
 
-            List<entHabitacion> listarHabitacion = logHabitacion.Instancia.ListarHabitacion();
-            var lsHabitacion = new SelectList(listarHabitacion, "idHabitacion", "numeroHabitacion");
+                    List<entHabitacion> listarHabitacion = logHabitacion.Instancia.ListarHabitacion();
+                    var lsHabitacion = new SelectList(listarHabitacion, "idHabitacion", "numeroHabitacion");
 
-            ViewBag.ListaCliente = lsCliente;
-            ViewBag.listaHabitacion = lsHabitacion;
-            return View();
+                    ViewBag.ListaCliente = lsCliente;
+                    ViewBag.listaHabitacion = lsHabitacion;
+                    return View();
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Login");
+            }
         }
 
         [HttpPost]
@@ -45,22 +77,32 @@ namespace Maldonado.Controllers
         {
             try
             {
-                R.idCliente = new entCliente();
-                R.idHabitacion = new entHabitacion();
-
-                R.idCliente.idCliente = Convert.ToInt32(frm["cboCliente"]);
-                R.idHabitacion.idHabitacion = Convert.ToInt32(frm["cboHabitacion"]);
-
-                Boolean inserta = logReserva.Instancia.InsertarReserva(R);
-
-                if (inserta)
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.tipo == true)
                 {
-                    return RedirectToAction("ListarReservas");
+                    R.idCliente = new entCliente();
+                    R.idHabitacion = new entHabitacion();
+
+                    R.idCliente.idCliente = Convert.ToInt32(frm["cboCliente"]);
+                    R.idHabitacion.idHabitacion = Convert.ToInt32(frm["cboHabitacion"]);
+
+                    Boolean inserta = logReserva.Instancia.InsertarReserva(R);
+
+                    if (inserta)
+                    {
+                        return RedirectToAction("ListarReservas");
+                    }
+                    else
+                    {
+                        return View(R);
+                    }
                 }
                 else
                 {
-                    return View(R);
+                    return RedirectToAction("Index", "Login");
                 }
+                
             }
             catch (ApplicationException ex)
             {

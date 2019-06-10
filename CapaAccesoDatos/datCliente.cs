@@ -94,8 +94,79 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return insertar;
         }
+
+        public Boolean EditarCliente(entCliente C)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmintidCliente", C.idCliente);
+                cmd.Parameters.AddWithValue("@prmstrNombre", C.nombreCliente);
+                cmd.Parameters.AddWithValue("@prmstrApellido", C.apellidoCliente);
+                cmd.Parameters.AddWithValue("@prmIdDni", C.DNI);
+                cmd.Parameters.AddWithValue("@prmIdTelefono", C.telefono);
+                cmd.Parameters.AddWithValue("@prmbitEstado", C.estCliente);
+                cmd.Parameters.AddWithValue("@prmIdTipoCliente", C.idTipoCliente.idTipoCliente);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i >= 0)
+                { edita = true; }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
+        }
+
+        public entCliente BuscarCliente(int idCliente)
+        {
+            SqlCommand cmd = null;
+            entCliente c = null;
+            entTipoCliente tc = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spBuscarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmintidCliente", idCliente);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    c = new entCliente();
+                    tc = new entTipoCliente();
+
+                    c.idCliente = Convert.ToInt32(dr["IdCliente"]);
+
+                    tc.idTipoCliente = Convert.ToInt32(dr["idTipoCliente"]);
+                    //tc.desTipoCliente = dr["DesTipoCliente"].ToString();
+                    c.idTipoCliente = tc;
+
+                    c.nombreCliente = Convert.ToString(dr["NombreCliente"]);
+                    c.apellidoCliente =Convert.ToString(dr["ApellidoCliente"]);
+                    c.DNI = Convert.ToString(dr["Dni"]);
+                    c.telefono = Convert.ToInt32(dr["Telefono"]);
+                    c.estCliente = Convert.ToBoolean(dr["EstCliente"]);
+
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return c;
+        }
         #endregion metodos
     }
-
 }
+
+
 

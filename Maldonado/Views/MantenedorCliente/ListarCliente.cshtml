@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Listar Clientes";
+    ViewBag.image = "/Contents/images/security.png";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,7 +12,7 @@
 </p>
 <table class="table">
 
-    <thead class="thead-light">
+    <thead class="thead-dark">
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
@@ -51,7 +52,7 @@
                 @Html.DisplayFor(modelItem => item.idTipoCliente.desTipoCliente)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Edit", "EditarCliente", new { idCliente = @item.idCliente }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>

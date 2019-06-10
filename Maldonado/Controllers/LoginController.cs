@@ -36,15 +36,12 @@ namespace Maldonado.Controllers
 
                 if (u.tipo == true)//Adminitradores
                 {
-                    return RedirectToAction("Administradores", "Inicio");
+                    return RedirectToAction("Index", "MenuIntranet");
                 }
                 else
                 {
                     return RedirectToAction("Index", "Inicio");
                 }
-
-                
-
 
             }
             catch (ApplicationException e)
@@ -61,6 +58,11 @@ namespace Maldonado.Controllers
 
                 return ViewBag(e);
             }
+        }
+        public ActionResult Logout()
+        {
+            Session.RemoveAll();
+            return RedirectToAction("Index", "Inicio");
         }
     }
 }

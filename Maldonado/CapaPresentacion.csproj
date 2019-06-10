@@ -129,6 +129,7 @@
     <Compile Include="Controllers\MantenedorClienteController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
     <Compile Include="Controllers\MantenedorReservaController.cs" />
+    <Compile Include="Controllers\MenuIntranetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -336,6 +337,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\MenuIntranet\Index.cshtml" />
+    <Content Include="Views\MantenedorCliente\EditarCliente.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

@@ -1,0 +1,92 @@
+﻿@model CapaEntidad.entCliente
+
+@{
+    ViewBag.Title = "Editar Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm()) {
+
+    @Html.AntiForgeryToken()
+    
+
+        <div class="form-horizontal">
+            <h4 class="display-4">Editar Cliente</h4>
+            @Html.ValidationSummary(true)
+
+
+            <div class="form-horizontal">
+                @Html.LabelFor(model => model.idCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.idCliente)
+                @Html.ValidationMessageFor(model => model.idCliente)
+            </div>
+
+            <div class="form-horizontal">
+                @Html.LabelFor(model => model.nombreCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nombreCliente)
+                @Html.ValidationMessageFor(model => model.nombreCliente)
+            </div>
+
+            <div class="form-horizontal">
+                @Html.LabelFor(model => model.apellidoCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.apellidoCliente)
+                @Html.ValidationMessageFor(model => model.apellidoCliente)
+            </div>
+
+            <div class="form-horizontal">
+                @Html.LabelFor(model => model.DNI, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DNI)
+                @Html.ValidationMessageFor(model => model.DNI)
+            </div>
+
+            <div class="form-horizontal">
+                @Html.LabelFor(model => model.telefono, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.telefono)
+                @Html.ValidationMessageFor(model => model.telefono)
+            </div>
+
+            <div class="form-horizontal">
+                @Html.LabelFor(model => model.estCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.estCliente)
+                @Html.ValidationMessageFor(model => model.estCliente)
+            </div>
+
+            <div class="form-horizontal">
+                <p class="control-label col-md-2">TipoCliente:</p>
+                <div class="col-md-10">
+                    @Html.DropDownList("cboTipoCliente", (SelectList)ViewBag.listaTipoCliente, "<seleccionar>")
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-outline-primary" />
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+            
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "ListarCliente")
+</div>

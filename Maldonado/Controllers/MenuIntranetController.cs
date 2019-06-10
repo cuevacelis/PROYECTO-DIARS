@@ -4,22 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CapaEntidad;
-using CapaLogica;
 
 namespace Maldonado.Controllers
 {
-    public class MantenedorHabitacionController : Controller
+    public class MenuIntranetController : Controller
     {
         //
-        // GET: /MantenedorHabitacion/
+        // GET: /MenuIntranet/
 
         public ActionResult Index()
-        {
-            return RedirectToAction("ListarHabitacion");
-        }
-
-        [HttpGet]
-        public ActionResult ListarHabitacion()
         {
             try
             {
@@ -27,9 +20,7 @@ namespace Maldonado.Controllers
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 if (u.tipo == true)
                 {
-                    List<entHabitacion> lista = logHabitacion.Instancia.ListarHabitacion();
-                    ViewBag.lista = lista;
-                    return View(lista);
+                    return View();
                 }
                 else
                 {
@@ -40,6 +31,8 @@ namespace Maldonado.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+           
         }
+
     }
 }
