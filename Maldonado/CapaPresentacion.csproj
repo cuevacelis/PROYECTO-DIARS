@@ -339,6 +339,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\MenuIntranet\Index.cshtml" />
     <Content Include="Views\MantenedorCliente\EditarCliente.cshtml" />
+    <Content Include="Views\MantenedorCliente\EliminarCliente.cshtml" />
+    <Content Include="Views\MantenedorReserva\EliminarReserva.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

@@ -11,15 +11,17 @@
     @Html.ActionLink("Nueva Reserva", "InsertarReserva")
 </p>
 <table class="table">
-    <thead class="thead-light">
+    <thead class="thead-dark">
         <tr>
-            <th scope="col">Id</th>
+            <th scope="col">Id Reserva</th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
             <th scope="col">N° de Habitacion</th>
             <th scope="col">Descripcion</th>
+            <th scope="col">Descripcion Tipo Habitacion</th>
             <th scope="col">Fecha de Inicio</th>
             <th scope="col">Fecha de Fin</th>
+            <th scope="col">Estado</th>
             <th scope="col"></th>
         </tr>
     </thead>
@@ -27,34 +29,40 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <th scope="row">
-                    @Html.DisplayFor(modelItem => item.idReserva)
-                </th>
-                <td>
-                    @Html.DisplayFor(modelItem => item.idCliente.nombreCliente)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.idCliente.apellidoCliente)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.idHabitacion.numeroHabitacion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.idHabitacion.descHabitacion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.fechaIncioReserva)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.fechaFinReserva)
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Edit", new { item.idReserva }) |
-                    @Html.ActionLink("Detalles", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
-            </tr>
+        <tr>
+            <th scope="row">
+                @Html.DisplayFor(modelItem => item.idReserva)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCliente.nombreCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCliente.apellidoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idHabitacion.numeroHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idHabitacion.descHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idHabitacion.idTipoHabitacion.desTipoHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaIncioReserva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaFinReserva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstReserva)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { idReserva = @item.idReserva }) |
+                @Html.ActionLink("Detalles", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "EliminarReserva", new { idReserva = @item.idReserva })
+            </td>
+        </tr>
         }
 
     </tbody>

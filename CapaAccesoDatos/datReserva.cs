@@ -41,6 +41,8 @@ namespace CapaAccesoDatos
 
                     entReserva Reserva = new entReserva();
                     entCliente Cliente = new entCliente();
+                    entHabitacion Habitacion = new entHabitacion();
+                    entTipoHabitacion th = new entTipoHabitacion();
 
                     Reserva.idReserva = Convert.ToInt16(dr["IdReserva"]);
 
@@ -50,13 +52,18 @@ namespace CapaAccesoDatos
                     Cliente.estCliente = Convert.ToBoolean(dr["EstCliente"]);
                     Reserva.idCliente = Cliente;
 
-                    entHabitacion Habitacion = new entHabitacion();
 
-                    Habitacion.numeroHabitacion = Convert.ToInt16(dr["NumeroHabitacion"]);
-                    Habitacion.descHabitacion = dr["DescHabitacion"].ToString();
+                    th.desTipoHabitacion = dr["DesTipoHabitacion"].ToString();
+                    Habitacion.idTipoHabitacion = th;
+
+                    Habitacion.numeroHabitacion = Convert.ToInt32(dr["NumeroHabitacion"]);
+                    Habitacion.descHabitacion = dr["DescHabitacion"].ToString();                    
                     //Habitacion.estHabitacion = Convert.ToBoolean(dr["EstHabitacion"]);
                     Reserva.idHabitacion = Habitacion;
 
+
+
+                    Reserva.EstReserva = Convert.ToBoolean(dr["EstReserva"]);
                     Reserva.fechaIncioReserva = Convert.ToDateTime(dr["FechaInicioReserva"]);
                     Reserva.fechaFinReserva = Convert.ToDateTime(dr["FechaFinReserva"]);
                     lista.Add(Reserva);
@@ -95,6 +102,58 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return insertar;
+        }
+        /*public Boolean InsertarReservaCliente(entReserva R)
+        {
+            SqlCommand cmd = null;
+            Boolean insertar = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInsertarReservaCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                
+                cmd.Parameters.AddWithValue("@prmstrNombre", R.fechaIncioReserva);
+                cmd.Parameters.AddWithValue("@prmIdTelefono", R.fechaIncioReserva);
+
+                cmd.Parameters.AddWithValue("@prmdateFechaInicio", R.fechaIncioReserva);
+                cmd.Parameters.AddWithValue("@prmdateFechaFin", R.fechaFinReserva);
+                cmd.Parameters.AddWithValue("@prmIdCliente", R.idCliente.idCliente);
+                cmd.Parameters.AddWithValue("@prmIdHabitacion", R.idHabitacion.idHabitacion);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                { insertar = true; }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return insertar;
+        }*/
+        public Boolean EliminarReserva(int idReserva)
+        {
+            SqlCommand cmd = null;
+            Boolean elimina = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEliminarReserva", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmintidReserva", idReserva);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i >= 0)
+                { elimina = true; }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return elimina;
         }
         #endregion metodos
     }

@@ -108,8 +108,6 @@ namespace Maldonado.Controllers
             ViewBag.listaTipoCliente = lsTipoCliente;
 
             return View(c);
-
-            
         }
         [HttpPost]
         public ActionResult EditarCliente(entCliente c, FormCollection frm)
@@ -128,6 +126,31 @@ namespace Maldonado.Controllers
                 else
                 {
                     return View(c);
+                }
+            }
+
+            catch (ApplicationException ex)
+            {
+                return RedirectToAction("EditarCliente", new { mesjExceptio = ex.Message });
+            }
+
+        }
+
+        public ActionResult EliminarCliente(int idCliente)
+        {
+            try
+            {
+                Boolean elimina = logCliente.Instancia.EliminarCliente(idCliente);
+                
+
+                if (elimina)
+                {
+                    return RedirectToAction("listarCliente");
+
+                }
+                else
+                {
+                    return View();
                 }
             }
 

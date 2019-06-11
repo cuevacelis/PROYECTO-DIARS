@@ -29,35 +29,83 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <th scope="row">
-                @Html.DisplayFor(modelItem => item.idCliente)
-            </th>
-            <td>
-                @Html.DisplayFor(modelItem => item.nombreCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.apellidoCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DNI)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.telefono)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.estCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idTipoCliente.desTipoCliente)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "EditarCliente", new { idCliente = @item.idCliente }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayFor(modelItem => item.idCliente)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombreCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.apellidoCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DNI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.estCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idTipoCliente.desTipoCliente)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditarCliente", new { idCliente = @item.idCliente }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    <a href="/MantenedorCliente/EliminarCliente?idCliente=@item.idCliente " onclick="prueba()">Eliminar</a>
+                    <script>
+
+                        function prueba() {
+
+                            const swalWithBootstrapButtons = Swal.mixin({
+                                customClass: {
+                                    confirmButton: 'btn btn-success',
+                                    cancelButton: 'btn btn-danger'
+                                },
+                                buttonsStyling: false,
+                            })
+
+                            swalWithBootstrapButtons.fire({
+                                title: 'Are you sure?',
+                                text: "You won't be able to revert this!",
+                                type: 'warning',
+                                showCancelButton: true,
+                                confirmButtonText: 'Yes, delete it!',
+                                cancelButtonText: 'No, cancel!',
+                                reverseButtons: true
+                            }).then((result) => {
+                                if (result.value) {
+                                    swalWithBootstrapButtons.fire(
+                                        'Deleted!',
+                                        'Your file has been deleted.',
+                                        'success'
+                                    )
+                                } else if (
+                                    // Read more about handling dismissals
+                                    result.dismiss === Swal.DismissReason.cancel
+                                ) {
+                                    swalWithBootstrapButtons.fire(
+                                        'Cancelled',
+                                        'Your imaginary file is safe :)',
+                                        'error'
+                                    )
+                                }
+                            })
+                        }
+
+
+                    </script>
+
+
+                </td>
+            </tr>
         }
     </tbody>
 
 </table>
+
+<script type="text/javascript" src="~/Contents/sweetalert2/sweetalert2.all.js"></script>
+<link rel="stylesheet" href="~/Contents/sweetalert2/sweetalert2.css">
+

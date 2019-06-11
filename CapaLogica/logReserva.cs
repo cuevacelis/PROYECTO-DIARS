@@ -45,5 +45,14 @@ namespace CapaLogica
             catch (Exception e)
             { throw e; }
         }
+        public Boolean EliminarReserva(int idReserva)
+        {
+            try
+            {
+                return datReserva.Instancia.EliminarReserva(idReserva);
+            }
+            catch (Exception e)
+            { throw e; }
+        }
     }
 }

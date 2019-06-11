@@ -109,5 +109,29 @@ namespace Maldonado.Controllers
                 return RedirectToAction("InsertarReserva", new { mesjExceptio = ex.Message });
             }
         }
+        public ActionResult EliminarReserva(int idReserva)
+        {
+            try
+            {
+
+                Boolean elimina = logReserva.Instancia.EliminarReserva(idReserva);
+
+                if (elimina)
+                {
+                    return RedirectToAction("listarReservas");
+
+                }
+                else
+                {
+                    return View();
+                }
+            }
+
+            catch (ApplicationException ex)
+            {
+                return RedirectToAction("EditarReserva", new { mesjExceptio = ex.Message });
+            }
+
+        }
     }
 }

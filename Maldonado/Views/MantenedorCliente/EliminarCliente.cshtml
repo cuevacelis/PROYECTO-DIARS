@@ -1,0 +1,63 @@
+﻿@model CapaEntidad.entCliente
+
+@{
+    ViewBag.Title = "EliminarCliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <h2>Eliminar Cliente</h2>
+
+    <h3>Esta seguro de eliminar?</h3>
+    <fieldset>
+        <legend>entCliente</legend>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.idCliente)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.idCliente)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.nombreCliente)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.nombreCliente)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.apellidoCliente)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.apellidoCliente)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.DNI)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.DNI)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.telefono)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.telefono)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.estCliente)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.estCliente)
+        </div>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Delete" />|
+        @Html.ActionLink("Back to List", "ListarCliente")
+    </p>
+}

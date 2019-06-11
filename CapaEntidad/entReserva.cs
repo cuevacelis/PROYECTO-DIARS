@@ -13,5 +13,6 @@ namespace CapaEntidad
         public entHabitacion idHabitacion { get; set; }
         public DateTime fechaIncioReserva { get; set; }
         public DateTime fechaFinReserva { get; set; }
+        public Boolean EstReserva { get; set; }
     }
 }

@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Maldonado",
-    "\\Maldonado\\Contents",
-    "\\Maldonado\\Contents\\sweetalert2",
-    "\\Maldonado\\Views",
-    "\\Maldonado\\Views\\Login"
+    ""
   ],
-  "SelectedNode": "\\Maldonado\\Views\\Login\\Index.cshtml",
+  "SelectedNode": "\\Maldonado",
   "PreviewInSolutionExplorer": false
 }
