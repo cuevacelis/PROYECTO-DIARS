@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logCliente.cs" />
+    <Compile Include="logDetalle.cs" />
     <Compile Include="logHabitacion.cs" />
     <Compile Include="logReserva.cs" />
     <Compile Include="logTipoCliente.cs" />
