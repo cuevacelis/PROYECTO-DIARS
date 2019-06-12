@@ -37,15 +37,14 @@ C:\Users\Sql Server\Source\Repos\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntida
 C:\Users\Sql Server\Source\Repos\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\Sql Server\Source\Repos\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\Sql Server\Source\Repos\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.pdb
-C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\bin\Debug\CapaEntidad.dll
-C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\bin\Debug\CapaEntidad.pdb
-C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
-C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.dll
-C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.pdb
-C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.csprojAssemblyReference.cache
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaEntidad\bin\Debug\CapaEntidad.dll
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaEntidad\bin\Debug\CapaEntidad.pdb
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.csprojAssemblyReference.cache
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaEntidad\obj\Debug\CapaEntidad.pdb
