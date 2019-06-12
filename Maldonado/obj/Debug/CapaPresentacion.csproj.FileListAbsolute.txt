@@ -33,3 +33,5 @@ C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\obj\Deb
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.dll
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.pdb
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\FastSqlServer.dll
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\FastSqlServer.xml
