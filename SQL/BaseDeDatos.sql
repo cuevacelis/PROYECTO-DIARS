@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [DBHotelDelRey]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Database [DBHotelDelRey]    Script Date: 21/06/2019 0:33:12 ******/
 CREATE DATABASE [DBHotelDelRey]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -75,7 +75,7 @@ ALTER DATABASE [DBHotelDelRey] SET TARGET_RECOVERY_TIME = 0 SECONDS
 GO
 USE [DBHotelDelRey]
 GO
-/****** Object:  StoredProcedure [dbo].[spBuscarCliente]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spBuscarCliente]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -97,7 +97,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[spConsultarReservasDisponibles]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spConsultarReservasDisponibles]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -118,7 +118,7 @@ AS
 	where (R.FechaInicioReserva>=@prmdateFechaInicio) and (R.FechaFinReserva<=@prmdateFechaFin)
 	ORDER BY R.FechaInicioReserva
 GO
-/****** Object:  StoredProcedure [dbo].[spEditarCliente]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spEditarCliente]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -148,7 +148,7 @@ where IdCliente=@prmintidCliente
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[spEliminarCliente]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spEliminarCliente]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -164,7 +164,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[spEliminarReserva]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spEliminarReserva]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -180,27 +180,32 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[spInsertarCliente]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spInsertarCliente]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create PROCEDURE [dbo].[spInsertarCliente](
-@prmstrNombre varchar(50),
-@prmstrApellido varchar(50),
+CREATE PROCEDURE [dbo].[spInsertarCliente](
+@prmstrNombres varchar(50),
 @prmIdDni INT,
 @prmIdTelefono INT,
-@prmbitEstado bit,
-@prmIdTipoCliente INT
+@prmIdTipoCliente INT,
+@prmdateFechaNacimiento datetime
 )
 AS
 BEGIN
-	INSERT INTO Cliente(NombreCliente,ApellidoCliente,Dni,Telefono,EstCliente,IdTipoCliente)
-	VALUES(@prmstrNombre, @prmstrApellido, @prmIdDni, @prmIdTelefono,@prmbitEstado,@prmIdTipoCliente)
+
+	INSERT INTO Persona (Dni,EstPersona,fechaNacimiento,Nombres,RazonSocial,Telefono)
+	values(@prmIdDni,1,@prmdateFechaNacimiento,@prmstrNombres,'Persona Natural',@prmIdTelefono)
+	SELECT @@IDENTITY AS 'Identity';
+
+	insert into Cliente(IdPersona)
+	values(@@IDENTITY)
+
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[spInsertarReserva]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spInsertarReserva]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -218,7 +223,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[spInsertarReservaCliente]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spInsertarReservaCliente]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -244,7 +249,7 @@ BEGIN
 	VALUES(@prmdateFechaInicio, @prmdateFechaFin, @prmIdCliente, @prmIdHabitacion,1)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[spListarHabitacion]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spListarHabitacion]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -258,7 +263,7 @@ AS
 	ORDER BY H.IdHabitacion
 
 GO
-/****** Object:  StoredProcedure [dbo].[spListarPersona]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spListarPersona]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -273,7 +278,7 @@ AS
 	ORDER BY C.IdCliente
 
 GO
-/****** Object:  StoredProcedure [dbo].[spListarReserva]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spListarReserva]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -290,7 +295,7 @@ AS
 	where R.EstReserva =1
 	ORDER BY R.FechaInicioReserva
 GO
-/****** Object:  StoredProcedure [dbo].[spListarTipoCliente]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spListarTipoCliente]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -302,7 +307,7 @@ AS
 	ORDER BY TP.IdTipoCliente
 
 GO
-/****** Object:  StoredProcedure [dbo].[spListarTipoHabitacion]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spListarTipoHabitacion]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -314,26 +319,28 @@ AS
 	ORDER BY TH.IdTipoHabitacion
 
 GO
-/****** Object:  StoredProcedure [dbo].[spVerificarAcceso]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  StoredProcedure [dbo].[spVerificarAcceso]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[spVerificarAcceso](
-@prmstrUsuario varchar(50),
+@prmstrCorreo varchar(50),
 @prmstrPassword varchar(50)
 )
 AS
 BEGIN
-	SELECT U.idUsuario, U.fecCreacion,U.nomUsuario,U.correo,U.estUsuario,U.tipo,C.NombreCliente,C.ApellidoCliente,C.Dni,C.Telefono,C.EstCliente
+
+	SELECT u.Correo,u.estUsuario,u.fechaCreacion,u.Hash,u.Password,u.Username,p.Nombres,p.Dni,p.RazonSocial,tp.Privilegio
 	FROM Usuario U
-	INNER JOIN Cliente C ON C.IdCliente = U.IdCliente
-	where (@prmstrUsuario=u.correo) and (@prmstrPassword=u.contrasenia)
+	INNER JOIN Persona P ON P.IdPersona = U.IdPersona
+	INNER JOIN TipoPersona TP ON TP.IdTipoPersona = P.IdTipoPersona
+	where (@prmstrCorreo=u.correo) and (@prmstrPassword=u.Password)
 
 END
 
 GO
-/****** Object:  Table [dbo].[Cliente]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Table [dbo].[Cliente]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -348,7 +355,7 @@ CREATE TABLE [dbo].[Cliente](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Habitacion]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Table [dbo].[Habitacion]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -370,7 +377,7 @@ PRIMARY KEY CLUSTERED
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[Persona]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Table [dbo].[Persona]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -395,7 +402,7 @@ CREATE TABLE [dbo].[Persona](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[Reserva]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Table [dbo].[Reserva]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -414,7 +421,7 @@ CREATE TABLE [dbo].[Reserva](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[TipoHabitacion]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Table [dbo].[TipoHabitacion]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -434,7 +441,7 @@ PRIMARY KEY CLUSTERED
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[TipoPersona]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Table [dbo].[TipoPersona]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -455,7 +462,7 @@ CREATE TABLE [dbo].[TipoPersona](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[Trabajador]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Table [dbo].[Trabajador]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -477,7 +484,7 @@ CREATE TABLE [dbo].[Trabajador](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 20/06/2019 23:11:26 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 21/06/2019 0:33:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -501,6 +508,13 @@ CREATE TABLE [dbo].[Usuario](
 
 GO
 SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[Cliente] ON 
+
+GO
+INSERT [dbo].[Cliente] ([IdCliente], [IdPersona]) VALUES (1, 1)
+GO
+SET IDENTITY_INSERT [dbo].[Cliente] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Habitacion] ON 
 
@@ -543,6 +557,13 @@ INSERT [dbo].[Habitacion] ([IdHabitacion], [NumeroHabitacion], [DescHabitacion],
 GO
 SET IDENTITY_INSERT [dbo].[Habitacion] OFF
 GO
+SET IDENTITY_INSERT [dbo].[Persona] ON 
+
+GO
+INSERT [dbo].[Persona] ([IdPersona], [IdTipoPersona], [Nombres], [Dni], [Telefono], [EstPersona], [RazonSocial], [fechaNacimiento]) VALUES (1, 1, N'jose', N'444444  ', 4444, 1, N'Persona Natural', CAST(0x0000AA4400000000 AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[Persona] OFF
+GO
 SET IDENTITY_INSERT [dbo].[TipoHabitacion] ON 
 
 GO
@@ -557,6 +578,26 @@ GO
 INSERT [dbo].[TipoHabitacion] ([IdTipoHabitacion], [DesTipoHabitacion], [EstTipoHabitacion]) VALUES (5, N'Suite Junior', 1)
 GO
 SET IDENTITY_INSERT [dbo].[TipoHabitacion] OFF
+GO
+SET IDENTITY_INSERT [dbo].[TipoPersona] ON 
+
+GO
+INSERT [dbo].[TipoPersona] ([IdTipoPersona], [Privilegio], [DesTipoPersona], [EstTipoPersona]) VALUES (1, 1, N'Cliente', 1)
+GO
+INSERT [dbo].[TipoPersona] ([IdTipoPersona], [Privilegio], [DesTipoPersona], [EstTipoPersona]) VALUES (2, 2, N'Cliente-Registrado', 1)
+GO
+INSERT [dbo].[TipoPersona] ([IdTipoPersona], [Privilegio], [DesTipoPersona], [EstTipoPersona]) VALUES (3, 3, N'Recepcionista', 1)
+GO
+INSERT [dbo].[TipoPersona] ([IdTipoPersona], [Privilegio], [DesTipoPersona], [EstTipoPersona]) VALUES (4, 4, N'Gerente', 1)
+GO
+SET IDENTITY_INSERT [dbo].[TipoPersona] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Usuario] ON 
+
+GO
+INSERT [dbo].[Usuario] ([IdUsusario], [IdPersona], [Username], [Correo], [Password], [Hash], [estUsuario], [fechaCreacion]) VALUES (1, 1, N'jose', N'cuevacelis@hotmail.com', N'12345', NULL, 1, CAST(0x0000AA4400000000 AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[Usuario] OFF
 GO
 ALTER TABLE [dbo].[Cliente]  WITH CHECK ADD  CONSTRAINT [FK_Cliente_Persona] FOREIGN KEY([IdPersona])
 REFERENCES [dbo].[Persona] ([IdPersona])
