@@ -28,7 +28,7 @@ namespace Maldonado.Controllers
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 if (u.tipo == true)
                 {
-                    List<entCliente> lista = logCliente.Instancia.ListarCliente();
+                    List<entPersona> lista = logCliente.Instancia.ListarCliente();
                     ViewBag.lista = lista;
                     return View(lista);
                 }
@@ -52,7 +52,7 @@ namespace Maldonado.Controllers
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 if (u.tipo == true)
                 {
-                    List<entTipoCliente> listarTipoCliente = logTipoCliente.Instancia.ListarTipoCliente();
+                    List<entTipoPersona> listarTipoCliente = logTipoCliente.Instancia.ListarTipoCliente();
                     var lsTipoCliente = new SelectList(listarTipoCliente, "idTipoCliente", "DesTipoCliente");
 
 
@@ -71,11 +71,11 @@ namespace Maldonado.Controllers
         }
 
         [HttpPost]
-        public ActionResult InsertarCliente(entCliente C, FormCollection frm)
+        public ActionResult InsertarCliente(entPersona C, FormCollection frm)
         {
             try
             {
-                C.idTipoCliente = new entTipoCliente();
+                C.idTipoCliente = new entTipoPersona();
 
                 C.idTipoCliente.idTipoCliente = Convert.ToInt32(frm["cboTipoCliente"]);
 
@@ -99,10 +99,10 @@ namespace Maldonado.Controllers
         [HttpGet]
         public ActionResult EditarCliente(int idCliente)
         {
-            entCliente c = new entCliente();
+            entPersona c = new entPersona();
             c = logCliente.Instancia.BuscarCliente(idCliente);
 
-            List<entTipoCliente> listarTipoCliente = logTipoCliente.Instancia.ListarTipoCliente();
+            List<entTipoPersona> listarTipoCliente = logTipoCliente.Instancia.ListarTipoCliente();
             var lsTipoCliente = new SelectList(listarTipoCliente, "idTipoCliente", "DesTipoCliente");
 
             ViewBag.listaTipoCliente = lsTipoCliente;
@@ -110,11 +110,11 @@ namespace Maldonado.Controllers
             return View(c);
         }
         [HttpPost]
-        public ActionResult EditarCliente(entCliente c, FormCollection frm)
+        public ActionResult EditarCliente(entPersona c, FormCollection frm)
         {
             try
             {
-                c.idTipoCliente = new entTipoCliente();
+                c.idTipoCliente = new entTipoPersona();
                 c.idTipoCliente.idTipoCliente = Convert.ToInt32(frm["cboTipoCliente"]);
 
                 Boolean edita = logCliente.Instancia.EditarCliente(c);

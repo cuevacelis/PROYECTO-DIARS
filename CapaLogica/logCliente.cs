@@ -23,11 +23,11 @@ namespace CapaLogica
         #endregion singleton
 
         #region metodos
-        public List<entCliente> ListarCliente()
+        public List<entPersona> ListarCliente()
         {
             try
             {
-                List<entCliente> lista = datCliente.Instancia.ListarCliente();
+                List<entPersona> lista = datPersona.Instancia.ListarCliente();
                 return lista;
             }
             catch (Exception e)
@@ -36,29 +36,29 @@ namespace CapaLogica
             }
         }
         
-        public Boolean InsertarCliente(entCliente a)
+        public Boolean InsertarCliente(entPersona a)
         {
             try
             {
-                return datCliente.Instancia.InsertarCliente(a);
+                return datPersona.Instancia.InsertarCliente(a);
             }
             catch (Exception e) { throw e; }
 
 
         }
-        public Boolean EditarCliente(entCliente c)
+        public Boolean EditarCliente(entPersona c)
         {
             try
             {
-                return datCliente.Instancia.EditarCliente(c);
+                return datPersona.Instancia.EditarCliente(c);
             }
             catch (Exception e){ throw e; }
         }
-        public entCliente BuscarCliente(int idCliente)
+        public entPersona BuscarCliente(int idCliente)
         {
             try
             {
-                return datCliente.Instancia.BuscarCliente(idCliente);
+                return datPersona.Instancia.BuscarCliente(idCliente);
             }
             catch (Exception e){ throw e; }
         }
@@ -66,7 +66,7 @@ namespace CapaLogica
         {
             try
             {
-                return datCliente.Instancia.EliminarCliente(idCliente);
+                return datPersona.Instancia.EliminarCliente(idCliente);
             }
             catch (Exception e)
             { throw e; }

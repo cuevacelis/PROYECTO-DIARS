@@ -51,7 +51,7 @@ namespace Maldonado.Controllers
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 if (u.tipo == true)
                 {
-                    List<entCliente> listarCliente = logCliente.Instancia.ListarCliente();
+                    List<entPersona> listarCliente = logCliente.Instancia.ListarCliente();
                     var lsCliente = new SelectList(listarCliente, "idCliente", "nombreCliente");
 
                     List<entHabitacion> listarHabitacion = logHabitacion.Instancia.ListarHabitacion();
@@ -81,7 +81,7 @@ namespace Maldonado.Controllers
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 if (u.tipo == true)
                 {
-                    R.idCliente = new entCliente();
+                    R.idCliente = new entPersona();
                     R.idHabitacion = new entHabitacion();
 
                     R.idCliente.idCliente = Convert.ToInt32(frm["cboCliente"]);

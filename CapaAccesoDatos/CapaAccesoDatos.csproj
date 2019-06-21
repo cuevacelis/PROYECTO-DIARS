@@ -40,11 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="datCliente.cs" />
-    <Compile Include="datDetalle.cs" />
+    <Compile Include="datPersona.cs" />
     <Compile Include="datHabitacion.cs" />
     <Compile Include="datReserva.cs" />
-    <Compile Include="datTipoCliente.cs" />
+    <Compile Include="datTipoPersona.cs" />
     <Compile Include="datUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -39,13 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="entCliente.cs" />
-    <Compile Include="entDetalle.cs" />
+    <Compile Include="entPersona.cs" />
     <Compile Include="entHabitacion.cs" />
     <Compile Include="entUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="entReserva.cs" />
-    <Compile Include="entTipoCliente.cs" />
+    <Compile Include="entTipoPersona.cs" />
     <Compile Include="entTipoHabitacion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

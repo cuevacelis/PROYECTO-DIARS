@@ -23,11 +23,11 @@ namespace CapaLogica
         #endregion singleton
 
         #region metodos
-        public List<entTipoCliente> ListarTipoCliente()
+        public List<entTipoPersona> ListarTipoCliente()
         {
             try
             {
-                List<entTipoCliente> lista = datTipoCliente.Instancia.ListarTipoCliente();
+                List<entTipoPersona> lista = datTipoPersona.Instancia.ListarTipoCliente();
                 return lista;
             }
             catch (Exception e)

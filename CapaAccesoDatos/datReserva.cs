@@ -40,7 +40,7 @@ namespace CapaAccesoDatos
                 {
 
                     entReserva Reserva = new entReserva();
-                    entCliente Cliente = new entCliente();
+                    entPersona Cliente = new entPersona();
                     entHabitacion Habitacion = new entHabitacion();
                     entTipoHabitacion th = new entTipoHabitacion();
 

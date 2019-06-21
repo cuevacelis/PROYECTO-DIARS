@@ -43,7 +43,7 @@ namespace CapaAccesoDatos
                     U.fecCreacion = Convert.ToDateTime(dr["fecCreacion"]);
                     U.tipo = Convert.ToBoolean(dr["tipo"]);
 
-                    entCliente C = new entCliente();
+                    entPersona C = new entPersona();
                     C.idCliente = Convert.ToInt16(dr["idCliente"]);
                     C.nombreCliente = dr["Nombres"].ToString();
                     C.apellidoCliente = dr["Apellidos"].ToString();
@@ -87,7 +87,7 @@ namespace CapaAccesoDatos
                     u.estUsuario = Convert.ToBoolean(dr["estUsuario"]);
                     u.tipo = Convert.ToBoolean(dr["tipo"]);
 
-                    entCliente C = new entCliente();
+                    entPersona C = new entPersona();
                     C.nombreCliente = dr["NombreCliente"].ToString();
                     C.apellidoCliente = dr["ApellidoCliente"].ToString();
                     C.DNI = dr["Dni"].ToString();
