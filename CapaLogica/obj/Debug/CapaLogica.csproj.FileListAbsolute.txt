@@ -93,3 +93,14 @@ C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaLogica\obj\De
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\bin\Debug\CapaAccesoDatos.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete

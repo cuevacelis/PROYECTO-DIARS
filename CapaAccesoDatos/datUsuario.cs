@@ -46,7 +46,6 @@ namespace CapaAccesoDatos
                     entPersona C = new entPersona();
                     C.idPersona = Convert.ToInt16(dr["idCliente"]);
                     C.nombreyApellidoPersona = dr["Nombres"].ToString();
-                    C.apellidoCliente = dr["Apellidos"].ToString();
                     C.DNI = dr["DNI"].ToString();
                     C.telefono = Convert.ToInt16(dr["Telefono"]);
                     C.estPersona = Convert.ToBoolean(dr["EstCliente"]);
@@ -73,27 +72,27 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spVerificarAcceso", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@prmstrUsuario", Usuario);
+                cmd.Parameters.AddWithValue("@prmstrCorreo", Usuario);
                 cmd.Parameters.AddWithValue("@prmstrPassword", Password);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     u = new entUsuario();
-                    u.idUsuario = Convert.ToInt32(dr["idUsuario"]);
-                    u.fecCreacion = Convert.ToDateTime(dr["FecCreacion"]);
-                    u.nomUsuario = dr["nomUsuario"].ToString();
-                    u.correo = dr["correo"].ToString();
+                    //u.idUsuario = Convert.ToInt32(dr["idUsuario"]);
+                    u.fecCreacion = Convert.ToDateTime(dr["fechaCreacion"]);
+                    u.nomUsuario = dr["Username"].ToString();
+                    u.correo = dr["Correo"].ToString();
                     u.estUsuario = Convert.ToBoolean(dr["estUsuario"]);
-                    u.tipo = Convert.ToBoolean(dr["tipo"]);
 
                     entPersona C = new entPersona();
-                    C.nombreyApellidoPersona = dr["NombreCliente"].ToString();
-                    C.apellidoCliente = dr["ApellidoCliente"].ToString();
+                    C.nombreyApellidoPersona = dr["Nombres"].ToString();
                     C.DNI = dr["Dni"].ToString();
-                    C.telefono = Convert.ToInt32(dr["Telefono"]);
-                    C.estPersona = Convert.ToBoolean(dr["EstCliente"]);
+                    //C.telefono = Convert.ToInt32(dr["Telefono"]);
+                    //C.estPersona = Convert.ToBoolean(dr["EstCliente"]);
                     u.idCliente = C;
+
+
                 }
             }
             catch (Exception e)
