@@ -8,26 +8,26 @@ using CapaEntidad;
 
 namespace CapaLogica
 {
-    public class logTipoCliente
+    public class logTipoPersona
     {
         #region singleton
-        private static readonly logTipoCliente UnicaInstancia = new logTipoCliente();
-        public static logTipoCliente Instancia
+        private static readonly logTipoPersona UnicaInstancia = new logTipoPersona();
+        public static logTipoPersona Instancia
         {
             get
             {
-                return logTipoCliente.UnicaInstancia;
+                return logTipoPersona.UnicaInstancia;
             }
 
         }
         #endregion singleton
 
         #region metodos
-        public List<entTipoPersona> ListarTipoCliente()
+        public List<entTipoPersona> ListarTipoPersona()
         {
             try
             {
-                List<entTipoPersona> lista = datTipoPersona.Instancia.ListarTipoCliente();
+                List<entTipoPersona> lista = datTipoPersona.Instancia.ListarTipoPersona();
                 return lista;
             }
             catch (Exception e)

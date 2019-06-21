@@ -47,10 +47,9 @@ namespace CapaAccesoDatos
                     Reserva.idReserva = Convert.ToInt16(dr["IdReserva"]);
 
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
-                    Cliente.nombreCliente = dr["NombreCliente"].ToString();
-                    Cliente.apellidoCliente = dr["ApellidoCliente"].ToString();
-                    Cliente.estCliente = Convert.ToBoolean(dr["EstCliente"]);
-                    Reserva.idCliente = Cliente;
+                    Cliente.nombreyApellidoPersona = dr["NombreCliente"].ToString();
+                    Cliente.estPersona = Convert.ToBoolean(dr["EstCliente"]);
+                    Reserva.idPersona = Cliente;
 
 
                     th.desTipoHabitacion = dr["DesTipoHabitacion"].ToString();
@@ -89,7 +88,7 @@ namespace CapaAccesoDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@prmdateFechaInicio", R.fechaIncioReserva);
                 cmd.Parameters.AddWithValue("@prmdateFechaFin", R.fechaFinReserva);
-                cmd.Parameters.AddWithValue("@prmIdCliente", R.idCliente.idCliente);
+                cmd.Parameters.AddWithValue("@prmIdPersona", R.idPersona.idPersona);
                 cmd.Parameters.AddWithValue("@prmIdHabitacion", R.idHabitacion.idHabitacion);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -103,35 +102,7 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return insertar;
         }
-        /*public Boolean InsertarReservaCliente(entReserva R)
-        {
-            SqlCommand cmd = null;
-            Boolean insertar = false;
-            try
-            {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarReservaCliente", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                
-                cmd.Parameters.AddWithValue("@prmstrNombre", R.fechaIncioReserva);
-                cmd.Parameters.AddWithValue("@prmIdTelefono", R.fechaIncioReserva);
-
-                cmd.Parameters.AddWithValue("@prmdateFechaInicio", R.fechaIncioReserva);
-                cmd.Parameters.AddWithValue("@prmdateFechaFin", R.fechaFinReserva);
-                cmd.Parameters.AddWithValue("@prmIdCliente", R.idCliente.idCliente);
-                cmd.Parameters.AddWithValue("@prmIdHabitacion", R.idHabitacion.idHabitacion);
-                cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                { insertar = true; }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return insertar;
-        }*/
+        
         public Boolean EliminarReserva(int idReserva)
         {
             SqlCommand cmd = null;

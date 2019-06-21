@@ -44,12 +44,12 @@ namespace CapaAccesoDatos
                     U.tipo = Convert.ToBoolean(dr["tipo"]);
 
                     entPersona C = new entPersona();
-                    C.idCliente = Convert.ToInt16(dr["idCliente"]);
-                    C.nombreCliente = dr["Nombres"].ToString();
+                    C.idPersona = Convert.ToInt16(dr["idCliente"]);
+                    C.nombreyApellidoPersona = dr["Nombres"].ToString();
                     C.apellidoCliente = dr["Apellidos"].ToString();
                     C.DNI = dr["DNI"].ToString();
                     C.telefono = Convert.ToInt16(dr["Telefono"]);
-                    C.estCliente = Convert.ToBoolean(dr["EstCliente"]);
+                    C.estPersona = Convert.ToBoolean(dr["EstCliente"]);
 
                     U.idCliente = C;
                     lista.Add(U);
@@ -88,11 +88,11 @@ namespace CapaAccesoDatos
                     u.tipo = Convert.ToBoolean(dr["tipo"]);
 
                     entPersona C = new entPersona();
-                    C.nombreCliente = dr["NombreCliente"].ToString();
+                    C.nombreyApellidoPersona = dr["NombreCliente"].ToString();
                     C.apellidoCliente = dr["ApellidoCliente"].ToString();
                     C.DNI = dr["Dni"].ToString();
                     C.telefono = Convert.ToInt32(dr["Telefono"]);
-                    C.estCliente = Convert.ToBoolean(dr["EstCliente"]);
+                    C.estPersona = Convert.ToBoolean(dr["EstCliente"]);
                     u.idCliente = C;
                 }
             }

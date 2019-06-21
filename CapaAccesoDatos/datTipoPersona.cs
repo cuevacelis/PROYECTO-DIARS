@@ -25,7 +25,7 @@ namespace CapaAccesoDatos
 
 
         #region metodos
-        public List<entTipoPersona> ListarTipoCliente()
+        public List<entTipoPersona> ListarTipoPersona()
         {
             SqlCommand cmd = null;
             List<entTipoPersona> lista = new List<entTipoPersona>();
@@ -33,19 +33,19 @@ namespace CapaAccesoDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarTipoCliente", cn);
+                cmd = new SqlCommand("spListarTipoPersona", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
 
-                    entTipoPersona TipoCliente = new entTipoPersona();
-                    TipoCliente.idTipoCliente = Convert.ToInt16(dr["IdTipoCliente"]);
-                    TipoCliente.desTipoCliente = dr["DesTipoCliente"].ToString();
-                    TipoCliente.estTipoCliente = Convert.ToBoolean(dr["EstTipoCliente"]);
+                    entTipoPersona TipoPersona = new entTipoPersona();
+                    TipoPersona.idTipoPersona = Convert.ToInt16(dr["IdTipoPersona"]);
+                    TipoPersona.desTipoPersona = dr["DesTipoPersona"].ToString();
+                    TipoPersona.estTipoPersona = Convert.ToBoolean(dr["EstTipoPersona"]);
 
-                    lista.Add(TipoCliente);
+                    lista.Add(TipoPersona);
                 }
 
             }

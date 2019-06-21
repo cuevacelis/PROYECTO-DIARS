@@ -8,8 +8,8 @@ namespace CapaEntidad
 {
     public class entTipoPersona
     {
-        public int idTipoCliente { get; set; }
-        public String desTipoCliente { get; set; }
-        public Boolean estTipoCliente { get; set; }
+        public int idTipoPersona { get; set; }
+        public String desTipoPersona { get; set; }
+        public Boolean estTipoPersona { get; set; }
     }
 }

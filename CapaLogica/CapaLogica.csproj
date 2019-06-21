@@ -39,10 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="logCliente.cs" />
+    <Compile Include="logPersona.cs" />
     <Compile Include="logHabitacion.cs" />
     <Compile Include="logReserva.cs" />
-    <Compile Include="logTipoCliente.cs" />
+    <Compile Include="logTipoPersona.cs" />
+    <Compile Include="logTrabajador.cs" />
     <Compile Include="logUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

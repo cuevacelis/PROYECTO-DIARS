@@ -1,7 +1,7 @@
-﻿@model CapaEntidad.entCliente
+﻿@model CapaEntidad.entPersona
 
 @{
-    ViewBag.Title = "Editar Cliente";
+    ViewBag.Title = "Editar Persona";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,32 +12,24 @@
     
 
         <div class="form-horizontal">
-            <h4 class="display-4">Editar Cliente</h4>
+            <h4 class="display-4">Editar Persona</h4>
             @Html.ValidationSummary(true)
 
 
             <div class="form-horizontal">
-                @Html.LabelFor(model => model.idCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.idPersona, htmlAttributes: new { @class = "control-label col-md-2" })
             </div>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.idCliente)
-                @Html.ValidationMessageFor(model => model.idCliente)
+                @Html.EditorFor(model => model.idPersona)
+                @Html.ValidationMessageFor(model => model.idPersona)
             </div>
 
             <div class="form-horizontal">
-                @Html.LabelFor(model => model.nombreCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.nombreyApellidoPersona, htmlAttributes: new { @class = "control-label col-md-2" })
             </div>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.nombreCliente)
-                @Html.ValidationMessageFor(model => model.nombreCliente)
-            </div>
-
-            <div class="form-horizontal">
-                @Html.LabelFor(model => model.apellidoCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.apellidoCliente)
-                @Html.ValidationMessageFor(model => model.apellidoCliente)
+                @Html.EditorFor(model => model.nombreyApellidoPersona)
+                @Html.ValidationMessageFor(model => model.nombreyApellidoPersona)
             </div>
 
             <div class="form-horizontal">
@@ -57,17 +49,17 @@
             </div>
 
             <div class="form-horizontal">
-                @Html.LabelFor(model => model.estCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.estPersona, htmlAttributes: new { @class = "control-label col-md-2" })
             </div>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.estCliente)
-                @Html.ValidationMessageFor(model => model.estCliente)
+                @Html.EditorFor(model => model.estPersona)
+                @Html.ValidationMessageFor(model => model.estPersona)
             </div>
 
             <div class="form-horizontal">
-                <p class="control-label col-md-2">TipoCliente:</p>
+                <p class="control-label col-md-2">TipoPersona:</p>
                 <div class="col-md-10">
-                    @Html.DropDownList("cboTipoCliente", (SelectList)ViewBag.listaTipoCliente, "<seleccionar>")
+                    @Html.DropDownList("cboTipoPersona", (SelectList)ViewBag.listaTipoPersona, "<seleccionar>")
                 </div>
             </div>
 
@@ -80,5 +72,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "ListarCliente")
+    @Html.ActionLink("Back to List", "ListarPersona")
 </div>

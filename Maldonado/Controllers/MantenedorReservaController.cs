@@ -51,7 +51,7 @@ namespace Maldonado.Controllers
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 if (u.tipo == true)
                 {
-                    List<entPersona> listarCliente = logCliente.Instancia.ListarCliente();
+                    List<entPersona> listarCliente = logPersona.Instancia.ListarPersona();
                     var lsCliente = new SelectList(listarCliente, "idCliente", "nombreCliente");
 
                     List<entHabitacion> listarHabitacion = logHabitacion.Instancia.ListarHabitacion();
@@ -81,10 +81,10 @@ namespace Maldonado.Controllers
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 if (u.tipo == true)
                 {
-                    R.idCliente = new entPersona();
+                    R.idPersona = new entPersona();
                     R.idHabitacion = new entHabitacion();
 
-                    R.idCliente.idCliente = Convert.ToInt32(frm["cboCliente"]);
+                    R.idPersona.idPersona = Convert.ToInt32(frm["cboCliente"]);
                     R.idHabitacion.idHabitacion = Convert.ToInt32(frm["cboHabitacion"]);
 
                     Boolean inserta = logReserva.Instancia.InsertarReserva(R);

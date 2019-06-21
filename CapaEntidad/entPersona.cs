@@ -8,12 +8,11 @@ namespace CapaEntidad
 {
     public class entPersona
     {
-        public int idCliente { get; set; }
-        public String nombreCliente { get; set; }
-        public String apellidoCliente { get; set; }
+        public int idPersona { get; set; }
+        public String nombreyApellidoPersona { get; set; }
         public String DNI { get; set; }
         public int telefono { get; set; }
-        public Boolean estCliente { get; set; }
-        public entTipoPersona idTipoCliente { get; set; }
+        public Boolean estPersona { get; set; }
+        public entTipoPersona idTipoPersona { get; set; }
     }
 }

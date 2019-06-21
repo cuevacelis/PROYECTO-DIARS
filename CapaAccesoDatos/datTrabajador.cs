@@ -3,58 +3,56 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaEntidad;
 using System.Data;
 using System.Data.SqlClient;
+using CapaEntidad;
 
 namespace CapaAccesoDatos
 {
-    public class datPersona
+    public class datTrabajador
     {
-        
         #region singleton
-        private static readonly datPersona UnicaInstancia = new datPersona();
-        public static datPersona Instancia
+        private static readonly datTrabajador UnicaInstancia = new datTrabajador();
+        public static datTrabajador Instancia
         {
             get
             {
-                return datPersona.UnicaInstancia;
+                return datTrabajador.UnicaInstancia;
             }
 
         }
         #endregion singleton
 
         #region metodos
-        public List<entPersona> ListarPersona()
+        public List<entTrabajador> ListarTrabajador()
         {
             SqlCommand cmd = null;
-            List<entPersona> lista = new List<entPersona>();
+            List<entTrabajador> lista = new List<entTrabajador>();
 
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarPersona", cn);
+                cmd = new SqlCommand("spListarTrabajador", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-
+                    entTrabajador Trabajador = new entTrabajador();
                     entPersona Persona = new entPersona();
-                    entTipoPersona TipoPersona = new entTipoPersona();
 
-                    Persona.idPersona = Convert.ToInt32(dr["IdPersona"]);
+                    Trabajador.idTrabajador = Convert.ToInt32(dr["IdTrabajador"]);
 
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
-                    TipoPersona.desTipoPersona = dr["DesTipoCliente"].ToString();
-                    Persona.idTipoPersona = TipoPersona;
+                    Trabajador.profesion = dr["Profesion"].ToString();
+                    Trabajador.ingresos = Convert.ToInt64(dr["Ingresos"]);
 
                     Persona.nombreyApellidoPersona = dr["Nombres"].ToString();
                     Persona.DNI = dr["Dni"].ToString();
                     Persona.telefono = Convert.ToInt32(dr["Telefono"]);
                     Persona.estPersona = Convert.ToBoolean(dr["EstPersona"]);
 
-                    lista.Add(Persona);
+                    lista.Add(Trabajador);
                 }
 
             }
@@ -66,20 +64,23 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public Boolean InsertarPersona(entPersona P)
+        public Boolean InsertarTrabajador(entTrabajador T)
         {
             SqlCommand cmd = null;
             Boolean insertar = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarPersona", cn);
+                cmd = new SqlCommand("spInsertarTrabajador", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@prmstrNombre",P.nombreyApellidoPersona);
-                cmd.Parameters.AddWithValue("@prmIdDni", P.DNI);
-                cmd.Parameters.AddWithValue("@prmIdTelefono", P.telefono);
-                cmd.Parameters.AddWithValue("@prmbitEstado", P.estPersona);
-                cmd.Parameters.AddWithValue("@prmIdTipoPersona", P.idTipoPersona.idTipoPersona);
+                //cmd.Parameters.AddWithValue("@prmstrNombre", T.nombreyApellidoPersona);
+                //cmd.Parameters.AddWithValue("@prmIdDni", T.DNI);
+                //cmd.Parameters.AddWithValue("@prmIdTelefono", T.telefono);
+                //cmd.Parameters.AddWithValue("@prmbitEstado", T.estPersona);
+                cmd.Parameters.AddWithValue("@prmIdPersona", T.idPersona.idPersona);
+                cmd.Parameters.AddWithValue("@prmintIngresos",T.ingresos);
+                cmd.Parameters.AddWithValue("@prmstrProfesion", T.profesion);
+                cmd.Parameters.AddWithValue("@prmstrRol", T.rol);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -93,21 +94,19 @@ namespace CapaAccesoDatos
             return insertar;
         }
 
-        public Boolean EditarPersona(entPersona P)
+        public Boolean EditarTrabajador(entTrabajador T)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarPersona", cn);
+                cmd = new SqlCommand("spEditarTrabajador", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@prmintidPersona", P.idPersona);
-                cmd.Parameters.AddWithValue("@prmstrNombre", P.nombreyApellidoPersona);
-                cmd.Parameters.AddWithValue("@prmIdDni", P.DNI);
-                cmd.Parameters.AddWithValue("@prmIdTelefono", P.telefono);
-                cmd.Parameters.AddWithValue("@prmbitEstado", P.estPersona);
-                cmd.Parameters.AddWithValue("@prmIdTipoPersona", P.idTipoPersona.idTipoPersona);
+                cmd.Parameters.AddWithValue("@prmintidPersona", T.idPersona.idPersona);
+                cmd.Parameters.AddWithValue("@prmintIngresos", T.ingresos);
+                cmd.Parameters.AddWithValue("@prmstrProfesion", T.profesion);
+                cmd.Parameters.AddWithValue("@prmstrRol", T.rol);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i >= 0)
@@ -122,35 +121,29 @@ namespace CapaAccesoDatos
             return edita;
         }
 
-        public entPersona BuscarPersona(int idPersona)
+        public entTrabajador BuscarTrabajador(int idTrabajador)
         {
             SqlCommand cmd = null;
-            entPersona c = null;
-            entTipoPersona tp = null;
+            entTrabajador T = null;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spBuscarPersona", cn);
+                cmd = new SqlCommand("spBuscarTrabajador", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@prmintidPersona", idPersona);
+                cmd.Parameters.AddWithValue("@prmintidTrabajador", idTrabajador);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    c = new entPersona();
-                    tp = new entTipoPersona();
+                    T = new entTrabajador();
 
-                    c.idPersona = Convert.ToInt32(dr["IdPersona"]);
+                    T.idTrabajador = Convert.ToInt32(dr["IdTrabajador"]);
 
-                    tp.idTipoPersona = Convert.ToInt32(dr["idTipoPersona"]);
                     //tc.desTipoCliente = dr["DesTipoCliente"].ToString();
-                    c.idTipoPersona = tp;
 
-                    c.nombreyApellidoPersona = Convert.ToString(dr["NombreYApellidoPersona"]);
-                    c.DNI = Convert.ToString(dr["Dni"]);
-                    c.telefono = Convert.ToInt32(dr["Telefono"]);
-                    c.estPersona = Convert.ToBoolean(dr["EstPersona"]);
-
+                    T.ingresos = Convert.ToInt64(dr["Ingresos"]);
+                    T.profesion = Convert.ToString(dr["Profesion"]);
+                    T.rol = dr["Telefono"].ToString();
                 }
             }
             catch (Exception e)
@@ -158,19 +151,19 @@ namespace CapaAccesoDatos
                 throw e;
             }
             finally { cmd.Connection.Close(); }
-            return c;
+            return T;
         }
 
-        public Boolean EliminarPersona(int idPersona)
+        public Boolean EliminarTrabajador(int idTrabajador)
         {
             SqlCommand cmd = null;
             Boolean elimina = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEliminarPersona", cn);
+                cmd = new SqlCommand("spEliminarTrabajador", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@prmintidPersona", idPersona);
+                cmd.Parameters.AddWithValue("@prmintidTrabajador", idTrabajador);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i >= 0)
@@ -187,6 +180,3 @@ namespace CapaAccesoDatos
         #endregion metodos
     }
 }
-
-
-
