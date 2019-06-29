@@ -21,7 +21,7 @@ namespace CapaAccesoDatos
         #endregion
 
         #region Metodos
-        public List<entUsuario> ListarUsuario()
+        /*public List<entUsuario> ListarUsuario()
         {
             SqlCommand cmd = null;
             List<entUsuario> lista = new List<entUsuario>();
@@ -60,7 +60,7 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return lista;
-        }
+        }*/
 
         public entUsuario VerificarAcceso(String Usuario, String Password)
         {
@@ -80,19 +80,23 @@ namespace CapaAccesoDatos
                 {
                     u = new entUsuario();
                     //u.idUsuario = Convert.ToInt32(dr["idUsuario"]);
-                    u.fecCreacion = Convert.ToDateTime(dr["fechaCreacion"]);
-                    u.nomUsuario = dr["Username"].ToString();
-                    u.correo = dr["Correo"].ToString();
+                    u.fechCreacion = Convert.ToDateTime(dr["fechaCreacion"]);
+                    u.Username = dr["Username"].ToString();
+                    u.Correo = dr["Correo"].ToString();
                     u.estUsuario = Convert.ToBoolean(dr["estUsuario"]);
 
-                    entPersona C = new entPersona();
-                    C.nombreyApellidoPersona = dr["Nombres"].ToString();
-                    C.DNI = dr["Dni"].ToString();
+                    entPersona P = new entPersona();
+                    P.nombreyApellidoPersona = dr["Nombres"].ToString();
+                    P.DNI = dr["Dni"].ToString();
                     //C.telefono = Convert.ToInt32(dr["Telefono"]);
                     //C.estPersona = Convert.ToBoolean(dr["EstCliente"]);
-                    u.idCliente = C;
 
+                    entTipoPersona tp = new entTipoPersona();
+                    tp.Privilegio = Convert.ToInt32(dr["Privilegio"]);
+                    tp.desTipoPersona= dr["DesTipoPersona"].ToString();
+                    P.idTipoPersona = tp;
 
+                    u.idPersona = P;
                 }
             }
             catch (Exception e)

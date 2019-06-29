@@ -18,7 +18,7 @@ namespace Maldonado.Controllers
             {
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.tipo == true)
+                if (u != null)//VERIFICA QUE INICIO SESION
                 {
                     return View();
                 }

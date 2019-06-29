@@ -40,16 +40,16 @@ namespace CapaAccesoDatos
                 {
 
                     entReserva Reserva = new entReserva();
-                    entPersona Cliente = new entPersona();
+                    entPersona Persona = new entPersona();
                     entHabitacion Habitacion = new entHabitacion();
                     entTipoHabitacion th = new entTipoHabitacion();
 
                     Reserva.idReserva = Convert.ToInt16(dr["IdReserva"]);
 
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
-                    Cliente.nombreyApellidoPersona = dr["NombreCliente"].ToString();
-                    Cliente.estPersona = Convert.ToBoolean(dr["EstCliente"]);
-                    Reserva.idPersona = Cliente;
+                    Persona.nombreyApellidoPersona = dr["Nombres"].ToString();
+                    Persona.estPersona = Convert.ToBoolean(dr["EstPersona"]);
+                    Reserva.idPersona = Persona;
 
 
                     th.desTipoHabitacion = dr["DesTipoHabitacion"].ToString();

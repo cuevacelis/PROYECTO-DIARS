@@ -25,7 +25,7 @@ namespace Maldonado.Controllers
             {
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.tipo == true)
+                if (u.idPersona.idTipoPersona.Privilegio == 1)
                 {
                     List<entHabitacion> lista = logHabitacion.Instancia.ListarHabitacion();
                     ViewBag.lista = lista;

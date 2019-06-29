@@ -15,9 +15,8 @@
         <tr>
             <th scope="col">Id Reserva</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
             <th scope="col">N° de Habitacion</th>
-            <th scope="col">Descripcion</th>
+            <th scope="col">Ubicacion</th>
             <th scope="col">Descripcion Tipo Habitacion</th>
             <th scope="col">Fecha de Inicio</th>
             <th scope="col">Fecha de Fin</th>
@@ -34,10 +33,7 @@
                 @Html.DisplayFor(modelItem => item.idReserva)
             </th>
             <td>
-                @Html.DisplayFor(modelItem => item.idCliente.nombreCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idCliente.apellidoCliente)
+                @Html.DisplayFor(modelItem => item.idPersona.nombreyApellidoPersona)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.idHabitacion.numeroHabitacion)

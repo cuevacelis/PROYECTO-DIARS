@@ -29,6 +29,8 @@
 
     <link rel="stylesheet" href="~/Contents/fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="~/Contents/fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Contents/FontAwesomeIcon/css/all.css">
     <!-- Theme Style -->
     <link rel="stylesheet" href="~/Contents/css/style.css">
 
@@ -58,23 +60,36 @@
                                             <li class="nav-item active">@Html.ActionLink("Home", "Index", "Inicio")</li>
                                             @if (u != null)   //USUARIO INICIO SESION
                                             {
-                                                if (u.tipo == true) //Tipo Administrador
+
+                                                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
                                                 {
-                                                    <li class="nav-item">@Html.ActionLink("Mi Cuenta(Admin)", "Index", "MenuIntranet")</li>
-                                                    <li class="nav-item">@Html.ActionLink("Admin Reservas", "Index", "MantenedorReserva")</li>
-                                                    <li class="nav-item">@Html.ActionLink("Admin Clientes", "Index", "MantenedorCliente")</li>
+                                                    <li class="nav-item">@Html.ActionLink("Mi Cuenta - Gerente", "Index", "MenuIntranet")</li>
+                                                    <li class="nav-item">@Html.ActionLink("Gestionar Reservas", "Index", "MantenedorReserva")</li>
+                                                    <li class="nav-item">@Html.ActionLink("Gestionar Habitaciones", "Index", "MantenedorCliente")</li>
+                                                    <li class="nav-item">@Html.ActionLink("Gestionar Clientes", "Index", "MantenedorCliente")</li>
+                                                    <li class="nav-item">@Html.ActionLink("Gestionar Trabajadores", "Index", "MantenedorCliente")</li>
                                                 }
-                                                else //Tipo Clientes
+                                                else
                                                 {
-                                                    <li class="nav-item">@Html.ActionLink("Mi Cuenta", "Clientes", "MenuIntranet")</li>
+                                                    if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
+                                                    {
+                                                        <li class="nav-item">@Html.ActionLink("Mi Cuenta - Recepcionista", "Index", "MenuIntranet")</li>
+                                                        <li class="nav-item">@Html.ActionLink("Gestionar Reservas", "Index", "MantenedorReserva")</li>
+                                                        <li class="nav-item">@Html.ActionLink("Gestionar Clientes", "Index", "MantenedorCliente")</li>
+                                                    }
+                                                    else
+                                                    {
+                                                        if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Cliente-Registrado"))
+                                                        {
+                                                            <li class="nav-item">@Html.ActionLink("Mi Cuenta", "Clientes", "MenuIntranet")</li>
+                                                        }
+                                                    }
                                                 }
                                                 <li class="nav-item">@Html.ActionLink("Habitaciones", "Habitaciones", "Inicio")</li>
                                                 <li class="nav-item">@Html.ActionLink("Acerca De", "About", "Inicio")</li>
                                                 <li class="nav-item">@Html.ActionLink("Eventos", "Eventos", "Inicio")</li>
                                                 <li class="nav-item">@Html.ActionLink("Reservaciones", "Reservaciones", "Inicio")</li>
-
                                                 <a href="/Login/Logout" class="btn btn-primary btn-lg active" role="button">Cerrar Sesion</a>
-                                                
                                             }
                                             else
                                             {
@@ -82,7 +97,6 @@
                                                 <li class="nav-item">@Html.ActionLink("Habitaciones", "Habitaciones", "Inicio")</li>
                                                 <li class="nav-item">@Html.ActionLink("Acerca De", "About", "Inicio")</li>
                                                 <li class="nav-item">@Html.ActionLink("Eventos", "Eventos", "Inicio")</li>
-                                                <li class="nav-item">@Html.ActionLink("Reservaciones", "Reservaciones", "Inicio")</li>
                                             }
                                         </ul>
                                     </div>
