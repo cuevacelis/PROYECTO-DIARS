@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="datHospedaje.cs" />
     <Compile Include="datPersona.cs" />
     <Compile Include="datHabitacion.cs" />
     <Compile Include="datReserva.cs" />

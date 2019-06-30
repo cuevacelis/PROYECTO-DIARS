@@ -46,7 +46,7 @@ namespace CapaAccesoDatos
                     Persona.idPersona = Convert.ToInt32(dr["IdPersona"]);
 
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
-                    TipoPersona.desTipoPersona = dr["DesTipoCliente"].ToString();
+                    TipoPersona.desTipoPersona = dr["DesTipoPersona"].ToString();
                     Persona.idTipoPersona = TipoPersona;
 
                     Persona.nombreyApellidoPersona = dr["Nombres"].ToString();

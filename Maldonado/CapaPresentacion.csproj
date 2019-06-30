@@ -119,6 +119,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MantenedorHospedajeController.cs" />
     <Compile Include="Controllers\MantenedorPersonaController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
     <Compile Include="Controllers\MantenedorReservaController.cs" />
@@ -236,12 +237,27 @@
     <Content Include="Contents\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="Contents\images\about_feature_image.png" />
     <Content Include="Contents\images\Background_Fondo.jpg" />
+    <Content Include="Contents\images\D-Frag-anime-girls-Takao-D-Frag-anime-brunette-feet-1369059-wallhere.com.jpg" />
     <Content Include="Contents\images\food-1.jpg" />
+    <Content Include="Contents\images\fotos_hotel1.PNG" />
+    <Content Include="Contents\images\fotos_hotel2.PNG" />
+    <Content Include="Contents\images\fotos_hotel3.PNG" />
+    <Content Include="Contents\images\fotos_hotel4.PNG" />
+    <Content Include="Contents\images\fotos_hotel5.PNG" />
+    <Content Include="Contents\images\fotos_hotel6.PNG" />
     <Content Include="Contents\images\Habitaciones.jpg" />
+    <Content Include="Contents\images\habitacion_doble.jpg" />
+    <Content Include="Contents\images\habitacion_matrimonial.jpg" />
+    <Content Include="Contents\images\habitacion_simple.jpg" />
+    <Content Include="Contents\images\habitacion_triple.jpg" />
     <Content Include="Contents\images\hero_1.jpg" />
     <Content Include="Contents\images\hero_2.jpg" />
     <Content Include="Contents\images\hero_3.jpg" />
     <Content Include="Contents\images\hero_4.jpg" />
+    <Content Include="Contents\images\HPDR_Comedor.JPG" />
+    <Content Include="Contents\images\HPDR_Comida.JPG" />
+    <Content Include="Contents\images\HPDR_Fondo.JPG" />
+    <Content Include="Contents\images\HPDR_Habitacion.JPG" />
     <Content Include="Contents\images\image_5.jpg" />
     <Content Include="Contents\images\image_6.jpg" />
     <Content Include="Contents\images\image_7.jpg" />
@@ -254,7 +270,9 @@
     <Content Include="Contents\images\person_2.jpg" />
     <Content Include="Contents\images\person_3.jpg" />
     <Content Include="Contents\images\person_4.jpg" />
+    <Content Include="Contents\images\regalos-para-viajeros.jpg" />
     <Content Include="Contents\images\round.png" />
+    <Content Include="Contents\images\security.png" />
     <Content Include="Contents\images\slider-1.jpg" />
     <Content Include="Contents\images\slider-2.jpg" />
     <Content Include="Contents\images\slider-3.jpg" />
@@ -1944,7 +1962,6 @@
     <Content Include="Views\Inicio\Habitaciones.cshtml" />
     <Content Include="Views\Login\LoginAntiguo.cshtml" />
     <Content Include="Contents\Login\scss\style.scss" />
-    <Content Include="Views\MantenedorPersona\ListarCliente.cshtml" />
     <Content Include="Views\MantenedorPersona\InsertarCliente.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -1962,6 +1979,10 @@
     <Content Include="Views\MantenedorPersona\EditarPersona.cshtml" />
     <Content Include="Views\MantenedorPersona\EliminarCliente.cshtml" />
     <Content Include="Views\MantenedorReserva\EliminarReserva.cshtml" />
+    <Content Include="Views\MantenedorHospedaje\ListarHospedaje.cshtml" />
+    <Content Include="Views\MantenedorHospedaje\InsertarHospedaje.cshtml" />
+    <Content Include="Views\MantenedorHospedaje\EliminarHospedaje.cshtml" />
+    <Content Include="Views\MantenedorPersona\ListarPersona.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

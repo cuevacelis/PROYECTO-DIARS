@@ -40,24 +40,24 @@ namespace Maldonado.Controllers
         [HttpGet]
         public ActionResult InsertarReserva()
         {
-            try
-            {
+            //try
+            //{
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                List<entPersona> listarCliente = logPersona.Instancia.ListarPersona();
-                var lsCliente = new SelectList(listarCliente, "idCliente", "nombreCliente");
+                List<entPersona> listarPersona = logPersona.Instancia.ListarPersona();
+                var lsPersona = new SelectList(listarPersona, "idCliente", "nombreCliente");
 
                 List<entHabitacion> listarHabitacion = logHabitacion.Instancia.ListarHabitacion();
                 var lsHabitacion = new SelectList(listarHabitacion, "idHabitacion", "numeroHabitacion");
 
-                ViewBag.ListaCliente = lsCliente;
+                ViewBag.ListaCliente = lsPersona;
                 ViewBag.listaHabitacion = lsHabitacion;
                 return View();
-            }
-            catch (Exception e)
-            {
-                return RedirectToAction("Index", "Login");
-            }
+            //}
+            //catch (Exception e)
+            //{
+            //    return RedirectToAction("ListarReservas");
+            //}
         }
 
         [HttpPost]

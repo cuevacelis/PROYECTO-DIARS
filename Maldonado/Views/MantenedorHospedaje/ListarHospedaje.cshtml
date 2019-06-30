@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CapaEntidad.entHospedaje>
+
+@{
+    ViewBag.Title = "ListarHospedaje";
+    ViewBag.image = "/Contents/images/security.png";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListarHospedaje</h2>
+
+<p>
+    @Html.ActionLink("Insertar Hospedaje", "InsertarReserva")
+</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id Hospedaje</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">N° de Habitacion</th>
+            <th scope="col">Ubicacion</th>
+            <th scope="col">Fecha Llegada</th>
+            <th scope="col">Fecha Salida</th>
+            <th scope="col">Estado</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idHospedaje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPersona.nombreyApellidoPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idHabitacion.numeroHabitacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idHabitacion.descHabitacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaLlegada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaSalida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estHospedaje)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "EliminarHospedaje", new { idHospedaje = @item.idHospedaje })
+        </td>
+    </tr>
+}
+
+</table>
