@@ -1983,6 +1983,8 @@
     <Content Include="Views\MantenedorHospedaje\InsertarHospedaje.cshtml" />
     <Content Include="Views\MantenedorHospedaje\EliminarHospedaje.cshtml" />
     <Content Include="Views\MantenedorPersona\ListarPersona.cshtml" />
+    <Content Include="Views\MantenedorReserva\ListarReservas_Por_Usuario.cshtml" />
+    <Content Include="Views\MantenedorReserva\InsertarReservaUsuario.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

@@ -75,7 +75,7 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarPersona", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@prmstrNombre",P.nombreyApellidoPersona);
+                cmd.Parameters.AddWithValue("@prmstrNombres",P.nombreyApellidoPersona);
                 cmd.Parameters.AddWithValue("@prmIdDni", P.DNI);
                 cmd.Parameters.AddWithValue("@prmIdTelefono", P.telefono);
                 cmd.Parameters.AddWithValue("@prmbitEstado", P.estPersona);

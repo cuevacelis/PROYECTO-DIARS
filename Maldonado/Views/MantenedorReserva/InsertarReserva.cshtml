@@ -7,51 +7,58 @@
 }
 
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-<fieldset>
-    <legend>Agregar Reserva</legend>
-
-   
-
-    <div class="editor-label">
-        Fecha de Inicio
-    </div>
-    <div class="editor-field">
-        @Html.TextBoxFor(model => model.fechaIncioReserva, new { @class = "form-control", @id = "checkin_date" })
-        @Html.ValidationMessageFor(model => model.fechaIncioReserva)
-    </div>
-
-    <div class="editor-label">
-        Fecha de Fin
-    </div>
-    <div class="editor-field">
-        @Html.TextBoxFor(model => model.fechaFinReserva, new { @class = "form-control", @id = "checkin_date" })
-        @Html.ValidationMessageFor(model => model.fechaFinReserva)
-    </div>
-
-    <div class="form-group">
-        Nombre de Cliente:
-        <div class="col-md-10">
-            @Html.DropDownList("cboCliente", (SelectList)ViewBag.listaCliente, "<seleccionar>")
-        </div>
-    </div>
-
-    <div class="form-group">
-        N° de Habitacion:
-        <div class="col-md-10">
-            @Html.DropDownList("cboHabitacion", (SelectList)ViewBag.listaHabitacion, "<seleccionar>")
-        </div>
-    </div>
-
-    <p>
-        <input type="submit" value="Create" />
-    </p>
-</fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="col-md-7" data-aos="fade-up" data-aos-delay="100" id="next">
+    <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
+        <fieldset>
+            <legend>Agregar Reserva</legend>
+
+            <div class="editor-label">
+                Fecha de Inicio
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.fechaIncioReserva, new { @class = "form-control", @id = "checkin_date" })
+                @Html.ValidationMessageFor(model => model.fechaIncioReserva)
+            </div>
+
+            <div class="editor-label">
+                Fecha de Fin
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.fechaFinReserva, new { @class = "form-control", @id = "checkin_date" })
+                @Html.ValidationMessageFor(model => model.fechaFinReserva)
+            </div>
+
+            <div class="form-group">
+                Nombre de Cliente:
+                <div class="col-md-10">
+                    @Html.DropDownList("cboCliente", (SelectList)ViewBag.listaCliente, "<seleccionar>")
+                </div>
+            </div>
+
+            <div class="form-group">
+                N° de Habitacion:
+                <div class="col-md-10">
+                    @Html.DropDownList("cboHabitacion", (SelectList)ViewBag.listaHabitacion, "<seleccionar>")
+                </div>
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    </form>
 </div>
+
+    
+
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>

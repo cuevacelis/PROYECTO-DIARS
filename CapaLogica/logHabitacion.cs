@@ -37,6 +37,19 @@ namespace CapaLogica
             }
         }
 
+        public List<entHabitacion> ListarHabitacionPorTipo(int IdTipoHabitacion)
+        {
+            try
+            {
+                List<entHabitacion> lista = datHabitacion.Instancia.ListarHabitacionPorTipo(IdTipoHabitacion);
+                return lista;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         /*
        public Boolean InsertarHabitacion(entHabitacion a)
        {
@@ -48,7 +61,7 @@ namespace CapaLogica
 
 
        }*/
-       
+
         #endregion metodos
     }
 }

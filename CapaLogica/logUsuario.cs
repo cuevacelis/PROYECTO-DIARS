@@ -19,7 +19,7 @@ namespace CapaLogica
         #endregion
 
         #region Metodos
-        /*public List<entUsuario> ListarUsuario()
+        public List<entUsuario> ListarUsuario()
         {
             try
             {
@@ -31,7 +31,7 @@ namespace CapaLogica
             {
                 throw e;
             }
-        }*/
+        }
 
         public entUsuario VerificarAcceso(String Usuario, String Password)
         {

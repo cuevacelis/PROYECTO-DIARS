@@ -44,6 +44,7 @@
     <Compile Include="datPersona.cs" />
     <Compile Include="datHabitacion.cs" />
     <Compile Include="datReserva.cs" />
+    <Compile Include="datTipoHabitacion.cs" />
     <Compile Include="datTipoPersona.cs" />
     <Compile Include="datTrabajador.cs" />
     <Compile Include="datUsuario.cs" />

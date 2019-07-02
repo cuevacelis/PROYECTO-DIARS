@@ -36,6 +36,19 @@ namespace CapaLogica
             }
         }
 
+        public List<entReserva> ListarReservas_Por_Usuario(entUsuario u)
+        {
+            try
+            {
+                List<entReserva> lista = datReserva.Instancia.ListarReservas_Por_Usuario(u);
+                return lista;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public Boolean InsertarReserva(entReserva R)
         {
             try

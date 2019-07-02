@@ -24,18 +24,18 @@ namespace Maldonado.Controllers
 
             try
             {
-                //entUsuario u = (entUsuario)Session["usuario"];
-                ////ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                //if (u.tipo == true)
-                //{
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.idPersona.idTipoPersona.estTipoPersona == true)
+                {
                 List<entPersona> lista = logPersona.Instancia.ListarPersona();
                 ViewBag.lista = lista;
                 return View(lista);
-                //}
-                //else
-                //{
-                //    return RedirectToAction("Index", "Login");
-                //}
+                }
+                else
+                { 
+                    return RedirectToAction("Index", "Login");
+                }
             }
             catch (Exception e)
             {
@@ -44,25 +44,25 @@ namespace Maldonado.Controllers
         }
 
         [HttpGet]
-        public ActionResult InsertarCliente()
+        public ActionResult InsertarPersona()
         {
             try
             {
-                //entUsuario u = (entUsuario)Session["usuario"];
-                ////ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                //if (u.tipo == true)
-                //{
-                List<entTipoPersona> listarTipoCliente = logTipoPersona.Instancia.ListarTipoPersona();
-                var lsTipoCliente = new SelectList(listarTipoCliente, "idTipoPersona", "DesTipoPersona");
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.idPersona.idTipoPersona.estTipoPersona == true)
+                {
+                    List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersona();
+                var lsTipoPersona = new SelectList(listarTipoPersona, "idTipoPersona", "DesTipoPersona");
 
 
-                ViewBag.listaTipoCliente = lsTipoCliente;
+                ViewBag.listaTipoCliente = lsTipoPersona;
                 return View();
-                //}
-                //else
-                //{
-                //    return RedirectToAction("Index", "Login");
-                //}
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
             }
             catch (Exception e)
             {
@@ -71,7 +71,7 @@ namespace Maldonado.Controllers
         }
 
         [HttpPost]
-        public ActionResult InsertarCliente(entPersona C, FormCollection frm)
+        public ActionResult InsertarPersona(entPersona C, FormCollection frm)
         {
             try
             {

@@ -13,7 +13,6 @@ namespace CapaEntidad
         public String Username { get; set; }
         public String Correo { get; set; }
         public String Password { get; set; }
-        public String Hash { get; set; }
         public Boolean estUsuario { get; set; }
         public DateTime fechCreacion { get; set; }
     }

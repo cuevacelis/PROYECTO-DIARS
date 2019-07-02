@@ -1,74 +1,71 @@
-﻿@model CapaEntidad.entCliente
+﻿@model CapaEntidad.entPersona
 
 @{
-    ViewBag.Title = "Insertar Cliente";
+    ViewBag.Title = "Insertar Persona";
     ViewBag.image = "/Contents/images/security.png";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-
-    <fieldset>
-        <legend>Agrega un Nuevo cliente</legend>
-
-        
-        <div class="editor-label">
-            @Html.LabelFor(model => model.nombreCliente)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.nombreCliente)
-            @Html.ValidationMessageFor(model => model.nombreCliente)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.apellidoCliente)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.apellidoCliente)
-            @Html.ValidationMessageFor(model => model.apellidoCliente)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.DNI)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.DNI)
-            @Html.ValidationMessageFor(model => model.DNI)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.telefono)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.telefono)
-            @Html.ValidationMessageFor(model => model.telefono)
-        </div>
-
-        <div class="editor-label">
-            Activar
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.estCliente)
-            @Html.ValidationMessageFor(model => model.estCliente)
-        </div>
-
-
-        <div class="form-group">
-        Tipo de Cliente:
-            <div class="col-md-10">
-                @Html.DropDownList("cboTipoCliente", (SelectList)ViewBag.listaTipoCliente, "<seleccionar>")
-            </div>
-        </div>
-
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
 }
+<div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+    <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
+        <fieldset>
+            <legend>Agrega una Nueva Persona</legend>
+
+
+            <div class="editor-label">
+                Nombres y Apellidos
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.nombreyApellidoPersona, new { htmlAttributes = new { @class = "form-control", required = true, placeholder = "Nombre del Cliente", @id = "validationDefault01", type = "text" } })
+                @Html.ValidationMessageFor(model => model.nombreyApellidoPersona)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DNI)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.DNI, new { htmlAttributes = new { @class = "form-control", required = true, maxlength = 8, placeholder = "Dni del Cliente", @id = "validationDefault03", @type = "number" } })
+                @Html.ValidationMessageFor(model => model.DNI)
+            </div>
+
+            <div class="editor-label">
+                Telefono
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control", maxlength = 8, required = true, placeholder = "Telefono del Cliente", @id = "validationDefault04", @type = "number" } })
+                @Html.ValidationMessageFor(model => model.telefono)
+            </div>
+
+            <div class="editor-label">
+                Activar
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.estPersona, new { htmlAttributes = new { required = true, @id = "invalidCheck2", @type = "checkbox" } })
+                @Html.ValidationMessageFor(model => model.estPersona)
+            </div>
+
+
+            <div class="form-group">
+                Tipo de Persona:
+                <div class="col-md-10">
+                    @Html.DropDownList("cboTipoPersona", (SelectList)ViewBag.listaTipoPersona, "<seleccionar>")
+                </div>
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    </form>    
+</div>
+
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver a la Pagina Anteriort", "Index")
 </div>

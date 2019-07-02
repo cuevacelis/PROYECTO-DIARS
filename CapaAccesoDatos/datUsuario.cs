@@ -21,7 +21,7 @@ namespace CapaAccesoDatos
         #endregion
 
         #region Metodos
-        /*public List<entUsuario> ListarUsuario()
+        public List<entUsuario> ListarUsuario()
         {
             SqlCommand cmd = null;
             List<entUsuario> lista = new List<entUsuario>();
@@ -36,21 +36,19 @@ namespace CapaAccesoDatos
                 {
                     entUsuario U = new entUsuario();
                     U.idUsuario = Convert.ToInt16(dr["idUsuario"]);
-                    U.nomUsuario = dr["nomUsuario"].ToString();
-                    U.correo = dr["correo"].ToString();
-                    U.correo = dr["correo"].ToString();
+                    U.Username = dr["nomUsuario"].ToString();
+                    U.Correo = dr["correo"].ToString();
                     U.estUsuario = Convert.ToBoolean(dr["estUsuario"]);
-                    U.fecCreacion = Convert.ToDateTime(dr["fecCreacion"]);
-                    U.tipo = Convert.ToBoolean(dr["tipo"]);
+                    U.fechCreacion = Convert.ToDateTime(dr["fecCreacion"]);
 
-                    entPersona C = new entPersona();
-                    C.idPersona = Convert.ToInt16(dr["idCliente"]);
-                    C.nombreyApellidoPersona = dr["Nombres"].ToString();
-                    C.DNI = dr["DNI"].ToString();
-                    C.telefono = Convert.ToInt16(dr["Telefono"]);
-                    C.estPersona = Convert.ToBoolean(dr["EstCliente"]);
+                    entPersona P = new entPersona();
+                    P.idPersona = Convert.ToInt16(dr["idPersona"]);
+                    P.nombreyApellidoPersona = dr["Nombres"].ToString();
+                    P.DNI = dr["DNI"].ToString();
+                    P.telefono = Convert.ToInt16(dr["Telefono"]);
+                    P.estPersona = Convert.ToBoolean(dr["EstCliente"]);
 
-                    U.idCliente = C;
+                    U.idPersona = P;
                     lista.Add(U);
                 }
             }
@@ -60,7 +58,7 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return lista;
-        }*/
+        }
 
         public entUsuario VerificarAcceso(String Usuario, String Password)
         {
@@ -79,7 +77,7 @@ namespace CapaAccesoDatos
                 if (dr.Read())
                 {
                     u = new entUsuario();
-                    //u.idUsuario = Convert.ToInt32(dr["idUsuario"]);
+                    u.idUsuario = Convert.ToInt32(dr["idUsuario"]);
                     u.fechCreacion = Convert.ToDateTime(dr["fechaCreacion"]);
                     u.Username = dr["Username"].ToString();
                     u.Correo = dr["Correo"].ToString();
@@ -88,7 +86,7 @@ namespace CapaAccesoDatos
                     entPersona P = new entPersona();
                     P.nombreyApellidoPersona = dr["Nombres"].ToString();
                     P.DNI = dr["Dni"].ToString();
-                    //C.telefono = Convert.ToInt32(dr["Telefono"]);
+                    P.telefono = Convert.ToInt32(dr["Telefono"]);
                     //C.estPersona = Convert.ToBoolean(dr["EstCliente"]);
 
                     entTipoPersona tp = new entTipoPersona();

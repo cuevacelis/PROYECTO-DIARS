@@ -1,0 +1,200 @@
+﻿@model IEnumerable<CapaEntidad.entReserva>
+
+@{
+    ViewBag.Title = "InsertarReservaUsuario";
+    ViewBag.image = "/Contents/images/slider-3.jpg";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+}
+
+@using CapaEntidad
+@{
+    entUsuario u = (entUsuario)Session["usuario"];
+}
+
+<section class="section contact-section" id="next">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+
+                <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
+                    <div class="col-md-6 form-group" style="display: table-cell;vertical-align: middle;text-align: center;">
+                        <label class="text-black font-weight-bold display-4" for="name">¡Reserva aqui @u.Username!</label>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6 form-group">
+                            <label class="text-black font-weight-bold" for="name">Check In</label>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(model => model.fechaIncioReserva, new { @class = "form-control", @id = "checkin_date", placeholder = "Inicio de Reserva", required = true })
+                                @Html.ValidationMessageFor(model => model.fechaIncioReserva)
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="text-black font-weight-bold" for="phone">Check Out</label>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(model => model.fechaFinReserva, new { @class = "form-control", @id = "checkin_date", placeholder = "Fin de Reserva", required = true })
+                                @Html.ValidationMessageFor(model => model.fechaFinReserva)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label class="text-black font-weight-bold" for="email">¿Que Tipo De Habitacion?</label>
+                            <div>
+                                @Html.DropDownList("cboTipoHabitacion", (SelectList)ViewBag.listaTipoHabitacion, "<Haga Click y Seleccione>", new { @class = "custom-select", @id = "TipoHabitacion", required = true, @name = "lista1" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label class="text-black font-weight-bold" for="email">¿Que Numero de Habitacion?</label>
+                            <div>
+                                @Html.DropDownList("cboHabitacion", (SelectList)ViewBag.listaHabitacion, "<Haga Click y Seleccione>", new { @class = "custom-select", @id = "Habitacion", required = true })
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-4">
+                        <div class="col-md-12 form-group">
+                            <label class="text-black font-weight-bold" for="message">¿Alguna Peticion Especial?</label>
+                            <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="submit" value="¡Reservar Ya!" class="btn btn-primary text-white py-3 px-5 font-weight-bold">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+                <div class="row">
+                    <div class="col-md-10 ml-auto contact-info">
+                        <p><span class="d-block">Address:</span> <span class="text-black">  Urb. La Merced, Trujillo-Perú | Calle, Jose Antonio Andueza #289</span></p>
+                        <p><span class="d-block">Phone:</span> <span class="text-black"> 51-44-200442 | 51-44-207682 | 51-44-618430</span></p>
+                        <p><span class="d-block">Email:</span> <span class="text-black"> reservas@laposadadelrey-peru.com</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section testimonial-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-7">
+                <h2 class="heading" data-aos="fade-up">People Says</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="js-carousel-2 owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="testimonial text-center slider-item">
+                    <div class="author-image mb-3">
+                        <img src="/Contents/images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+                    </div>
+                    <blockquote>
+
+                        <p>&ldquo;Desayuno increíble.  Con "estación" detox y gluten free....Habitaciones planta alta espectaculares. Atención en el restaurant buenisima para familia con niños.&rdquo;</p>
+                    </blockquote>
+                    <p><em>&mdash; Julia Stil</em></p>
+                </div>
+
+                <div class="testimonial text-center slider-item">
+                    <div class="author-image mb-3">
+                        <img src="/Contents/images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+                    </div>
+                    <blockquote>
+                        <p>&ldquo;Honestamente todo el hotel está de maravilla. Es un poco caro pero al te er un excelente servicio e instalaciones uno está dispuesto a hacer el esfuerzo. El desayuno es excelente también. &rdquo;</p>
+                    </blockquote>
+                    <p><em>&mdash;  Joel Montana</em></p>
+                </div>
+
+                <div class="testimonial text-center slider-item">
+                    <div class="author-image mb-3">
+                        <img src="/Contents/images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+                    </div>
+                    <blockquote>
+
+                        <p>&ldquo;La amabilidad del personal y profesionalismo del trato al cliente, la comida buenísima, y las habitaciones super cómodas, totalmente recomendado para familias.&rdquo;</p>
+                    </blockquote>
+                    <p><em>&mdash; Max Dash</em></p>
+                </div>
+
+
+                <div class="testimonial text-center slider-item">
+                    <div class="author-image mb-3">
+                        <img src="/Contents/images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+                    </div>
+                    <blockquote>
+
+                        <p>&ldquo;La atencion excelente, la cama maravillosa, las almohadas un sueño, la piscina con la temperatura ideal pero lo mejor fue el servicio ejecutivo que nos ofrecieron por un súper precio pudimos hacer uso de un área exclusiva para cenar y tomar desayuno, excelente atención..&rdquo;</p>
+                    </blockquote>
+                    <p><em>&mdash; Angela Smith</em></p>
+                </div>
+
+                <div class="testimonial text-center slider-item">
+                    <div class="author-image mb-3">
+                        <img src="/Contents/images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+                    </div>
+                    <blockquote>
+                        <p>&ldquo;La cama muy cómoda! La habitación y el baño son muy cómodos y bastante buena la decoración simple. &rdquo;</p>
+                    </blockquote>
+                    <p><em>&mdash; Darel</em></p>
+                </div>
+
+                <div class="testimonial text-center slider-item">
+                    <div class="author-image mb-3">
+                        <img src="/Contents/images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+                    </div>
+                    <blockquote>
+
+                        <p>&ldquo; Su atención y personal más las instalaciones A1 definitivamente es un hotel con todas las características de un destacado 5 estrellas. &rdquo;</p>
+                    </blockquote>
+                    <p><em>&mdash; John Wick</em></p>
+                </div>
+
+            </div>
+            <!-- END slider -->
+        </div>
+
+    </div>
+</section>
+
+
+@Scripts.Render("~/bundles/MyJson")
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#TipoHabitacion').change(function () {
+            $('#Habitacion').empty();
+            seleccionarElemento();
+        });
+    });
+
+    function seleccionarElemento() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("TraerDatosTipoHabitacion")',
+            dataType: 'json',
+            data: { idHabitacion: $('#TipoHabitacion').val() },
+            success: function (listarHabitacion) {
+                $.each(listarHabitacion, function (i, dato) {
+                    $('#Habitacion').append('<option value ="' + dato.idHabitacion + '">' + dato.numeroHabitacion + '</option>');
+                })
+            }
+        });
+    }
+
+</script>

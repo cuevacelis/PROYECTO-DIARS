@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CapaEntidad.entReserva>
+
+@{
+    ViewBag.Title = "ListarReservas_Por_Usuario";
+    ViewBag.image = "/Contents/images/security.png";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <a href="@Url.Action("Create New", "Create")">
+        <h2>Nueva Reserva</h2>
+    </a>
+</p>
+<table class="table sortable">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" onclick="sortTable(0, 'str')">Nombres y Apellidos</th>
+            <th scope="col" onclick="sortTable(1, 'str')">N° de Habitacion</th>
+            <th scope="col" onclick="sortTable(2, 'str')">Ubicacion</th>
+            <th scope="col" onclick="sortTable(3, 'str')">Descripcion del Tipo Habotacion</th>
+            <th scope="col" onclick="sortTable(4, 'str')">Fecha de Inicio</th>
+            <th scope="col" onclick="sortTable(5, 'str')">Fecha de Fin</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.nombreyApellidoPersona)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idHabitacion.numeroHabitacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idHabitacion.descHabitacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idHabitacion.idTipoHabitacion.desTipoHabitacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fechaIncioReserva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fechaFinReserva)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Index", "MenuIntranet")">
+    <h4>Volver al Panel de Gestion</h4>
+</a>
+
+@Scripts.Render("~/bundles/OrdenarTablas")
