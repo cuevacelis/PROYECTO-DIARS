@@ -1,0 +1,44 @@
+﻿@model CapaEntidad.entCliente
+
+@{
+    ViewBag.Title = "EditarCliente";
+    ViewBag.image = "/Contents/images/security.png";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditarCliente</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.idPersona.idPersona, htmlAttributes: new { @class = "control-label col-md-2", required = true, placeholder = "Numero de Identificacion del Cliente", @id = "validationDefault01", type = "number" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.idPersona.idPersona, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.idPersona.idPersona, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-horizontal">
+            <p class="control-label col-md-2">¿Cliente Activado?</p>
+        </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.estCliente, new { required = true, @id = "invalidCheck2", @type = "checkbox" })
+                @Html.ValidationMessageFor(model => model.estCliente)
+            </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

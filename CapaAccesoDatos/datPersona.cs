@@ -52,6 +52,7 @@ namespace CapaAccesoDatos
                     Persona.nombreyApellidoPersona = dr["Nombres"].ToString();
                     Persona.DNI = dr["Dni"].ToString();
                     Persona.telefono = Convert.ToInt32(dr["Telefono"]);
+                    Persona.razonSocial = dr["RazonSocial"].ToString();
                     Persona.estPersona = Convert.ToBoolean(dr["EstPersona"]);
 
                     lista.Add(Persona);

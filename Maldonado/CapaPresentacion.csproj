@@ -190,16 +190,6 @@
     <Content Include="Contents\bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Contents\bootstrap\bootstrap.css" />
     <Content Include="Contents\bootstrap\bootstrap.min.css" />
-    <Content Include="Contents\bootstrap\css\bootstrap-grid.css" />
-    <Content Include="Contents\bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="Contents\bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="Contents\bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="Contents\bootstrap\css\bootstrap.css" />
-    <Content Include="Contents\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Contents\bootstrap\js\bootstrap.bundle.js" />
-    <Content Include="Contents\bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="Contents\bootstrap\js\bootstrap.js" />
-    <Content Include="Contents\bootstrap\js\bootstrap.min.js" />
     <Content Include="Contents\css\animate.css" />
     <Content Include="Contents\css\aos.css" />
     <Content Include="Contents\css\bootstrap-datepicker.css" />
@@ -210,7 +200,6 @@
     <Content Include="Contents\css\fancybox.min.css" />
     <Content Include="Contents\css\jquery.timepicker.css" />
     <Content Include="Contents\css\magnific-popup.css" />
-    <Content Include="Contents\css\OrdenarTablasCSS.css" />
     <Content Include="Contents\css\owl.carousel.min.css" />
     <Content Include="Contents\css\style.css" />
     <Content Include="Contents\css\_custom.css" />
@@ -247,12 +236,10 @@
     <Content Include="Contents\fonts\ionicons\css\ionicons.css" />
     <Content Include="Contents\fonts\ionicons\css\ionicons.min.css" />
     <Content Include="Contents\fonts\ionicons\fonts\ionicons.svg" />
-    <Content Include="Contents\images\40-formas-de-ganar-dinero-mientras-viajas.jpg" />
     <Content Include="Contents\images\about_feature_image.png" />
     <Content Include="Contents\images\Background_Fondo.jpg" />
     <Content Include="Contents\images\Cuarto Hotel.jpg" />
     <Content Include="Contents\images\D-Frag-anime-girls-Takao-D-Frag-anime-brunette-feet-1369059-wallhere.com.jpg" />
-    <Content Include="Contents\images\Error404.png" />
     <Content Include="Contents\images\food-1.jpg" />
     <Content Include="Contents\images\fotos_hotel1.PNG" />
     <Content Include="Contents\images\fotos_hotel2.PNG" />
@@ -298,9 +285,7 @@
     <Content Include="Contents\js\aos.js" />
     <Content Include="Contents\js\bootstrap-datepicker.js" />
     <Content Include="Contents\js\bootstrap.min.js" />
-    <Content Include="Contents\js\jquery-1.2.6.js" />
     <Content Include="Contents\js\jquery-3.3.1.min.js" />
-    <Content Include="Contents\js\jquery-3.4.1.min.js" />
     <Content Include="Contents\js\jquery-migrate-3.0.1.min.js" />
     <Content Include="Contents\js\jquery.fancybox.min.js" />
     <Content Include="Contents\js\jquery.magnific-popup.min.js" />
@@ -311,8 +296,6 @@
     <Content Include="Contents\js\main.js" />
     <Content Include="Contents\js\owl.carousel.min.js" />
     <Content Include="Contents\js\popper.min.js" />
-    <Content Include="Contents\js\SortTable.js" />
-    <Content Include="Contents\js\tablesOrder.js" />
     <Content Include="Contents\LoginInteractivo\atardecer.jpg" />
     <Content Include="Contents\LoginInteractivo\css\reset.min.css" />
     <Content Include="Contents\LoginInteractivo\css\style.css" />
@@ -323,7 +306,6 @@
     <Content Include="Contents\Login\css\style.css" />
     <Content Include="Contents\Login\images\D-Frag-anime-girls-Takao-D-Frag-anime-brunette-feet-1369059-wallhere.com.jpg" />
     <Content Include="Contents\Login\js\index.js" />
-    <Content Include="Contents\MisScript\JS_HabitacionyTipoHabitacion_Json.js" />
     <Content Include="Contents\sweetalert2\sweetalert2.all.js" />
     <Content Include="Contents\sweetalert2\sweetalert2.all.min.js" />
     <Content Include="Contents\sweetalert2\sweetalert2.css" />
@@ -1963,16 +1945,6 @@
     <Content Include="Contents\FontAwesomeIcon\webfonts\fa-solid-900.ttf" />
     <Content Include="Contents\FontAwesomeIcon\webfonts\fa-solid-900.woff" />
     <Content Include="Contents\FontAwesomeIcon\webfonts\fa-solid-900.woff2" />
-    <Content Include="Contents\bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="Contents\bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="Contents\bootstrap\js\bootstrap.js.map" />
-    <Content Include="Contents\bootstrap\js\bootstrap.min.js.map" />
-    <Content Include="Contents\bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="Contents\bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="Contents\bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="Contents\bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Contents\bootstrap\css\bootstrap.css.map" />
-    <Content Include="Contents\bootstrap\css\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2008,6 +1980,7 @@
     <Content Include="Views\MenuIntranet\Index.cshtml" />
     <Content Include="Views\MantenedorPersona\EditarPersona.cshtml" />
     <Content Include="Views\MantenedorPersona\EliminarPersona.cshtml" />
+    <Content Include="Views\MantenedorReserva\EliminarReserva.cshtml" />
     <Content Include="Views\MantenedorHospedaje\ListarHospedaje.cshtml" />
     <Content Include="Views\MantenedorHospedaje\InsertarHospedaje.cshtml" />
     <Content Include="Views\MantenedorHospedaje\EliminarHospedaje.cshtml" />
@@ -2016,7 +1989,7 @@
     <Content Include="Views\MantenedorReserva\InsertarReservaUsuario.cshtml" />
     <Content Include="Views\MantenedorCliente\ListarCliente.cshtml" />
     <Content Include="Views\MantenedorCliente\InsertarCliente.cshtml" />
-    <Content Include="Views\MantenedorReserva\EliminarReserva.cshtml" />
+    <Content Include="Views\MantenedorCliente\EditarCliente.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

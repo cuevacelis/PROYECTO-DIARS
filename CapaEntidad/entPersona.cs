@@ -13,6 +13,7 @@ namespace CapaEntidad
         public String DNI { get; set; }
         public int telefono { get; set; }
         public Boolean estPersona { get; set; }
+        public String razonSocial { get; set; }
         public entTipoPersona idTipoPersona { get; set; }
         public DateTime fechaNacimiento { get; set; }
     }
