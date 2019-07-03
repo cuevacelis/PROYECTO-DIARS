@@ -104,6 +104,30 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return u;
         }
+
+        public Boolean AgregarBitacora(entUsuario u)
+        {
+
+            SqlCommand cmd = null;
+            Boolean insertar = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spAgregarBitacora", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmintidUsuario", u.idUsuario);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                { insertar = true; }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return insertar;
+        }
         #endregion
     }
 }

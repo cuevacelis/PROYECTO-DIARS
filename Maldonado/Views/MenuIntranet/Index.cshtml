@@ -18,7 +18,7 @@
     if (us.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
     {
         ViewBag.Title = "Bienvenid@ Gerente " + us.idPersona.nombreyApellidoPersona;
-<div class="row text-center pad-top">
+        <div class="row text-center pad-top">
         <div class="card-group">
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
             <div class="div-square">
@@ -27,16 +27,6 @@
                     <h4>Gestionar Reservas</h4>
                 </a>
             </div>
-        </div>
-
-        <div class="card">
-            <a href="">
-                <img class="card-img-top" src="" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Gestionar Hospedaje</h5>
-                    <p class="card-text">Aqui puede ver las habitaciones Disponibles.</p>
-                </div>
-            </a>
         </div>
 
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
@@ -73,29 +63,71 @@
             </a>
         </div>
     </div>
-</div>
+    </div>
+}
+else
+{
+    if (us.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
+    {
+        ViewBag.Title = "Bienvenid@ Recepcionista " + us.idPersona.nombreyApellidoPersona;
+
+        <div class="row text-center pad-top">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <div class="div-square">
+                    <a href="@Url.Action("ListarReservas","MantenedorReserva")">
+                        <i class="fas fa-concierge-bell fa-5x"></i>
+                        <h4>Gestionar Reservas</h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <div class="div-square">
+                    <a href="@Url.Action("ListarCliente","MantenedorCliente")">
+                        <i class="fas fa-users fa-5x"></i>
+                        <h4>Gestionar Clientes</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <div class="div-square">
+                    <a href="blank.html">
+                        <i class="fa fa-key fa-5x"></i>
+                        <h4>Admin </h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <div class="div-square">
+                    <a href="blank.html">
+                        <i class="fa fa-comments-o fa-5x"></i>
+                        <h4>Soporte</h4>
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <div class="div-square">
+                    <a href="blank.html">
+                        <i class="fa fa-bell-o fa-5x"></i>
+                        <h4>Notificaciones </h4>
+                    </a>
+                </div>
+            </div>
+        </div>
     }
     else
     {
-        if (us.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
+        if (us.idPersona.idTipoPersona.desTipoPersona.Equals("Cliente-Registrado"))
         {
-            ViewBag.Title = "Bienvenid@ Recepcionista " + us.idPersona.nombreyApellidoPersona;
-
+            ViewBag.Title = "Bienvenid@ Cliente" + us.idPersona.nombreyApellidoPersona;
             <div class="row text-center pad-top">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                     <div class="div-square">
-                        <a href="@Url.Action("ListarReservas","MantenedorReserva")">
+                        <a href="blank.html">
                             <i class="fas fa-concierge-bell fa-5x"></i>
-                            <h4>Gestionar Reservas</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                    <div class="div-square">
-                        <a href="@Url.Action("ListarCliente","MantenedorCliente")">
-                            <i class="fas fa-users fa-5x"></i>
-                            <h4>Gestionar Clientes</h4>
+                            <h4>Ver mis Reservas</h4>
                         </a>
                     </div>
                 </div>
@@ -127,50 +159,8 @@
                 </div>
             </div>
         }
-        else
-        {
-            if (us.idPersona.idTipoPersona.desTipoPersona.Equals("Cliente-Registrado"))
-            {
-                ViewBag.Title = "Bienvenid@ Cliente" + us.idPersona.nombreyApellidoPersona;
-                <div class="row text-center pad-top">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                        <div class="div-square">
-                            <a href="blank.html">
-                                <i class="fas fa-concierge-bell fa-5x"></i>
-                                <h4>Ver mis Reservas</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                        <div class="div-square">
-                            <a href="blank.html">
-                                <i class="fa fa-key fa-5x"></i>
-                                <h4>Admin </h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                        <div class="div-square">
-                            <a href="blank.html">
-                                <i class="fa fa-comments-o fa-5x"></i>
-                                <h4>Soporte</h4>
-                            </a>
-                        </div>
-
-
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                        <div class="div-square">
-                            <a href="blank.html">
-                                <i class="fa fa-bell-o fa-5x"></i>
-                                <h4>Notificaciones </h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            }
-        }
     }
+}
     ViewBag.image = "/Contents/images/security.png";
      Layout = "~/Views/Shared/_Layout.cshtml";
 }

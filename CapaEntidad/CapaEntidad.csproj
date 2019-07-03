@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entBitacora.cs" />
     <Compile Include="entCliente.cs" />
     <Compile Include="entHospedaje.cs" />
     <Compile Include="entPago.cs" />

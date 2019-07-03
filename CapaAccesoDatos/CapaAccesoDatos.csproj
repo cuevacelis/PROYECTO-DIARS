@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="datBitacora.cs" />
     <Compile Include="datCliente.cs" />
     <Compile Include="datHospedaje.cs" />
     <Compile Include="datPago.cs" />

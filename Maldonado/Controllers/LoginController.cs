@@ -29,7 +29,8 @@ namespace Maldonado.Controllers
                 String txtUsuario = frm["txtUsuario"];
                 String txtPassword = frm["txtPassword"];
 
-                entUsuario u = logUsuario.Instancia.VerificarAcceso(txtUsuario, txtPassword);
+            entUsuario u = logUsuario.Instancia.VerificarAcceso(txtUsuario, txtPassword);
+            logUsuario.Instancia.AgregarBitacora(u);
 
                 Session["usuario"] = u;
                 TempData["MensajeDeValidacion"] = "success";
@@ -65,5 +66,46 @@ namespace Maldonado.Controllers
             Session.RemoveAll();
             return RedirectToAction("Index", "Inicio");
         }
+
+        [HttpPost]
+        public ActionResult AgregarBitacora(entUsuario U)
+        {
+            try
+            {
+
+                Boolean inserta = logUsuario.Instancia.AgregarBitacora(U);
+
+                if (inserta)
+                {
+                    return RedirectToAction("ListarPersona");
+                }
+                else
+                {
+                    return View(U);
+                }
+            }
+            catch (ApplicationException ex)
+            {
+                return RedirectToAction("InsertarPersona", new { mesjExceptio = ex.Message });
+            }
+        }
+
+        public ActionResult ListarBitacora()
+        {
+
+            try
+            {
+                entUsuario u = (entUsuario)Session["usuario"];
+                List<entBitacora> lista = logBitacora.Instancia.ListarBitacora(u);
+                ViewBag.lista = lista;
+                return View(lista);
+
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
+
     }
 }
