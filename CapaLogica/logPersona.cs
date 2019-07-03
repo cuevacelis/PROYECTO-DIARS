@@ -25,51 +25,51 @@ namespace CapaLogica
         #region metodos
         public List<entPersona> ListarPersona()
         {
-            try
-            {
+            //try
+            //{
                 List<entPersona> lista = datPersona.Instancia.ListarPersona();
                 return lista;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            //}
+            //catch (Exception e)
+            //{
+            //    throw e;
+            //}
         }
         
         public Boolean InsertarPersona(entPersona a)
         {
-            try
-            {
+            //try
+            //{
                 return datPersona.Instancia.InsertarPersona(a);
-            }
-            catch (Exception e) { throw e; }
+            //}
+            //catch (Exception e) { throw e; }
 
 
         }
         public Boolean EditarPersona(entPersona c)
         {
-            try
-            {
+            //try
+            //{
                 return datPersona.Instancia.EditarPersona(c);
-            }
-            catch (Exception e){ throw e; }
+            //}
+            //catch (Exception e){ throw e; }
         }
         public entPersona BuscarPersona(int idPersona)
         {
-            try
-            {
+            //try
+            //{
                 return datPersona.Instancia.BuscarPersona(idPersona);
-            }
-            catch (Exception e){ throw e; }
+            //}
+            //catch (Exception e){ throw e; }
         }
         public Boolean EliminarPersona(int idPersona)
         {
-            try
-            {
+            //try
+            //{
                 return datPersona.Instancia.EliminarPersona(idPersona);
-            }
-            catch (Exception e)
-            { throw e; }
+            //}
+            //catch (Exception e)
+            //{ throw e; }
         }
         #endregion metodos
     }

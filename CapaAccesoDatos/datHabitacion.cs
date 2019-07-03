@@ -62,7 +62,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public List<entHabitacion> ListarHabitacionPorTipo(int IdTipoHabitacion)
+        public List<entHabitacion> ListarHabitacionPorTipo(int IdTipoHabitacion,DateTime fechaIncioReserva, DateTime fechaFinReserva)
         {
             SqlCommand cmd = null;
             List<entHabitacion> lista = new List<entHabitacion>();
@@ -73,6 +73,8 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spListarHabitacionPorTipo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@prmIdTipoHabitacion", IdTipoHabitacion);
+                cmd.Parameters.AddWithValue("@prmdateFechaInicio", fechaIncioReserva);
+                cmd.Parameters.AddWithValue("@prmdateFechaFin", fechaFinReserva);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())

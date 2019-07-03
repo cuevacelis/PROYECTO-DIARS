@@ -15,25 +15,6 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
 
-    <!--
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
-    -->
-
-    <link rel="stylesheet" href="~/Contents/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="~/Contents/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="~/Contents/css/jquery.timepicker.css">
-    <link rel="stylesheet" href="~/Contents/css/animate.css">
-    <link rel="stylesheet" href="~/Contents/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/Contents/css/aos.css">
-    <link rel="stylesheet" href="~/Contents/css/fancybox.min.css">
-
-    <link rel="stylesheet" href="~/Contents/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="~/Contents/fonts/fontawesome/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="~/Contents/FontAwesomeIcon/css/all.css">
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="~/Contents/css/style.css">
-
     @Styles.Render("~/bundles/css")
 </head>
 
@@ -58,7 +39,7 @@
                                     <div class="col-md-6 mx-auto">
                                         <ul class="list-unstyled menu">
                                             <li class="nav-item active">@Html.ActionLink("Home", "Index", "Inicio")</li>
-                                            @if (u != null)   //USUARIO INICIO SESION
+                                            @if (u != null) //USUARIO INICIO SESION
                                             {
 
                                                 if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
@@ -120,7 +101,7 @@
                 <div class="container">
                     <div class="row site-hero-inner justify-content-center align-items-center">
                         <div class="col-md-10 text-center" data-aos="fade-up">
-                            <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To 5 <span class="fa fa-star text-primary"></span>Hotel</span>
+                            <span class="custom-caption text-uppercase text-white d-block mb-3">Welcome To 5 <span class="fa fa-star text-primary"></span>Hotel</span>
                             <h1 class="heading">Hotel la Posada del Rey</h1>
                         </div>
                     </div>
@@ -196,7 +177,7 @@
                 <p class="col-md-6 text-left">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> Todos los derechos Reservados  <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://www.upn.edu.pe/es" target="_blank">UPN</a>
+                    <script>document.write(new Date().getFullYear());</script> Todos los derechos Reservados <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://www.upn.edu.pe/es" target="_blank">UPN</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
                 <p class="col-md-6 text-right social">
@@ -210,8 +191,6 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="~/Contents/js/aos.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery-3.4.1.min.js"></script>
     @Scripts.Render("~/bundles/js")
 </body>
 </html>
