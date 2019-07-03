@@ -19,48 +19,45 @@ namespace Maldonado.Controllers
         [HttpGet]
         public ActionResult ListarCliente()
         {
-            //try
-            //{
-            //entUsuario u = (entUsuario)Session["usuario"];
-            //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-            //if (u.idPersona.idTipoPersona.estTipoPersona == true)
-            //{
-                List<entCliente> lista = logCliente.Instancia.ListarCliente();
+            try
+            {
+                entUsuario u = (entUsuario)Session["usuario"];
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente") || u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
+                {
+                    List<entCliente> lista = logCliente.Instancia.ListarCliente();
                 ViewBag.lista = lista;
                 return View(lista);
-            //}
-            //else
-            //{
-            //    return RedirectToAction("Index", "Login");
-            //}
-            //}
-            //catch (Exception e)
-            //{
-            //    return RedirectToAction("Index", "Login");
-            //}
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Login");
+            }
         }
 
         [HttpGet]
         public ActionResult InsertarCliente()
         {
-            //try
-            //{
-             entUsuario u = (entUsuario)Session["usuario"];
-            //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-            //if (u.idPersona.idTipoPersona.estTipoPersona == true)
-            //{
-
-            return View();
-                //}
-                //else
-                //{
-                //    return RedirectToAction("Index", "Login");
-                //}
-            //}
-            //catch (Exception e)
-            //{
-            //    return RedirectToAction("Index", "Login");
-            //}
+            try
+            {
+                entUsuario u = (entUsuario)Session["usuario"];
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente") || u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
+                {
+                    return View();
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Login");
+            }
         }
 
         [HttpPost]
@@ -68,15 +65,22 @@ namespace Maldonado.Controllers
         {
             try
             {
+                entUsuario u = (entUsuario)Session["usuario"];
                 Boolean inserta = logCliente.Instancia.InsertarCliente(C);
-
-                if (inserta)
+                if(u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente") || u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
                 {
-                    return RedirectToAction("ListarCliente");
+                    if (inserta)
+                    {
+                        return RedirectToAction("ListarCliente");
+                    }
+                    else
+                    {
+                        return View();
+                    }
                 }
                 else
                 {
-                    return View();
+                    return RedirectToAction("Index", "Login");
                 }
             }
             catch (ApplicationException ex)
@@ -88,10 +92,25 @@ namespace Maldonado.Controllers
         [HttpGet]
         public ActionResult EditarCliente(int idCliente)
         {
-            entCliente C = new entCliente();
-            C = logCliente.Instancia.BuscarCliente(idCliente);
+            try
+            {
+                entUsuario u = (entUsuario)Session["usuario"];
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente") || u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
+                {
+                    entCliente C = new entCliente();
+                    C = logCliente.Instancia.BuscarCliente(idCliente);
 
-            return View(C);
+                    return View(C);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+            }catch(ApplicationException ex)
+            {
+                return RedirectToAction("EditarCliente", new { mesjExceptio = ex.Message });
+            }
+            
         }
 
         [HttpPost]
@@ -99,20 +118,27 @@ namespace Maldonado.Controllers
         {
             try
             {
+                entUsuario u = (entUsuario)Session["usuario"];
                 C.idPersona = new entPersona();
 
                 Boolean edita = logCliente.Instancia.EditarCliente(C);
-                if (edita)
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente") || u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
                 {
-                    return RedirectToAction("ListarCliente");
+                    if (edita)
+                    {
+                        return RedirectToAction("ListarCliente");
 
+                    }
+                    else
+                    {
+                        return View(C);
+                    }
                 }
                 else
                 {
-                    return View(C);
+                    return RedirectToAction("Index", "Login");
                 }
             }
-
             catch (ApplicationException ex)
             {
                 return RedirectToAction("EditarCliente", new { mesjExceptio = ex.Message });
@@ -124,17 +150,24 @@ namespace Maldonado.Controllers
         {
             try
             {
+                entUsuario u = (entUsuario)Session["usuario"];
+
                 Boolean elimina = logCliente.Instancia.EliminarCliente(idCliente);
-
-
-                if (elimina)
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente") || u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista")
                 {
-                    return RedirectToAction("ListarCliente");
+                    if (elimina)
+                    {
+                        return RedirectToAction("ListarCliente");
 
+                    }
+                    else
+                    {
+                        return View();
+                    }
                 }
                 else
                 {
-                    return View();
+                    return RedirectToAction("Index", "Login");
                 }
             }
 

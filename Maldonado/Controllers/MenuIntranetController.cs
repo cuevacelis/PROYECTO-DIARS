@@ -18,7 +18,7 @@ namespace Maldonado.Controllers
             {
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u != null)//VERIFICA QUE INICIO SESION
+                if (u.idPersona.idTipoPersona.desTipoPersona == "Gerente") //VERIFICA QUE INICIÓ SESION GERENTE
                 {
                     return View();
                 }
@@ -31,7 +31,6 @@ namespace Maldonado.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
-           
         }
 
     }
