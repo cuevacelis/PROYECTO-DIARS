@@ -1,0 +1,108 @@
+﻿@model IEnumerable<CapaEntidad.entTrabajador>
+
+@{
+    ViewBag.Title = "ListarTrabajador";
+    ViewBag.image = "/Contents/images/security.png";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="display-4 ">Lista de Trabajadores del Hotel</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Trabajador", "InsertarTrabajador")
+</p>
+
+<table class="table">
+    <tr>
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombres y Apellidos</th>
+                <th scope="col">Dni</th>
+                <th scope="col">Ingresos</th>
+                <th scope="col">Profesion</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Estado</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+    </tr>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.nombreyApellidoPersona)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.DNI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ingresos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.profesion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.estTrabajador)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditarTrabajador", new { idTrabajador = @item.idTrabajador }) |
+                    <a href="/MantenedorTrabajador/EliminarTrabajador?idTrabajador=@item.idTrabajador " onclick="prueba()">Eliminar</a>
+                    <script>
+
+                        function prueba() {
+
+                            const swalWithBootstrapButtons = Swal.mixin({
+                                customClass: {
+                                    confirmButton: 'btn btn-success',
+                                    cancelButton: 'btn btn-danger'
+                                },
+                                buttonsStyling: false,
+                            })
+
+                            swalWithBootstrapButtons.fire({
+                                title: 'Are you sure?',
+                                text: "You won't be able to revert this!",
+                                type: 'warning',
+                                showCancelButton: true,
+                                confirmButtonText: 'Yes, delete it!',
+                                cancelButtonText: 'No, cancel!',
+                                reverseButtons: true
+                            }).then((result) => {
+                                if (result.value) {
+                                    swalWithBootstrapButtons.fire(
+                                        'Deleted!',
+                                        'Your file has been deleted.',
+                                        'success'
+                                    )
+                                } else if (
+                                    // Read more about handling dismissals
+                                    result.dismiss === Swal.DismissReason.cancel
+                                ) {
+                                    swalWithBootstrapButtons.fire(
+                                        'Cancelled',
+                                        'Your imaginary file is safe :)',
+                                        'error'
+                                    )
+                                }
+                            })
+                        }
+                    </script>
+
+                    @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                </td>
+            </tr>
+            }
+        </tbody>
+
+</table>

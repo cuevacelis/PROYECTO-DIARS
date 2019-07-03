@@ -113,7 +113,6 @@ namespace CapaAccesoDatos
                     C.idPersona.DNI = Convert.ToString(dr["Dni"]);
                     C.idPersona.telefono = Convert.ToInt32(dr["Telefono"]);
                     C.idPersona.estPersona = Convert.ToBoolean(dr["EstPersona"]);
-
                 }
             }
             catch (Exception e)
@@ -151,6 +150,30 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return edita;
+        }
+
+        public Boolean EliminarCliente(int idCliente)
+        {
+            SqlCommand cmd = null;
+            Boolean elimina = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEliminarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmintidCliente", idCliente);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i >= 0)
+                { elimina = true; }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return elimina;
         }
         #endregion
     }

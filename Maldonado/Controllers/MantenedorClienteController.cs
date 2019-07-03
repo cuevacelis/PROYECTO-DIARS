@@ -119,5 +119,30 @@ namespace Maldonado.Controllers
             }
 
         }
+
+        public ActionResult EliminarCliente(int idCliente)
+        {
+            try
+            {
+                Boolean elimina = logCliente.Instancia.EliminarCliente(idCliente);
+
+
+                if (elimina)
+                {
+                    return RedirectToAction("ListarCliente");
+
+                }
+                else
+                {
+                    return View();
+                }
+            }
+
+            catch (ApplicationException ex)
+            {
+                return RedirectToAction("EditarCliente", new { mesjExceptio = ex.Message });
+            }
+
+        }
     }
 }

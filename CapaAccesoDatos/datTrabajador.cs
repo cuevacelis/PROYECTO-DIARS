@@ -73,14 +73,18 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarTrabajador", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.AddWithValue("@prmstrNombre", T.nombreyApellidoPersona);
-                //cmd.Parameters.AddWithValue("@prmIdDni", T.DNI);
-                //cmd.Parameters.AddWithValue("@prmIdTelefono", T.telefono);
-                //cmd.Parameters.AddWithValue("@prmbitEstado", T.estPersona);
-                cmd.Parameters.AddWithValue("@prmIdPersona", T.idPersona.idPersona);
-                cmd.Parameters.AddWithValue("@prmintIngresos",T.ingresos);
+                cmd.Parameters.AddWithValue("@prmstrNombres", T.idPersona.nombreyApellidoPersona);
+                cmd.Parameters.AddWithValue("@prmIdDni", T.idPersona.DNI);
+                cmd.Parameters.AddWithValue("@prmIdTelefono", T.idPersona.telefono);
+                cmd.Parameters.AddWithValue("@prmdateFechaNacimiento", T.idPersona.fechaNacimiento);
+
+                cmd.Parameters.AddWithValue("@prmintIdTipoPersona", T.idPersona.idTipoPersona.idTipoPersona);
+
+                //cmd.Parameters.AddWithValue("@prmIdPersona", T.idPersona.idPersona);
+                cmd.Parameters.AddWithValue("@prmfloatIngresos", T.ingresos);
                 cmd.Parameters.AddWithValue("@prmstrProfesion", T.profesion);
                 cmd.Parameters.AddWithValue("@prmstrRol", T.rol);
+                cmd.Parameters.AddWithValue("@prmboolestTrabajador", T.estTrabajador);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
