@@ -119,6 +119,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MantenedorClienteController.cs" />
     <Compile Include="Controllers\MantenedorHospedajeController.cs" />
     <Compile Include="Controllers\MantenedorPersonaController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
@@ -237,6 +238,7 @@
     <Content Include="Contents\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="Contents\images\about_feature_image.png" />
     <Content Include="Contents\images\Background_Fondo.jpg" />
+    <Content Include="Contents\images\Cuarto Hotel.jpg" />
     <Content Include="Contents\images\D-Frag-anime-girls-Takao-D-Frag-anime-brunette-feet-1369059-wallhere.com.jpg" />
     <Content Include="Contents\images\food-1.jpg" />
     <Content Include="Contents\images\fotos_hotel1.PNG" />
@@ -1985,6 +1987,7 @@
     <Content Include="Views\MantenedorPersona\ListarPersona.cshtml" />
     <Content Include="Views\MantenedorReserva\ListarReservas_Por_Usuario.cshtml" />
     <Content Include="Views\MantenedorReserva\InsertarReservaUsuario.cshtml" />
+    <Content Include="Views\MantenedorCliente\ListarCliente.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

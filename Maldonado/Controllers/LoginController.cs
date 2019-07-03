@@ -24,8 +24,8 @@ namespace Maldonado.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection frm)
         {
-            try
-            {
+            //try
+            //{
                 String txtUsuario = frm["txtUsuario"];
                 String txtPassword = frm["txtPassword"];
 
@@ -43,21 +43,21 @@ namespace Maldonado.Controllers
                     return RedirectToAction("Index", "Inicio");
                 }
 
-            }
-            catch (ApplicationException e)
-            {
-                ViewBag.mensaje = e.Message;
-                TempData["MensajeDeValidacion"] = "error";
+            //}
+            //catch (ApplicationException e)
+            //{
+                //ViewBag.mensaje = e.Message;
+                //TempData["MensajeDeValidacion"] = "error";
 
-                return RedirectToAction("Index", "Login");
-            }
-            catch (Exception e)
-            {
-                ViewBag.mensaje = e.Message;
-                TempData["MensajeDeValidacion"] = "errorCodigo";
+                //return RedirectToAction("Index", "Login");
+            //}
+        //    catch (Exception e)
+        //    {
+        //        ViewBag.mensaje = e.Message;
+        //        TempData["MensajeDeValidacion"] = "errorCodigo";
 
-                return ViewBag(e);
-            }
+        //        return ViewBag(e);
+        //    }
         }
 
         public ActionResult Logout()

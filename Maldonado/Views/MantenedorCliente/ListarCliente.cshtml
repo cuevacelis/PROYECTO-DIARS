@@ -1,0 +1,100 @@
+﻿@model IEnumerable<CapaEntidad.entCliente>
+
+@{
+    ViewBag.Title = "ListarPersona";
+    ViewBag.image = "/Contents/images/security.png";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="display-4 ">Lista de Personas del Hotel</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombres y Apellidos</th>
+            <th scope="col">Dni</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Tipo</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.nombreyApellidoPersona)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.DNI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.estPersona)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.idTipoPersona.idTipoPersona)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditarPersona", new { idPersona = @item.idPersona }) |
+                    <a href="/MantenedorPersona/EliminarPersona?idPersona=@item.idPersona " onclick="prueba()">Eliminar</a>
+                    <script>
+
+                        function prueba() {
+
+                            const swalWithBootstrapButtons = Swal.mixin({
+                                customClass: {
+                                    confirmButton: 'btn btn-success',
+                                    cancelButton: 'btn btn-danger'
+                                },
+                                buttonsStyling: false,
+                            })
+
+                            swalWithBootstrapButtons.fire({
+                                title: 'Are you sure?',
+                                text: "You won't be able to revert this!",
+                                type: 'warning',
+                                showCancelButton: true,
+                                confirmButtonText: 'Yes, delete it!',
+                                cancelButtonText: 'No, cancel!',
+                                reverseButtons: true
+                            }).then((result) => {
+                                if (result.value) {
+                                    swalWithBootstrapButtons.fire(
+                                        'Deleted!',
+                                        'Your file has been deleted.',
+                                        'success'
+                                    )
+                                } else if (
+                                    // Read more about handling dismissals
+                                    result.dismiss === Swal.DismissReason.cancel
+                                ) {
+                                    swalWithBootstrapButtons.fire(
+                                        'Cancelled',
+                                        'Your imaginary file is safe :)',
+                                        'error'
+                                    )
+                                }
+                            })
+                        }
+                    </script>
+
+                    @*@Html.ActionLink("Edit", "Edit", new { / id=item.PrimaryKey / }) |
+                        @Html.ActionLink("Details", "Details", new { / id=item.PrimaryKey / }) |
+                        @Html.ActionLink("Delete", "Delete", new { / id=item.PrimaryKey / })*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

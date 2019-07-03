@@ -27,7 +27,7 @@ namespace CapaLogica
         {
             //try
             //{
-            List<entTipoHabitacion> lista = datTipohabitacion.Instancia.ListarTipoHabitacion();
+            List<entTipoHabitacion> lista = datTipoHabitacion.Instancia.ListarTipoHabitacion();
             return lista;
             //}
             //catch (Exception e)

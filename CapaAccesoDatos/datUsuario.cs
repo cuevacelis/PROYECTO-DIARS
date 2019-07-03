@@ -77,7 +77,7 @@ namespace CapaAccesoDatos
                 if (dr.Read())
                 {
                     u = new entUsuario();
-                    u.idUsuario = Convert.ToInt32(dr["idUsuario"]);
+                    //u.idUsuario = Convert.ToInt32(dr["idUsuario"]);
                     u.fechCreacion = Convert.ToDateTime(dr["fechaCreacion"]);
                     u.Username = dr["Username"].ToString();
                     u.Correo = dr["Correo"].ToString();

@@ -18,74 +18,106 @@
     if (us.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
     {
         ViewBag.Title = "Bienvenid@ Gerente " + us.idPersona.nombreyApellidoPersona;
-        <div class="row text-center pad-top">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <div class="div-square">
-                    <a href="@Url.Action("ListarReservas","MantenedorReserva")">
-                        <i class="fas fa-concierge-bell fa-5x"></i>
-                        <h4>Gestionar Reservas</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <div class="div-square">
-                    <a href="@Url.Action("ListarHospedaje", "MantenedorHospedaje")">
-                        <i class="fas fa-building fa-5x"></i>
-                        <h4>Gestionar Hospedaje</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <div class="div-square">
-                    <a href="blank.html">
-                        <i class="fas fa-hotel fa-5x"></i>
-                        <h4>Gestionar Habitaciones</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <div class="div-square">
-                    <a href="@Url.Action("ListarCliente","MantenedorCliente")">
-                        <i class="fas fa-users fa-5x"></i>
-                        <h4>Gestionar Clientes</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <div class="div-square">
-                    <a href="blank.html">
-                        <i class="fas fa-user-tie fa-5x"></i>
-                        <h4>Gestionar Trabajadores</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <div class="div-square">
-                    <a href="blank.html">
-                        <i class="fa fa-key fa-5x"></i>
-                        <h4>Admin </h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <div class="div-square">
-                    <a href="blank.html">
-                        <i class="fa fa-comments-o fa-5x"></i>
-                        <h4>Soporte</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                <div class="div-square">
-                    <a href="blank.html">
-                        <i class="fa fa-bell-o fa-5x"></i>
-                        <h4>Notificaciones </h4>
-                    </a>
-                </div>
+<div class="row text-center pad-top">
+    @*<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="@Url.Action("ListarReservas","MantenedorReserva")">
+                    <i class="fas fa-concierge-bell fa-5x"></i>
+                    <h4>Gestionar Reservas</h4>
+                </a>
             </div>
         </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="@Url.Action("ListarHospedaje", "MantenedorHospedaje")">
+                    <i class="fas fa-building fa-5x"></i>
+                    <h4>Gestionar Hospedaje</h4>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="blank.html">
+                    <i class="fas fa-hotel fa-5x"></i>
+                    <h4>Gestionar Habitaciones</h4>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="@Url.Action("ListarCliente","MantenedorCliente")">
+                    <i class="fas fa-users fa-5x"></i>
+                    <h4>Gestionar Clientes</h4>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="blank.html">
+                    <i class="fas fa-user-tie fa-5x"></i>
+                    <h4>Gestionar Trabajadores</h4>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="blank.html">
+                    <i class="fa fa-key fa-5x"></i>
+                    <h4>Admin </h4>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="blank.html">
+                    <i class="fa fa-comments-o fa-5x"></i>
+                    <h4>Soporte</h4>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="div-square">
+                <a href="blank.html">
+                    <i class="fa fa-bell-o fa-5x"></i>
+                    <h4>Notificaciones </h4>
+                </a>
+            </div>
+        </div>*@
+    <div class="card-group">
+        <div class="card">
+            <a href="@Url.Action("ListarReservas","MantenedorReserva")">
+                <img class="card-img-top" src="~/Contents/images/Cuarto Hotel.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Gestionar Reserva</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="">
+                <img class="card-img-top" src="" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo 3</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="">
+                <img class="card-img-top" src="" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Titulo 3</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
     }
     else
     {

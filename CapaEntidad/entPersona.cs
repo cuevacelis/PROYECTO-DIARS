@@ -14,5 +14,6 @@ namespace CapaEntidad
         public int telefono { get; set; }
         public Boolean estPersona { get; set; }
         public entTipoPersona idTipoPersona { get; set; }
+        public DateTime fechaNacimiento { get; set; }
     }
 }

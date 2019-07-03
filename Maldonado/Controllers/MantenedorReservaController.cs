@@ -21,8 +21,8 @@ namespace Maldonado.Controllers
         [HttpGet]
         public ActionResult ListarReservas()
         {
-            try
-            {
+            //try
+            //{
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 if(u.idPersona.idTipoPersona.estTipoPersona == true)
@@ -35,11 +35,11 @@ namespace Maldonado.Controllers
                 {
                     return RedirectToAction("Index", "Login");
                 }
-            }
-            catch (Exception e)
-            {
-                return RedirectToAction("Index", "Login");
-            }
+            //}
+            //catch (Exception e)
+            //{
+            //    return RedirectToAction("Index", "Login");
+            //}
         }
 
         [HttpGet]

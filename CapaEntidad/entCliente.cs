@@ -10,5 +10,6 @@ namespace CapaEntidad
     {
         public int idCliente { get; set; }
         public entPersona idPersona { get; set; }
+        public Boolean estCliente { get; set; }
     }
 }
