@@ -1,44 +1,64 @@
 ﻿@model CapaEntidad.entCliente
 
 @{
-    ViewBag.Title = "EditarCliente";
+    ViewBag.Title = "Panel de Edicion de Clientes";
     ViewBag.image = "/Contents/images/security.png";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>EditarCliente</h2>
 
 @using (Html.BeginForm())
 {
+
     @Html.AntiForgeryToken()
-    
+
+
+<div class="form-horizontal" id="next">
+    <h2 class="display-4">Editar Cliente</h2>
+    @Html.ValidationSummary(true)
+
+
+
+
     <div class="form-horizontal">
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.idPersona.idPersona, htmlAttributes: new { @class = "control-label col-md-2", required = true, placeholder = "Numero de Identificacion del Cliente", @id = "validationDefault01", type = "number" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.idPersona.idPersona, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.idPersona.idPersona, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <p class="control-label col-md-2">Nombre del Cliente</p>
+    </div>
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.idPersona.nombreyApellidoPersona, new { htmlAttributes = new { @class = "form-control", required = true, placeholder = "Nombre del Cliente", @id = "validationDefault02", type = "text" } })
+        @Html.ValidationMessageFor(model => model.idPersona.nombreyApellidoPersona)
+    </div>
 
-        <div class="form-horizontal">
-            <p class="control-label col-md-2">¿Cliente Activado?</p>
-        </div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.estCliente, new { required = true, @id = "invalidCheck2", @type = "checkbox" })
-                @Html.ValidationMessageFor(model => model.estCliente)
-            </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
+
+    <div class="form-horizontal">
+        <p class="control-label col-md-2">Dni del Cliente</p>
+    </div>
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.idPersona.DNI, new { htmlAttributes = new { @class = "form-control", required = true, maxlength = 8, placeholder = "Dni del Cliente", @id = "validationDefault03", @type = "text" } })
+        @Html.ValidationMessageFor(model => model.idPersona.DNI)
+    </div>
+
+    <div class="form-horizontal">
+        <p class="control-label col-md-2">Telefono del Cliente</p>
+    </div>
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.idPersona.telefono, new { htmlAttributes = new { @class = "form-control", maxlength = 8, required = true, placeholder = "Telefono del Cliente", @id = "validationDefault04", @type = "number" } })
+        @Html.ValidationMessageFor(model => model.idPersona.telefono)
+    </div>
+
+    
+
+
+
+
+    <div class="form-horizontal">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-outline-primary" />
         </div>
     </div>
+</div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver a la Pagina Anterior", "ListarCliente")
 </div>

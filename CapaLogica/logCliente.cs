@@ -62,6 +62,15 @@ namespace CapaLogica
             }
             catch (Exception e) { throw e; }
         }
+        public Boolean EliminarCliente(int idCliente)
+        {
+            try
+            {
+                return datCliente.Instancia.EliminarCliente(idCliente);
+            }
+            catch (Exception e)
+            { throw e; }
+        }
         #endregion metodos
     }
 }

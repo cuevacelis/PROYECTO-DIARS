@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<CapaEntidad.entCliente>
 
 @{
-    ViewBag.Title = "Listar Cliente";
+    ViewBag.Title = "Gestionar Clientes del Hotel";
     ViewBag.image = "/Contents/images/security.png";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 class="display-4 ">Lista de Clientes del Hotel</h2>
+<h2 class="display-4" id="next">Lista de Clientes del Hotel</h2>
 
 <p>
     @Html.ActionLink("Nuevo Cliente", "InsertarCliente")
 </p>
-<table class="table">
+<table class="table sortable">
     <thead class="thead-dark">
         <tr>
             <th scope="col">Id</th>
@@ -48,7 +48,7 @@
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "EditarCliente", new { idCliente = @item.idCliente }) |
-                    <a href="/MantenedorPersona/EliminarPersona?idPersona=@item.idPersona " onclick="prueba()">Eliminar</a>
+                    @Html.ActionLink("Delete", "EliminarCliente", new { idCliente = @item.idCliente })
 
                     @*@Html.ActionLink("Edit", "Edit", new { / id=item.PrimaryKey / }) |
                         @Html.ActionLink("Details", "Details", new { / id=item.PrimaryKey / }) |
@@ -59,43 +59,8 @@
     </tbody>
 </table>
 
-<script>
+<a href="@Url.Action("Index","MenuIntranet")">
+    <h4>Volver al Panel de Gestion</h4>
+</a>
 
-    function prueba() {
-
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-                confirmButton: 'btn btn-success',
-                cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false,
-        })
-
-        swalWithBootstrapButtons.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Yes, delete it!',
-            cancelButtonText: 'No, cancel!',
-            reverseButtons: true
-        }).then((result) => {
-            if (result.value) {
-                swalWithBootstrapButtons.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                )
-            } else if (
-                // Read more about handling dismissals
-                result.dismiss === Swal.DismissReason.cancel
-            ) {
-                swalWithBootstrapButtons.fire(
-                    'Cancelled',
-                    'Your imaginary file is safe :)',
-                    'error'
-                )
-            }
-        })
-    }
-</script>
+@Scripts.Render("~/bundles/OrdenarTablas")

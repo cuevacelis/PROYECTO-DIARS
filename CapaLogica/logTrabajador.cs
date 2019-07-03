@@ -38,11 +38,11 @@ namespace CapaLogica
 
         public Boolean InsertarTrabajador(entTrabajador T)
         {
-            try
-            {
-                return datTrabajador.Instancia.InsertarTrabajador(T);
-            }
-            catch (Exception e) { throw e; }
+            //try
+            //{
+               return datTrabajador.Instancia.InsertarTrabajador(T);
+            //}
+            //catch (Exception e) { throw e; }
 
 
         }

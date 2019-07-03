@@ -41,7 +41,7 @@ namespace CapaAccesoDatos
                     P.estPersona = Convert.ToBoolean(dr["EstPersona"]);
 
                     entCliente C = new entCliente();
-                    //C.idCliente = Convert.ToInt32(dr["IdCliente"]);
+                    C.idCliente = Convert.ToInt32(dr["IdCliente"]);
 
                     entTipoPersona TP = new entTipoPersona();
                     //TP.idTipoPersona = Convert.ToInt32(dr["IdTipoPersona"]);
@@ -109,7 +109,7 @@ namespace CapaAccesoDatos
                     //tc.desTipoCliente = dr["DesTipoCliente"].ToString();
                     C.idPersona = P;
 
-                    C.idPersona.nombreyApellidoPersona = Convert.ToString(dr["NombreYApellidoPersona"]);
+                    C.idPersona.nombreyApellidoPersona = Convert.ToString(dr["Nombres"]);
                     C.idPersona.DNI = Convert.ToString(dr["Dni"]);
                     C.idPersona.telefono = Convert.ToInt32(dr["Telefono"]);
                     C.idPersona.estPersona = Convert.ToBoolean(dr["EstPersona"]);
@@ -151,6 +151,29 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return edita;
+        }
+        public Boolean EliminarCliente(int idCliente)
+        {
+            SqlCommand cmd = null;
+            Boolean elimina = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEliminarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmintidCliente", idCliente);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i >= 0)
+                { elimina = true; }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return elimina;
         }
         #endregion
     }
