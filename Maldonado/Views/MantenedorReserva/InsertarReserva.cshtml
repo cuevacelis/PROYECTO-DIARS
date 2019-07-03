@@ -1,7 +1,7 @@
 ﻿@model CapaEntidad.entReserva
 
 @{
-    ViewBag.Title = "Insertar Reserva";
+    ViewBag.Title = "Insertar Reserva de Clientes";
     ViewBag.image = "/Contents/images/security.png";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -14,7 +14,9 @@
 
 }
 
+
 <div class="col-md-7" data-aos="fade-up" data-aos-delay="100" id="next">
+
     <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
         <fieldset>
             <legend>Agregar Reserva</legend>
@@ -23,7 +25,7 @@
                 Fecha de Inicio
             </div>
             <div class="editor-field">
-                @Html.TextBoxFor(model => model.fechaIncioReserva, new { @class = "form-control", @id = "checkin_date" })
+                @Html.TextBoxFor(model => model.fechaIncioReserva, new { @class = "form-control", @id = "check_in", placeholder = "Inicio de Reserva", required = true })
                 @Html.ValidationMessageFor(model => model.fechaIncioReserva)
             </div>
 
@@ -31,34 +33,67 @@
                 Fecha de Fin
             </div>
             <div class="editor-field">
-                @Html.TextBoxFor(model => model.fechaFinReserva, new { @class = "form-control", @id = "checkin_date" })
+                @Html.TextBoxFor(model => model.fechaFinReserva, new { @class = "form-control", @id = "check_out", placeholder = "Fin de Reserva", required = true })
                 @Html.ValidationMessageFor(model => model.fechaFinReserva)
             </div>
 
             <div class="form-group">
                 Nombre de Cliente:
-                <div class="col-md-10">
-                    @Html.DropDownList("cboCliente", (SelectList)ViewBag.listaCliente, "<seleccionar>")
+                <div>
+                    @Html.DropDownList("cboCliente", (SelectList)ViewBag.listaCliente, "<seleccionar>", new { @class = "custom-select", @id = "inputState", required = true })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Tipo de Habitacion:
+                <div>
+                    @Html.DropDownList("cboTipoHabitacion", (SelectList)ViewBag.listaTipoHabitacion, "<seleccionar>", new { @class = "custom-select", @id = "TipoHabitacion", required = true, @name = "lista1" })
                 </div>
             </div>
 
             <div class="form-group">
                 N° de Habitacion:
-                <div class="col-md-10">
-                    @Html.DropDownList("cboHabitacion", (SelectList)ViewBag.listaHabitacion, "<seleccionar>")
+                <div>
+                    @Html.DropDownList("cboHabitacion", (SelectList)ViewBag.listaHabitacion, "<seleccionar>", new { @class = "custom-select", @id = "Habitacion", required = true })
                 </div>
             </div>
 
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" class="btn btn-primary" value="Create" />
             </p>
         </fieldset>
     </form>
+
 </div>
 
-    
+
+<div>
+    @Html.ActionLink("Volver a Gestionar Reservas", "Index")
+</div>
+
+@Scripts.Render("~/bundles/MyJson")
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#TipoHabitacion').change(function () {
+            $('#Habitacion').empty();
+            seleccionarElemento();
+        });
+    });
+
+    function seleccionarElemento() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("TraerDatosTipoHabitacion")',
+            dataType: 'json',
+            data: { idHabitacion: $('#TipoHabitacion').val(), fechaIncioReserva: $('#check_in').val(), fechaFinReserva: $('#check_out').val()},
+            success: function (listarHabitacion) {
+                $.each(listarHabitacion, function (i,dato){
+                    $('#Habitacion').append('<option value ="' + dato.idHabitacion + '">' + dato.numeroHabitacion + '</option>');
+                })
+            }
+        });
+    }
+
+</script>
 
 
-        <div>
-            @Html.ActionLink("Back to List", "Index")
-        </div>

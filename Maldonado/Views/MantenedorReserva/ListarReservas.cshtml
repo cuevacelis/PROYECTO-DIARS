@@ -6,11 +6,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h2 class="display-4 " id="next">Lista de Reservas del Hotel</h2>
 
 <p>
     @Html.ActionLink("Nueva Reserva", "InsertarReserva")
 </p>
-<table class="table">
+<table class="table sortable">
     <thead class="thead-dark">
         <tr>
             <th scope="col">Id Reserva</th>
@@ -28,39 +29,43 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <th scope="row">
-                @Html.DisplayFor(modelItem => item.idReserva)
-            </th>
-            <td>
-                @Html.DisplayFor(modelItem => item.idPersona.nombreyApellidoPersona)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idHabitacion.numeroHabitacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idHabitacion.descHabitacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idHabitacion.idTipoHabitacion.desTipoHabitacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fechaIncioReserva)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fechaFinReserva)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EstReserva)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { idReserva = @item.idReserva }) |
-                @Html.ActionLink("Detalles", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "EliminarReserva", new { idReserva = @item.idReserva })
-            </td>
-        </tr>
+            <tr>
+                <th scope="row">
+                    @Html.DisplayFor(modelItem => item.idReserva)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPersona.nombreyApellidoPersona)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idHabitacion.numeroHabitacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idHabitacion.descHabitacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idHabitacion.idTipoHabitacion.desTipoHabitacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fechaIncioReserva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fechaFinReserva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstReserva)
+                </td>
+                <td>
+                    @Html.ActionLink("EliminarReserva", "EliminarReserva", new {idReserva=@item.idReserva })
+                </td>
+            </tr>
         }
 
     </tbody>
-        
+
 </table>
+
+<a href="@Url.Action("Index","MenuIntranet")">
+    <h4>Volver al Panel de Gestion</h4>
+</a>
+
+@Scripts.Render("~/bundles/OrdenarTablas")

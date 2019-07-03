@@ -37,11 +37,11 @@ namespace CapaLogica
             }
         }
 
-        public List<entHabitacion> ListarHabitacionPorTipo(int IdTipoHabitacion)
+        public List<entHabitacion> ListarHabitacionPorTipo(int idHabitacion, DateTime fechaIncioReserva, DateTime fechaFinReserva)
         {
             try
             {
-                List<entHabitacion> lista = datHabitacion.Instancia.ListarHabitacionPorTipo(IdTipoHabitacion);
+                List<entHabitacion> lista = datHabitacion.Instancia.ListarHabitacionPorTipo(idHabitacion, fechaIncioReserva, fechaFinReserva);
                 return lista;
             }
             catch (Exception e)
