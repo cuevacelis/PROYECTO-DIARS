@@ -49,7 +49,7 @@ namespace Maldonado.Controllers
                 ////ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
                 //if (u.tipo == true)
                 //{
-                List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersona();
+                List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersonaTrabajador();
                 var lsTipoPersona = new SelectList(listarTipoPersona, "idTipoPersona", "DesTipoPersona");
 
                 ViewBag.listaTipoCliente = lsTipoPersona;

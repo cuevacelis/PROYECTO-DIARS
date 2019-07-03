@@ -121,6 +121,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MantenedorClienteController.cs" />
     <Compile Include="Controllers\MantenedorHospedajeController.cs" />
+    <Compile Include="Controllers\MantenedorPagoController.cs" />
     <Compile Include="Controllers\MantenedorPersonaController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
     <Compile Include="Controllers\MantenedorReservaController.cs" />
@@ -1993,6 +1994,8 @@
     <Content Include="Views\MantenedorCliente\EliminarCliente.cshtml" />
     <Content Include="Views\MantenedorTrabajador\ListarTrabajador.cshtml" />
     <Content Include="Views\MantenedorTrabajador\InsertarTrabajador.cshtml" />
+    <Content Include="Views\MantenedorPago\ListarPago.cshtml" />
+    <Content Include="Views\MantenedorTrabajador\EditarTrabajador.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
