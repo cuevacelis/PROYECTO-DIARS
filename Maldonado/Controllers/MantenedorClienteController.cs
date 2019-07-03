@@ -64,11 +64,11 @@ namespace Maldonado.Controllers
         }
 
         [HttpPost]
-        public ActionResult InsertarCliente(entCliente C, entPersona P, entUsuario U, FormCollection frm)
+        public ActionResult InsertarCliente(entCliente C, FormCollection frm)
         {
             try
             {
-                Boolean inserta = logCliente.Instancia.InsertarCliente(C, P, U);
+                Boolean inserta = logCliente.Instancia.InsertarCliente(C);
 
                 if (inserta)
                 {
@@ -76,7 +76,7 @@ namespace Maldonado.Controllers
                 }
                 else
                 {
-                    return View(P);
+                    return View();
                 }
             }
             catch (ApplicationException ex)

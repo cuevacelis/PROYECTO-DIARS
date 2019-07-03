@@ -58,7 +58,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        public Boolean InsertarCliente(entCliente C, entPersona P, entUsuario U)
+        public Boolean InsertarCliente(entCliente C)
         {
             SqlCommand cmd = null;
             Boolean insertar = false;
@@ -67,12 +67,10 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@prmstrNombres", P.nombreyApellidoPersona);
-                cmd.Parameters.AddWithValue("@prmIdDni", P.DNI);
-                cmd.Parameters.AddWithValue("@prmIdTelefono", P.telefono);
-                cmd.Parameters.AddWithValue("@prmdateFechaNacimiento", P.fechaNacimiento);
-                cmd.Parameters.AddWithValue("@prmstrCorreo", U.Correo);
-                cmd.Parameters.AddWithValue("@prmstrContraseña", U.Password);
+                cmd.Parameters.AddWithValue("@prmstrNombres", C.idPersona.nombreyApellidoPersona);
+                cmd.Parameters.AddWithValue("@prmIdDni", C.idPersona.DNI);
+                cmd.Parameters.AddWithValue("@prmIdTelefono", C.idPersona.telefono);
+                cmd.Parameters.AddWithValue("@prmdateFechaNacimiento", C.idPersona.fechaNacimiento);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

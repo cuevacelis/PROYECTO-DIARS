@@ -36,13 +36,13 @@ namespace CapaLogica
             }
         }
 
-        public Boolean InsertarCliente(entCliente C, entPersona P, entUsuario U)
+        public Boolean InsertarCliente(entCliente C)
         {
-            try
-            {
-                return datCliente.Instancia.InsertarCliente(C, P, U);
-            }
-            catch (Exception e) { throw e; }
+            //try
+            //{
+                return datCliente.Instancia.InsertarCliente(C);
+            //}
+            //catch (Exception e) { throw e; }
         }
         #endregion metodos
     }

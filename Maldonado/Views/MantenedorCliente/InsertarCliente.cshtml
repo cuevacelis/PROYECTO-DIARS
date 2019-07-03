@@ -1,4 +1,4 @@
-﻿@model CapaEntidad.entUsuario
+﻿@model CapaEntidad.entCliente
 
 @{
     ViewBag.Title = "InsertarCliente";
@@ -50,21 +50,7 @@
                 @Html.ValidationMessageFor(model => model.idPersona.fechaNacimiento)
             </div>
 
-            <div class="editor-label">
-                Correo
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control", required = true, placeholder = "Telefono del Cliente", @id = "validationDefault04", @type = "text" } })
-                @Html.ValidationMessageFor(model => model.Correo)
-            </div>
-
-            <div class="editor-label">
-                Password
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", required = true, placeholder = "Telefono del Cliente", @id = "validationDefault04", @type = "number" } })
-                @Html.ValidationMessageFor(model => model.Password)
-            </div>
+            
 
             <p>
                 <input type="submit" value="Create" />

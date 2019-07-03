@@ -47,3 +47,4 @@ C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.dll
 C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.pdb
+C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\System.Web.Optimization.xml
