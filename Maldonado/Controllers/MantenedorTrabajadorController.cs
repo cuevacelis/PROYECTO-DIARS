@@ -23,7 +23,7 @@ namespace Maldonado.Controllers
             {
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                if (u.idPersona.idTipoPersona.Privilegio==1)
                 {
                     List<entTrabajador> lista = logTrabajador.Instancia.ListarTrabajador();
                 ViewBag.lista = lista;
@@ -47,7 +47,7 @@ namespace Maldonado.Controllers
             {
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                if (u.idPersona.idTipoPersona.Privilegio == 1)
                 {
                     List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersona();
                 var lsTipoPersona = new SelectList(listarTipoPersona, "idTipoPersona", "DesTipoPersona");
@@ -76,7 +76,7 @@ namespace Maldonado.Controllers
                 T.idPersona.idTipoPersona.idTipoPersona = Convert.ToInt32(frm["cboTipoPersona"]);
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                if (u.idPersona.idTipoPersona.Privilegio == 1)
                 {
                     Boolean inserta = logTrabajador.Instancia.InsertarTrabajador(T);
 
@@ -108,7 +108,7 @@ namespace Maldonado.Controllers
             {
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                if (u.idPersona.idTipoPersona.Privilegio == 1)
                 {
                     entTrabajador T = new entTrabajador();
                     T = logTrabajador.Instancia.BuscarTrabajador(idTrabajador);
@@ -138,7 +138,7 @@ namespace Maldonado.Controllers
             {
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                if (u.idPersona.idTipoPersona.Privilegio == 1)
                 {
                     T.idPersona.idTipoPersona = new entTipoPersona();
                     T.idPersona.idTipoPersona.idTipoPersona = Convert.ToInt32(frm["cboTipoPersona"]);
