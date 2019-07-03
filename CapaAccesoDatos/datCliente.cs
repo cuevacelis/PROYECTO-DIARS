@@ -70,6 +70,7 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmstrNombres", P.nombreyApellidoPersona);
                 cmd.Parameters.AddWithValue("@prmIdDni", P.DNI);
                 cmd.Parameters.AddWithValue("@prmIdTelefono", P.telefono);
+                cmd.Parameters.AddWithValue("@prmdateFechaNacimiento", P.fechaNacimiento);
                 cmd.Parameters.AddWithValue("@prmstrCorreo", U.Correo);
                 cmd.Parameters.AddWithValue("@prmstrContraseña", U.Password);
                 cn.Open();
@@ -84,8 +85,6 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return insertar;
         }
-
-
         #endregion
     }
 }

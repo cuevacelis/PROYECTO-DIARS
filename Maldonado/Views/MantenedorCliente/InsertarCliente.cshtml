@@ -1,0 +1,78 @@
+﻿@model CapaEntidad.entUsuario
+
+@{
+    ViewBag.Title = "InsertarCliente";
+    ViewBag.image = "/Contents/images/security.png";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+}
+
+<div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+    <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
+        <fieldset>
+            <legend>Agrega una Nuevo Cliente</legend>
+
+
+            <div class="editor-label">
+                Nombres y Apellidos
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.idPersona.nombreyApellidoPersona, new { htmlAttributes = new { @class = "form-control", required = true, placeholder = "Nombre del Cliente", @id = "validationDefault01", type = "text" } })
+                @Html.ValidationMessageFor(model => model.idPersona.nombreyApellidoPersona)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.idPersona.DNI)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.idPersona.DNI, new { htmlAttributes = new { @class = "form-control", required = true, maxlength = 8, placeholder = "Dni del Cliente", @id = "validationDefault03", @type = "number" } })
+                @Html.ValidationMessageFor(model => model.idPersona.DNI)
+            </div>
+
+            <div class="editor-label">
+                Telefono
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.idPersona.telefono, new { htmlAttributes = new { @class = "form-control", maxlength = 8, required = true, placeholder = "Telefono del Cliente", @id = "validationDefault04", @type = "number" } })
+                @Html.ValidationMessageFor(model => model.idPersona.telefono)
+            </div>
+
+            <div class="editor-label">
+                Fecha de Nacimiento
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.idPersona.fechaNacimiento, new { @class = "form-control", @id = "checkin_date" })
+                @Html.ValidationMessageFor(model => model.idPersona.fechaNacimiento)
+            </div>
+
+            <div class="editor-label">
+                Correo
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control", required = true, placeholder = "Telefono del Cliente", @id = "validationDefault04", @type = "text" } })
+                @Html.ValidationMessageFor(model => model.Correo)
+            </div>
+
+            <div class="editor-label">
+                Password
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", required = true, placeholder = "Telefono del Cliente", @id = "validationDefault04", @type = "number" } })
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    </form>
+</div>
+
+<div>
+    @Html.ActionLink("Volver a la Pagina Anterior", "Index")
+</div>
