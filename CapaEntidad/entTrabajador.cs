@@ -13,6 +13,6 @@ namespace CapaEntidad
         public float ingresos { get; set; }
         public String profesion { get; set; }
         public String rol { get; set; }
-        public bool estTrabajador { get; set; }
+        public Boolean estTrabajador { get; set; }
     }
 }

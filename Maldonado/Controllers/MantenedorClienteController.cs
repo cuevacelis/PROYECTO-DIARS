@@ -129,7 +129,7 @@ namespace Maldonado.Controllers
 
                 if (elimina)
                 {
-                    return RedirectToAction("listarCliente");
+                    return RedirectToAction("ListarCliente");
 
                 }
                 else

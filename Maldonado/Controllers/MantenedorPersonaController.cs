@@ -22,25 +22,25 @@ namespace Maldonado.Controllers
         public ActionResult ListarPersona()
         {
 
-            try
-            {
-                entUsuario u = (entUsuario)Session["usuario"];
-                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.idPersona.idTipoPersona.estTipoPersona == true)
-                {
+            //try
+            //{
+                //entUsuario u = (entUsuario)Session["usuario"];
+                ////ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                //if (u.idPersona.idTipoPersona.estTipoPersona == true)
+                //{
                 List<entPersona> lista = logPersona.Instancia.ListarPersona();
                 ViewBag.lista = lista;
                 return View(lista);
-                }
-                else
-                { 
-                    return RedirectToAction("Index", "Login");
-                }
-            }
-            catch (Exception e)
-            {
-                return RedirectToAction("Index", "Login");
-            }            
+                //}
+                //else
+                //{ 
+                //    return RedirectToAction("Index", "Login");
+                //}
+            //}
+            //catch (Exception e)
+            //{
+            //    return RedirectToAction("Index", "Login");
+            //}            
         }
 
         [HttpGet]

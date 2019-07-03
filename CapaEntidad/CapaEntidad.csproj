@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="entCliente.cs" />
     <Compile Include="entHospedaje.cs" />
+    <Compile Include="entPago.cs" />
     <Compile Include="entPersona.cs" />
     <Compile Include="entHabitacion.cs" />
     <Compile Include="entTrabajador.cs" />
