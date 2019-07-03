@@ -15,22 +15,6 @@ C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\Maldonado\bin\FastSq
 C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\Maldonado\bin\System.Web.Optimization.xml
 C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\Maldonado\bin\CapaAccesoDatos.pdb
 C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csproj.CopyComplete
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\Maldonado.dll.config
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\Maldonado.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\Maldonado.pdb
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaEntidad.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaLogica.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\FastSqlServer.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaAccesoDatos.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaEntidad.pdb
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaLogica.pdb
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\FastSqlServer.xml
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaAccesoDatos.pdb
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csproj.CopyComplete
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.pdb
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\Maldonado.dll.config
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\Maldonado.dll
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\bin\Maldonado.pdb
@@ -47,3 +31,19 @@ C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\obj\Deb
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.dll
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\Maldonado.dll.config
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\Maldonado.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\Maldonado.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaEntidad.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaLogica.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\FastSqlServer.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaAccesoDatos.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaEntidad.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaLogica.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\FastSqlServer.xml
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\bin\CapaAccesoDatos.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\Maldonado\obj\Debug\Maldonado.pdb
