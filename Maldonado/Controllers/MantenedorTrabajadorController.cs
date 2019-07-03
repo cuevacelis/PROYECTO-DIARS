@@ -23,11 +23,11 @@ namespace Maldonado.Controllers
             {
                 entUsuario u = (entUsuario)Session["usuario"];
                 //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                if (u.idPersona.idTipoPersona.Privilegio==1)
+                if (u.idPersona.idTipoPersona.Privilegio == 1)
                 {
                     List<entTrabajador> lista = logTrabajador.Instancia.ListarTrabajador();
-                ViewBag.lista = lista;
-                return View(lista);
+                    ViewBag.lista = lista;
+                    return View(lista);
                 }
                 else
                 {
@@ -36,7 +36,7 @@ namespace Maldonado.Controllers
             }
             catch (Exception e)
             {
-                return RedirectToAction("Index", "Login");
+                return RedirectToAction("Error", "Error");
             }
         }
 
@@ -50,10 +50,10 @@ namespace Maldonado.Controllers
                 if (u.idPersona.idTipoPersona.Privilegio == 1)
                 {
                     List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersona();
-                var lsTipoPersona = new SelectList(listarTipoPersona, "idTipoPersona", "DesTipoPersona");
+                    var lsTipoPersona = new SelectList(listarTipoPersona, "idTipoPersona", "DesTipoPersona");
 
-                ViewBag.listaTipoCliente = lsTipoPersona;
-                return View();
+                    ViewBag.listaTipoCliente = lsTipoPersona;
+                    return View();
                 }
                 else
                 {
@@ -62,7 +62,7 @@ namespace Maldonado.Controllers
             }
             catch (Exception e)
             {
-                return RedirectToAction("Index", "Login");
+                return RedirectToAction("Error", "Error");
             }
         }
 
@@ -80,14 +80,14 @@ namespace Maldonado.Controllers
                 {
                     Boolean inserta = logTrabajador.Instancia.InsertarTrabajador(T);
 
-                if (inserta)
-                {
-                    return RedirectToAction("ListarTrabajador");
-                }
-                else
-                {
-                    return View(T);
-                }
+                    if (inserta)
+                    {
+                        return RedirectToAction("ListarTrabajador");
+                    }
+                    else
+                    {
+                        return View(T);
+                    }
                 }
                 else
                 {

@@ -27,7 +27,7 @@ namespace CapaLogica
         {
             try
             {
-                List<entTipoPersona> lista = datTipoPersona.Instancia.ListarTipoPersona();
+                List<entTipoPersona> lista = datTipoPersona.Instancia.ListarTipoPersonaTrabajador();
                 return lista;
             }
             catch (Exception e)
