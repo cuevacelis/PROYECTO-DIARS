@@ -1989,6 +1989,7 @@
     <Content Include="Views\MantenedorReserva\InsertarReservaUsuario.cshtml" />
     <Content Include="Views\MantenedorCliente\ListarCliente.cshtml" />
     <Content Include="Views\MantenedorCliente\InsertarCliente.cshtml" />
+    <Content Include="Views\MantenedorCliente\EditarCliente.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

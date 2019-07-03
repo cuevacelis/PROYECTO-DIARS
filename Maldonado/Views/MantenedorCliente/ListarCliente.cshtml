@@ -9,7 +9,7 @@
 <h2 class="display-4 ">Lista de Clientes del Hotel</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Cliente", "InsertarCliente")
 </p>
 <table class="table">
     <thead class="thead-dark">
@@ -47,7 +47,7 @@
                     @Html.DisplayFor(modelItem => item.idPersona.idTipoPersona.idTipoPersona)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "EditarPersona", new { idPersona = @item.idPersona }) |
+                    @Html.ActionLink("Edit", "EditarCliente", new { idCliente = @item.idCliente }) |
                     <a href="/MantenedorPersona/EliminarPersona?idPersona=@item.idPersona " onclick="prueba()">Eliminar</a>
 
                     @*@Html.ActionLink("Edit", "Edit", new { / id=item.PrimaryKey / }) |

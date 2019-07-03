@@ -44,6 +44,24 @@ namespace CapaLogica
             //}
             //catch (Exception e) { throw e; }
         }
+
+        public entCliente BuscarCliente(int idCliente)
+        {
+            try
+            {
+                return datCliente.Instancia.BuscarCliente(idCliente);
+            }
+            catch (Exception e) { throw e; }
+        }
+
+        public Boolean EditarCliente(entCliente C)
+        {
+            try
+            {
+                return datCliente.Instancia.EditarCliente(C);
+            }
+            catch (Exception e) { throw e; }
+        }
         #endregion metodos
     }
 }

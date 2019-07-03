@@ -84,5 +84,40 @@ namespace Maldonado.Controllers
                 return RedirectToAction("InsertarCliente", new { mesjExceptio = ex.Message });
             }
         }
+
+        [HttpGet]
+        public ActionResult EditarCliente(int idCliente)
+        {
+            entCliente C = new entCliente();
+            C = logCliente.Instancia.BuscarCliente(idCliente);
+
+            return View(C);
+        }
+
+        [HttpPost]
+        public ActionResult EditarCliente(entCliente C, FormCollection frm)
+        {
+            try
+            {
+                C.idPersona = new entPersona();
+
+                Boolean edita = logCliente.Instancia.EditarCliente(C);
+                if (edita)
+                {
+                    return RedirectToAction("ListarCliente");
+
+                }
+                else
+                {
+                    return View(C);
+                }
+            }
+
+            catch (ApplicationException ex)
+            {
+                return RedirectToAction("EditarCliente", new { mesjExceptio = ex.Message });
+            }
+
+        }
     }
 }
