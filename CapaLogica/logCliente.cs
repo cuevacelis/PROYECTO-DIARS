@@ -62,7 +62,6 @@ namespace CapaLogica
             }
             catch (Exception e) { throw e; }
         }
-
         public Boolean EliminarCliente(int idCliente)
         {
             try

@@ -45,12 +45,16 @@ namespace CapaAccesoDatos
 
                     //tp.desTipoCliente = Convert.ToInt16(dr["idTipoCliente"]);
                     Trabajador.profesion = dr["Profesion"].ToString();
+                    Trabajador.rol = dr["Rol"].ToString();
+                    Trabajador.estTrabajador = Convert.ToBoolean(dr["EstTrabajador"]);
                     Trabajador.ingresos = Convert.ToInt64(dr["Ingresos"]);
 
+                    Persona.idPersona = Convert.ToInt32(dr["IdPersona"]);
                     Persona.nombreyApellidoPersona = dr["Nombres"].ToString();
                     Persona.DNI = dr["Dni"].ToString();
                     Persona.telefono = Convert.ToInt32(dr["Telefono"]);
                     Persona.estPersona = Convert.ToBoolean(dr["EstPersona"]);
+                    Trabajador.idPersona = Persona ;
 
                     lista.Add(Trabajador);
                 }
@@ -68,8 +72,8 @@ namespace CapaAccesoDatos
         {
             SqlCommand cmd = null;
             Boolean insertar = false;
-            try
-            {
+            //try
+            //{
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarTrabajador", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -77,10 +81,7 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmIdDni", T.idPersona.DNI);
                 cmd.Parameters.AddWithValue("@prmIdTelefono", T.idPersona.telefono);
                 cmd.Parameters.AddWithValue("@prmdateFechaNacimiento", T.idPersona.fechaNacimiento);
-
                 cmd.Parameters.AddWithValue("@prmintIdTipoPersona", T.idPersona.idTipoPersona.idTipoPersona);
-
-                //cmd.Parameters.AddWithValue("@prmIdPersona", T.idPersona.idPersona);
                 cmd.Parameters.AddWithValue("@prmfloatIngresos", T.ingresos);
                 cmd.Parameters.AddWithValue("@prmstrProfesion", T.profesion);
                 cmd.Parameters.AddWithValue("@prmstrRol", T.rol);
@@ -89,12 +90,12 @@ namespace CapaAccesoDatos
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 { insertar = true; }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
+            //}
+            //catch (Exception e)
+            //{
+            //    throw e;
+            //}
+            //finally { cmd.Connection.Close(); }
             return insertar;
         }
 

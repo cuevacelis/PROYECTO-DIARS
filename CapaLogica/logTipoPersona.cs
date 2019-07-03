@@ -36,7 +36,20 @@ namespace CapaLogica
             }
         }
 
-        
+        public List<entTipoPersona> ListarTipoPersonaTrabajador()
+        {
+            try
+            {
+                List<entTipoPersona> lista = datTipoPersona.Instancia.ListarTipoPersonaTrabajador();
+                return lista;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
         #endregion metodos
     }
 }

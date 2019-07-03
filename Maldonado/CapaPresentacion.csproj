@@ -121,7 +121,6 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MantenedorClienteController.cs" />
     <Compile Include="Controllers\MantenedorHospedajeController.cs" />
-    <Compile Include="Controllers\MantenedorPagoController.cs" />
     <Compile Include="Controllers\MantenedorPersonaController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
     <Compile Include="Controllers\MantenedorReservaController.cs" />
@@ -307,6 +306,7 @@
     <Content Include="Contents\Login\css\style.css" />
     <Content Include="Contents\Login\images\D-Frag-anime-girls-Takao-D-Frag-anime-brunette-feet-1369059-wallhere.com.jpg" />
     <Content Include="Contents\Login\js\index.js" />
+    <Content Include="Contents\MisScript\JS_HabitacionyTipoHabitacion_Json.js" />
     <Content Include="Contents\sweetalert2\sweetalert2.all.js" />
     <Content Include="Contents\sweetalert2\sweetalert2.all.min.js" />
     <Content Include="Contents\sweetalert2\sweetalert2.css" />
@@ -1963,7 +1963,6 @@
     <Content Include="Views\Inicio\Eventos.cshtml" />
     <Content Include="Views\Inicio\Reservaciones.cshtml" />
     <Content Include="Views\Inicio\Habitaciones.cshtml" />
-    <Content Include="Views\Login\LoginAntiguo.cshtml" />
     <Content Include="Contents\Login\scss\style.scss" />
     <Content Include="Views\MantenedorPersona\InsertarPersona.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
@@ -1991,10 +1990,9 @@
     <Content Include="Views\MantenedorCliente\ListarCliente.cshtml" />
     <Content Include="Views\MantenedorCliente\InsertarCliente.cshtml" />
     <Content Include="Views\MantenedorCliente\EditarCliente.cshtml" />
+    <Content Include="Views\MantenedorCliente\EliminarCliente.cshtml" />
     <Content Include="Views\MantenedorTrabajador\ListarTrabajador.cshtml" />
     <Content Include="Views\MantenedorTrabajador\InsertarTrabajador.cshtml" />
-    <Content Include="Views\MantenedorTrabajador\EditarTrabajador.cshtml" />
-    <Content Include="Views\MantenedorPago\ListarPago.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

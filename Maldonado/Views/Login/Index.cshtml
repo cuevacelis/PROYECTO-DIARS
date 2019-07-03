@@ -20,8 +20,9 @@
 
     <link rel="stylesheet" href="~/Contents/bootstrap/bootstrap.css">
 </head>
-    
-<body background="~/Contents/images/hero_4.jpg">
+
+<body>
+
     <form method="post">
         <div class="svgContainer">
             <div>
@@ -205,40 +206,40 @@
         </div>
     </form>
 
+</body>
+</html>
 
-    <!--VALIDACION POR MEDIO DE JS-->
+@Scripts.Render("~/bundles/MyJs")
 
-    @if (@TempData["MensajeDeValidacion"] != null)
+<script type="text/javascript" src="~/Contents/LoginInteractivo/js/TweenMax.js"></script>
+<script type="text/javascript" src="~/Contents/LoginInteractivo/js/index.js"></script>
+<script type="text/javascript" src="~/Contents/LoginInteractivo/js/SVGplugin.js"></script>
+
+<!--VALIDACION POR MEDIO DE JS-->
+
+@if (@TempData["MensajeDeValidacion"] != null)
+{
+    if (@TempData["MensajeDeValidacion"].Equals("error"))
     {
-        if (@TempData["MensajeDeValidacion"].Equals("error"))
+        <script type="text/javascript">
+            Swal.fire({
+                type: 'error',
+                title: 'Ohhh noo.. :(',
+                text: 'Usuario o Contraseña erroneos!!'
+            })
+        </script>
+    }
+    else
+    {
+        if (@TempData["MensajeDeValidacion"].Equals("errorCodigo"))
         {
             <script type="text/javascript">
                 Swal.fire({
                     type: 'error',
-                    title: 'Ohhh noo.. :(',
-                    text: 'Usuario y Contraseña mal escrito!!'
+                    title: 'Error Codigo',
+                    text: 'falla del sistema :('
                 })
             </script>
         }
-        else
-        {
-            if (@TempData["MensajeDeValidacion"].Equals("errorCodigo"))
-            {
-                <script type="text/javascript">
-                    Swal.fire({
-                        type: 'error',
-                        title: 'Error Codigo',
-                        text: 'falla del sistema :('
-                    })
-                </script>
-            }
-        }
     }
-
-    <script src="~/Contents/LoginInteractivo/js/TweenMax.js"></script>
-    <script src="~/Contents/LoginInteractivo/js/index.js"></script>
-    <script src="~/Contents/LoginInteractivo/js/SVGplugin.js"></script>
-
-</body>
-
-</html>
+}
