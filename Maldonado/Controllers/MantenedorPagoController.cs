@@ -36,7 +36,7 @@ namespace Maldonado.Controllers
             }
             catch (Exception e)
             {
-                return RedirectToAction("Index", "Login");
+                return RedirectToAction("Error", "Error");
             }
         }
 
@@ -58,7 +58,7 @@ namespace Maldonado.Controllers
             }
             catch (Exception e)
             {
-                return RedirectToAction("Index", "Login");
+                return RedirectToAction("Error", "Error");
             }
         }
 

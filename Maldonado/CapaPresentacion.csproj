@@ -1996,6 +1996,7 @@
     <Content Include="Views\MantenedorTrabajador\InsertarTrabajador.cshtml" />
     <Content Include="Views\MantenedorPago\ListarPago.cshtml" />
     <Content Include="Views\MantenedorTrabajador\EditarTrabajador.cshtml" />
+    <Content Include="Views\Error\Error.cshtml" />
     <None Include="Views\Shared\contact.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

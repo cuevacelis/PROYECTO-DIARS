@@ -25,15 +25,15 @@ namespace CapaLogica
         #region metodos
         public List<entTrabajador> ListarTrabajador()
         {
-            try
-            {
+            //try
+            //{
                 List<entTrabajador> lista = datTrabajador.Instancia.ListarTrabajador();
                 return lista;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            //}
+            //catch (Exception e)
+            //{
+            //    throw e;
+            //}
         }
 
         public Boolean InsertarTrabajador(entTrabajador T)

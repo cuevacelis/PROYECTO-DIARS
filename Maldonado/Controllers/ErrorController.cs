@@ -8,7 +8,7 @@ namespace Maldonado.Controllers
 {
     public class ErrorController : Controller
     {
-        public ActionResult Index(String mensajerror)
+        public ActionResult Error(String mensajerror)
         {
             ViewBag.mensaje = mensajerror;
             return View();
