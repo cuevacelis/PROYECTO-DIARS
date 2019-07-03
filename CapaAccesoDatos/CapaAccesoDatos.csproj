@@ -42,6 +42,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="datCliente.cs" />
     <Compile Include="datHospedaje.cs" />
+    <Compile Include="datPago.cs" />
     <Compile Include="datPersona.cs" />
     <Compile Include="datHabitacion.cs" />
     <Compile Include="datReserva.cs" />

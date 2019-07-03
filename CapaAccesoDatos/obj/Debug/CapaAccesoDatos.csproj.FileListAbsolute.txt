@@ -66,15 +66,6 @@ C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaAccesoDatos\bin\
 C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaEntidad.dll
 C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaEntidad.pdb
 C:\Users\USUARIO\source\repos\RepositorioUwU\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CopyComplete
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.pdb
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaEntidad.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaEntidad.pdb
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csprojAssemblyReference.cache
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CoreCompileInputs.cache
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CopyComplete
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
-C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.pdb
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaEntidad.dll
@@ -84,3 +75,12 @@ C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaAccesoDatos\o
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CopyComplete
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
 C:\Users\Sql Server\Desktop\PROYECTO DIARS JOSE\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaEntidad.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csprojAssemblyReference.cache
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
+C:\Users\USUARIO\source\repos\RepositorioUwU\cuevacelis\PROYECTO-DIARS\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
