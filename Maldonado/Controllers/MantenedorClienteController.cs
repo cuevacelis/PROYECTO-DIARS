@@ -153,7 +153,7 @@ namespace Maldonado.Controllers
                 entUsuario u = (entUsuario)Session["usuario"];
 
                 Boolean elimina = logCliente.Instancia.EliminarCliente(idCliente);
-                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente") || u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista")
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente") || u.idPersona.idTipoPersona.desTipoPersona.Equals("Recepcionista"))
                 {
                     if (elimina)
                     {
