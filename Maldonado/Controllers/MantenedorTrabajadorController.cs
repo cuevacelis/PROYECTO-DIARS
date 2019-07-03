@@ -21,18 +21,18 @@ namespace Maldonado.Controllers
         {
             try
             {
-                //entUsuario u = (entUsuario)Session["usuario"];
-                ////ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                //if (u.tipo == true)
-                //{
-                List<entTrabajador> lista = logTrabajador.Instancia.ListarTrabajador();
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                {
+                    List<entTrabajador> lista = logTrabajador.Instancia.ListarTrabajador();
                 ViewBag.lista = lista;
                 return View(lista);
-                //}
-                //else
-                //{
-                //    return RedirectToAction("Index", "Login");
-                //}
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
             }
             catch (Exception e)
             {
@@ -45,20 +45,20 @@ namespace Maldonado.Controllers
         {
             try
             {
-                //entUsuario u = (entUsuario)Session["usuario"];
-                ////ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                //if (u.tipo == true)
-                //{
-                List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersona();
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                {
+                    List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersona();
                 var lsTipoPersona = new SelectList(listarTipoPersona, "idTipoPersona", "DesTipoPersona");
 
                 ViewBag.listaTipoCliente = lsTipoPersona;
                 return View();
-                //}
-                //else
-                //{
-                //    return RedirectToAction("Index", "Login");
-                //}
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
             }
             catch (Exception e)
             {
@@ -74,11 +74,11 @@ namespace Maldonado.Controllers
                 T.idPersona.idTipoPersona = new entTipoPersona();
 
                 T.idPersona.idTipoPersona.idTipoPersona = Convert.ToInt32(frm["cboTipoPersona"]);
-                //entUsuario u = (entUsuario)Session["usuario"];
-                ////ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
-                //if (u.tipo == true)
-                //{                
-                Boolean inserta = logTrabajador.Instancia.InsertarTrabajador(T);
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                {
+                    Boolean inserta = logTrabajador.Instancia.InsertarTrabajador(T);
 
                 if (inserta)
                 {
@@ -88,11 +88,11 @@ namespace Maldonado.Controllers
                 {
                     return View(T);
                 }
-            //}
-            //    else
-            //    {
-            //    return RedirectToAction("Index", "Login");
-            //}
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
 
             }
             catch (ApplicationException ex)
@@ -104,15 +104,31 @@ namespace Maldonado.Controllers
         [HttpGet]
         public ActionResult EditarTrabajador(int idTrabajador)
         {
-            entTrabajador T = new entTrabajador();
-            T = logTrabajador.Instancia.BuscarTrabajador(idTrabajador);
+            try
+            {
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
+                {
+                    entTrabajador T = new entTrabajador();
+                    T = logTrabajador.Instancia.BuscarTrabajador(idTrabajador);
 
-            List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersona();
-            var lsTipoPersona = new SelectList(listarTipoPersona, "idTipoPersona", "DesTipoPersona");
+                    List<entTipoPersona> listarTipoPersona = logTipoPersona.Instancia.ListarTipoPersona();
+                    var lsTipoPersona = new SelectList(listarTipoPersona, "idTipoPersona", "DesTipoPersona");
 
-            ViewBag.listaTipoPersona = lsTipoPersona;
+                    ViewBag.listaTipoPersona = lsTipoPersona;
 
-            return View(T);
+                    return View(T);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Login");
+                }
+            }
+            catch(ApplicationException ex)
+            {
+                return RedirectToAction("EditarTrabajador", new { mesjExceptio = ex.Message });
+            }
         }
 
         [HttpPost]
@@ -120,18 +136,27 @@ namespace Maldonado.Controllers
         {
             try
             {
-                T.idPersona.idTipoPersona = new entTipoPersona();
-                T.idPersona.idTipoPersona.idTipoPersona = Convert.ToInt32(frm["cboTipoPersona"]);
-
-                Boolean edita = logTrabajador.Instancia.EditarTrabajador(T);
-                if (edita)
+                entUsuario u = (entUsuario)Session["usuario"];
+                //ViewBag.usuario = u.idCliente.nombreCliente + " " + u.nomUsuario;
+                if (u.idPersona.idTipoPersona.desTipoPersona.Equals("Gerente"))
                 {
-                    return RedirectToAction("ListarTrabajador");
+                    T.idPersona.idTipoPersona = new entTipoPersona();
+                    T.idPersona.idTipoPersona.idTipoPersona = Convert.ToInt32(frm["cboTipoPersona"]);
 
+                    Boolean edita = logTrabajador.Instancia.EditarTrabajador(T);
+                    if (edita)
+                    {
+                        return RedirectToAction("ListarTrabajador");
+
+                    }
+                    else
+                    {
+                        return View(T);
+                    }
                 }
                 else
                 {
-                    return View(T);
+                    return RedirectToAction("Index", "Login");
                 }
             }
 
