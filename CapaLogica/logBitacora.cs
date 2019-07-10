@@ -31,6 +31,16 @@ namespace CapaLogica
                 throw e;
             }
         }
+
+        public Boolean AgregarBitacora(entUsuario a)
+        {
+            try
+            {
+                return datUsuario.Instancia.AgregarBitacora(a);
+            }
+            catch (Exception e) { throw e; }
+
+        }
+        #endregion
     }
-    #endregion
 }
