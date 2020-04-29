@@ -12,4 +12,4 @@ Proyecto **INCOMPLETO** de Diseño y Arquitectura de Software, de la Universidad
 ```
 > PD1: Este proyecto no esta terminado y puede presentar errores, no hay interes previsto retomar el proyecto.
 ---
-> PD2: Para obtener un proyecto completo de este tipo visite Proyecto-Arquisoft (https://nodejs.org/es/download/).
+> PD2: Para obtener un proyecto completo de este tipo visite [Proyecto-Arquisoft](https://github.com/cuevacelis/ProyectoArquisoft).
